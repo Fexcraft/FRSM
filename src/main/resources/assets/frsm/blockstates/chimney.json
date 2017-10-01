@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "type=0": { "model": "frsm:chimney_0" },
+        "type=1": { "model": "frsm:chimney_1" },
+        "type=2": { "model": "frsm:chimney_2" },
+        "type=3": { "model": "frsm:chimney_3" },
+        "type=4": { "model": "frsm:chimney_4" }
+    }
+}
