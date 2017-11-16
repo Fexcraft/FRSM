@@ -6,11 +6,10 @@ import javax.annotation.Nullable;
 
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
-import net.fexcraft.mod.frsm.util.CCS;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.lib.api.common.PaintableObject;
 import net.fexcraft.mod.lib.api.item.PaintItem;
-import net.fexcraft.mod.lib.util.common.EnumColor;
+import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.BlockCarpet;
@@ -34,7 +33,7 @@ public class PaintSet extends Item implements PaintItem {
 	
 	public static PaintSet[] SETS;
 	private RGB color = new RGB();
-	private EnumColor dye;
+	private EnumDyeColor dye;
 	//private String name;
 	private boolean custom = false;
 	
@@ -63,7 +62,7 @@ public class PaintSet extends Item implements PaintItem {
 	public PaintSet(int name, EnumDyeColor c){
 		String id = "paintset" + name;
 		this.color.fromDyeColor(c);
-		dye = EnumColor.fromDyeColor(c);
+		this.dye = c;
 		this.setCreativeTab(CD.TOOLS);
 		this.setMaxStackSize(1);
 		RegistryUtil.get("frsm").addItem(id, this, 1, null);
@@ -85,19 +84,19 @@ public class PaintSet extends Item implements PaintItem {
 				((PaintableObject)state.getBlock()).onPaintItemUse(this.getRGBColor(), this.getColor(), player.getHeldItem(hand), player, pos, world);
 			}
 			else if(state.getBlock() == Blocks.WOOL){
-				world.setBlockState(pos, Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, dye.toDyeColor()));
+				world.setBlockState(pos, Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, dye));
 			}
 			else if(state.getBlock() == Blocks.STAINED_HARDENED_CLAY){
-				world.setBlockState(pos, Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, dye.toDyeColor()));
+				world.setBlockState(pos, Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, dye));
 			}
 			else if(state.getBlock() instanceof BlockStainedGlass){
-				world.setBlockState(pos, Blocks.STAINED_GLASS.getDefaultState().withProperty(BlockColored.COLOR, dye.toDyeColor()));
+				world.setBlockState(pos, Blocks.STAINED_GLASS.getDefaultState().withProperty(BlockColored.COLOR, dye));
 			}
 			else if(state.getBlock() instanceof BlockStainedGlassPane){
-				world.setBlockState(pos, Blocks.STAINED_GLASS_PANE.getDefaultState().withProperty(BlockColored.COLOR, dye.toDyeColor()));
+				world.setBlockState(pos, Blocks.STAINED_GLASS_PANE.getDefaultState().withProperty(BlockColored.COLOR, dye));
 			}
 			else if(state.getBlock() instanceof BlockCarpet){
-				world.setBlockState(pos, Blocks.CARPET.getDefaultState().withProperty(BlockColored.COLOR, dye.toDyeColor()));
+				world.setBlockState(pos, Blocks.CARPET.getDefaultState().withProperty(BlockColored.COLOR, dye));
 			}
 			else if(state.getBlock().hasTileEntity(state)){
 				if(world.getTileEntity(pos) instanceof PaintableObject){
@@ -117,17 +116,17 @@ public class PaintSet extends Item implements PaintItem {
 
 	@Override
 	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
-		tooltip.add(CCS.GOLD + color.toString());
+		tooltip.add(Formatter.format("&6" + color.toString()));
 		if(custom){
-			tooltip.add(CCS.DAQUA + "Customisable");
+			tooltip.add(Formatter.format("&3Customisable"));
 		}
 		else{
-			tooltip.add(CCS.fromInt(dye.toDyeColor().getMetadata()) + dye.toString());
+			tooltip.add(Formatter.format("&a" + dye.getName()));
 		}
     }
 
 	@Override
-	public EnumColor getColor(){
+	public EnumDyeColor getColor(){
 		return dye;
 	}
 

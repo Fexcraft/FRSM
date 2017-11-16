@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "palet1x1", tileentity = Palet1x1Entity.class)
+@fBlock(modid = FI.MODID, name = "palet1x1", tileentity = Palet1x1Entity.class, burn_time = 1200)
 public class Palet1x1 extends FBC_4R_F {
 	
 	public Palet1x1() {

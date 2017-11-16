@@ -4,7 +4,6 @@ import net.fexcraft.mod.lib.api.common.PaintableObject;
 import net.fexcraft.mod.lib.api.network.IPacketReceiver;
 import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.common.EnumColor;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
@@ -89,7 +88,7 @@ public class OfficechairEntity extends TileEntity implements IPacketReceiver<Pac
 	}
 
 	@Override
-	public void onPaintItemUse(RGB color, EnumColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
+	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
 		if(!world.isRemote){
 			primary.copyFrom(color);
 			this.sendUpdatePacket();

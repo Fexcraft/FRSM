@@ -6,7 +6,7 @@ import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-@fBlock(modid = FI.MODID, name = "decoblock2")
+@fBlock(modid = FI.MODID, name = "decoblock2", burn_time = 300)
 public class DecoBlock2 extends Block{
 
     public DecoBlock2(){

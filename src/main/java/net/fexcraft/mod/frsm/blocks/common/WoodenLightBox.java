@@ -6,7 +6,7 @@ import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-@fBlock(modid = FI.MODID, name = "woodenlightbox")
+@fBlock(modid = FI.MODID, name = "woodenlightbox", burn_time = 400)
 public class WoodenLightBox extends Block {
 	
     public WoodenLightBox(){

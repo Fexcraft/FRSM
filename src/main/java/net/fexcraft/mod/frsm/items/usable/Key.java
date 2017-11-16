@@ -5,13 +5,13 @@ import java.util.UUID;
 
 import javax.annotation.Nullable;
 
-import net.fexcraft.mod.frsm.util.CCS;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.lib.api.common.LockableObject;
 import net.fexcraft.mod.lib.api.item.KeyItem;
 import net.fexcraft.mod.lib.api.item.fItem;
 import net.fexcraft.mod.lib.network.Network;
+import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.common.Static;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -77,7 +77,7 @@ public class Key extends KeyItem {
 			String name = Network.getMinecraftServer().getPlayerProfileCache().getProfileByUUID(UUID.fromString(creator)).getName();
 			KeyType type = KeyType.fromString(nbt.getString("KeyType"));
 			tooltip.add("Type: " + type.toText());
-			tooltip.add("Code: " + getCode(type, nbt.getString("KeyCode"), creator, null));
+			tooltip.add("Code: " + Formatter.format(getCode(type, nbt.getString("KeyCode"), creator, null)));
 			tooltip.add("Creator: " + name);
 			tooltip.add("Origin: " + nbt.getString("KeyOrigin"));
 		}
@@ -89,11 +89,11 @@ public class Key extends KeyItem {
 	private String getCode(KeyType type, String code, String string, UUID id) {
 		if(type == KeyType.PRIVATE){
 			//if(id.toString().equals(string)){
-				return CCS.GREEN + code;
+				return "&a" + code;
 			//}
 			//else return TextFormatting.OBFUSCATED + code;
 		}
-		else return CCS.AQUA + code;
+		else return "&3" + code;
 	}
 
 	@Override

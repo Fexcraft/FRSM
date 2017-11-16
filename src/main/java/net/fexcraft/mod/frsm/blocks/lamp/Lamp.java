@@ -5,7 +5,6 @@ import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FM;
 import net.fexcraft.mod.lib.api.block.fBlock;
 import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.util.common.EnumColor;
 import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
 import net.fexcraft.mod.lib.util.render.RGB;
@@ -28,7 +27,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "lamp", variants = 16)
+@fBlock(modid = FI.MODID, name = "lamp", variants = 16, burn_time = 100)
 public class Lamp extends Block  implements PaintableObject {
 	
 	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
@@ -151,7 +150,7 @@ public class Lamp extends Block  implements PaintableObject {
     }
 
 	@Override
-	public void onPaintItemUse(RGB rgb, EnumColor color, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
-		world.setBlockState(pos, this.getDefaultState().withProperty(COLOR, color.toDyeColor()));
+	public void onPaintItemUse(RGB rgb, EnumDyeColor color, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
+		world.setBlockState(pos, this.getDefaultState().withProperty(COLOR, color));
 	}
 }

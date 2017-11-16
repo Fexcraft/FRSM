@@ -4,11 +4,11 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.fexcraft.mod.frsm.util.CCS;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBN_4R;
 import net.fexcraft.mod.lib.api.block.fBlock;
+import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -35,7 +35,7 @@ public class LaptopBlue extends FBN_4R {
 		
 		@Override
 		public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
-			tooltip.add(CCS.DAQUA + "Ufuntu OS");
+			tooltip.add(Formatter.format("&9Ufuntu OS"));
 		}
 	}
 	

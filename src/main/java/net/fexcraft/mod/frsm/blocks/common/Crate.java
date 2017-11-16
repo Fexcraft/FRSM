@@ -6,7 +6,7 @@ import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-@fBlock(modid = FI.MODID, name = "crate")
+@fBlock(modid = FI.MODID, name = "crate", burn_time=1500)
 public class Crate extends Block {
 
 	public Crate() {

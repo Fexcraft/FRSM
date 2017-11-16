@@ -4,9 +4,9 @@ import net.fexcraft.mod.lib.api.common.PaintableObject;
 import net.fexcraft.mod.lib.api.network.IPacketReceiver;
 import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.common.EnumColor;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -20,7 +20,7 @@ public class PizzaOvenEntity extends TileEntity implements IPacketReceiver<Packe
 	private RGB color = new RGB();
 	
 	public PizzaOvenEntity(){
-		color.fromDyeColor(EnumColor.GRAY.toDyeColor());
+		color.fromDyeColor(EnumDyeColor.GRAY);
 	}
 	
 	public void sendUpdatePacket(){
@@ -65,7 +65,7 @@ public class PizzaOvenEntity extends TileEntity implements IPacketReceiver<Packe
 	}
 
 	@Override
-	public void onPaintItemUse(RGB color, EnumColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
+	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
 		this.color.copyFrom(color);
 		this.sendUpdatePacket();
 	}

@@ -1,6 +1,5 @@
 package net.fexcraft.mod.frsm.util.block;
 
-import net.fexcraft.mod.frsm.util.CCS;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -15,12 +14,12 @@ import net.minecraft.world.World;
 public abstract class FBC_4R_L extends FBC_4R {
 	
 	public String bname;
-	protected String s = CCS.GRAY;
+	protected String s = "&7";
 	protected String f = "frsm_lock_";
 	
 	public FBC_4R_L(Material material, String bname) {
     	super(material);
-    	this.bname = CCS.AQUA + bname + CCS.GRAY;
+    	this.bname = "&3" + bname + "&7";
 	}
 	
 	//TODO UPDATE THIS

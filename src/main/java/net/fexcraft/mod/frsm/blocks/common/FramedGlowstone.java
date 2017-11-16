@@ -16,7 +16,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "framedglowstone", variants = 6, item = FramedGlowstone.IB.class)
+@fBlock(modid = FI.MODID, name = "framedglowstone", variants = 6, item = FramedGlowstone.IB.class, burn_time = 900)
 public class FramedGlowstone extends Block {
 	
 	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 5);

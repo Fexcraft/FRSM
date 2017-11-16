@@ -1,12 +1,11 @@
 package net.fexcraft.mod.frsm;
 
-import java.io.File;
-
+import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.tools.PaintSet;
 import net.fexcraft.mod.frsm.util.*;
-import net.fexcraft.mod.lib.util.common.Print;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
+import net.fexcraft.mod.lib.util.registry.RegistryUtil.AutoRegisterer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,39 +17,19 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = FI.MODID, name = FI.NAME, version = FRSM.version, updateJSON = "http://fexcraft.net/minecraft/fcl/request?mode=getForgeUpdateJson&modid=frsm", dependencies = "required-after:fcl")
+@Mod(modid = FI.MODID, name = FI.NAME, version = FRSM.version, acceptedMinecraftVersions = "*", updateJSON = "http://fexcraft.net/minecraft/fcl/request?mode=getForgeUpdateJson&modid=frsm", dependencies = "required-after:fcl")
 public class FRSM{
 	
-	public static final String version = "4.0.22"; 
-	public static final String vnote = "A new Age.";
+	public static final String version = "4.0.25"; 
+	public static final String vnote = "Clocks.";
 	
 	@Mod.Instance(FI.MODID)
 	private static FRSM instance;
 	
 	public static boolean conf1, conf2, conf3, conf4, conf5;
-	public static File mainpath, datapath, tempdata;
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
-		mainpath = new File(event.getModConfigurationDirectory(), "/frsm/");
-		if(!mainpath.exists()){
-			Print.log("FRSM", "FRSM Main folder not found. Creating empty folder.");
-			mainpath.mkdirs();
-		}
-		datapath = new File(mainpath, "data/");
-		if (!datapath.exists()){
-			Print.log("FRSM", "FRSM Data folder not found. Creating empty folder.");
-			datapath.mkdirs();
-		}
-		tempdata = new File(mainpath, "temp/");
-		if(!tempdata.exists()){
-			Print.log("FRSM", "FRSM TempData folder not found. Creating empty folder.");
-			tempdata.mkdirs();
-		}
-		for(File file : tempdata.listFiles()){
-			file.delete();
-		}
-		
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 	    config.load();
 	    conf1       = config.getBoolean("robo_crafting", "###[> RoboStuff <]###", true, "Robo Crafting Recipes");
@@ -71,11 +50,9 @@ public class FRSM{
 		
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Mod.EventHandler
     public void init(FMLInitializationEvent event){
-		FuelHandler.initialize();
-		GameRegistry.registerFuelHandler(new FuelHandler());
+		GameRegistry.registerTileEntity(ClockBaseTileEntity.class, "frsm:clock_tileentity");
 		MinecraftForge.addGrassSeed(new ItemStack(RegistryUtil.getItem("frsm:tomatoseeds")), 1);
 		
 		Data.getDataFromServer();
@@ -86,11 +63,15 @@ public class FRSM{
 	
 	@Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event){
-		
+		//
     }
 	
 	public static FRSM getInstance(){
 		return instance;
+	}
+
+	public static final AutoRegisterer getAutoRegisterer(){
+		return RegistryUtil.get(FI.MODID);
 	}
 	
 }

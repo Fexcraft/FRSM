@@ -6,7 +6,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class BusStation extends ModelBase{
+public class BusStation extends ModelBase {
 	
     ModelRenderer Shape1;
     ModelRenderer Shape2;

@@ -4,10 +4,10 @@ import net.fexcraft.mod.lib.api.common.PaintableObject;
 import net.fexcraft.mod.lib.api.network.IPacketReceiver;
 import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.common.EnumColor;
 import net.fexcraft.mod.lib.util.common.Print;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -18,11 +18,11 @@ import net.minecraft.world.World;
 
 public class Shelf1Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
 
-	private EnumColor color;
+	private EnumDyeColor color;
 	private boolean open;
 	
 	public Shelf1Entity(){
-		color = EnumColor.WHITE;
+		color = EnumDyeColor.WHITE;
 		open = false;
 	}
 	
@@ -49,7 +49,7 @@ public class Shelf1Entity extends TileEntity implements IPacketReceiver<PacketTi
 	@Override
 	public void processClientPacket(PacketTileEntityUpdate packet){
 		if(packet.nbt.hasKey("color")){
-			this.color = EnumColor.fromString(packet.nbt.getString("color"));
+			this.color = ApiUtil.getDyeColorFromString(packet.nbt.getString("color"));
 		}
 		if(packet.nbt.hasKey("open")){
 			this.open = packet.nbt.getBoolean("open");
@@ -70,7 +70,7 @@ public class Shelf1Entity extends TileEntity implements IPacketReceiver<PacketTi
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound){
 		super.writeToNBT(compound);
-		compound.setString("frsm_color", color.toString());
+		compound.setString("frsm_color", color.getName());
 		compound.setBoolean("frsm_open", open);
 		return compound;
 	}
@@ -78,7 +78,7 @@ public class Shelf1Entity extends TileEntity implements IPacketReceiver<PacketTi
 	@Override
 	public void readFromNBT(NBTTagCompound compound){
 		super.readFromNBT(compound);
-		color = EnumColor.fromString(compound.getString("frsm_color"));
+		color = ApiUtil.getDyeColorFromString("frsm_color");
 		open = compound.getBoolean("frsm_open");
 	}
 
@@ -86,12 +86,12 @@ public class Shelf1Entity extends TileEntity implements IPacketReceiver<PacketTi
 		return open;
 	}
 
-	public EnumColor getColor(){
+	public EnumDyeColor getColor(){
 		return color;
 	}
 
 	@Override
-	public void onPaintItemUse(RGB color, EnumColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
+	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
 		this.color = dye;
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setString("color", color.toString());

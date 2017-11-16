@@ -230,4 +230,5 @@ public class ModelFurnace1 extends ModelBase {
 		translateAll(0F, 0F, 0F);
 		
 	}
+	
 }

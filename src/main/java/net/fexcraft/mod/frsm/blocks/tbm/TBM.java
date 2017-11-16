@@ -17,7 +17,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "tbm")
+@fBlock(modid = FI.MODID, name = "tbm", burn_time = 6000)
 public class TBM extends BlockFalling {
 	
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);

@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "window1", tileentity = WindowEntity.class)
+@fBlock(modid = FI.MODID, name = "window1", tileentity = WindowEntity.class, burn_time = 600)
 public class Window extends FBC_4R {
 	
 	public Window() {

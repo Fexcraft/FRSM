@@ -8,11 +8,10 @@ import com.google.gson.JsonObject;
 
 import net.fexcraft.mod.frsm.util.Data;
 import net.fexcraft.mod.frsm.util.FI;
-import static net.fexcraft.mod.frsm.util.CCS.*;
-
 import net.fexcraft.mod.lib.api.common.fCommand;
 import net.fexcraft.mod.lib.network.Browser;
 import net.fexcraft.mod.lib.network.Network;
+import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.common.Print;
 import net.fexcraft.mod.lib.util.common.Static;
 import net.minecraft.block.state.IBlockState;
@@ -31,7 +30,7 @@ public class MainCommand extends CommandBase {
 	private final ArrayList<String> aliases;
 	//private static final String restart = RED + "Changes apply after game restart.";
 	//private static final String experimental = RED + "This is an Experimental Feature, use on own responsability.";
-	private static final String error = RED + "Error, Invalid argument.";
+	private static final String error = "&4Error, Invalid argument.";
 	private ICommandSender sender;
   
     public MainCommand(){ 
@@ -69,7 +68,7 @@ public class MainCommand extends CommandBase {
     public void execute(MinecraftServer server, ICommandSender sender, String[] args)  throws CommandException{
     	this.sender = sender;
         if(args.length < 1){
-        	print(DAQUA + "/frsm <args>");
+        	print("&9/frsm <args>");
         	return;
         }
         switch(args[0]){
@@ -77,15 +76,15 @@ public class MainCommand extends CommandBase {
         	case "?":
         	case "list":
         		print(FI.PREFIX + " Welcome back " + sender.getName() + "!");
-        		print(DAQUA + "List of available arguments:");
-        		print(WHITE + "download, version, changelog, config, help, reload, resyc, grn");
-        		print(DAQUA + "Do '/frsm <arg> help to find out more.'");
+        		print("&9List of available arguments:");
+        		print("&fdownload, version, changelog, config, help, reload, resyc, grn");
+        		print("&9Do '/frsm <arg> help to find out more.'");
         		break;
         	case "config":
         		print(FI.PREFIX + " Currently disabled.");
         		break;
         	case "version":
-        		print(FI.PREFIX + DAQUA + " Version: " + DPURPLE + FI.VERSION);
+        		print(FI.PREFIX + "&9 Version: &5" + FI.VERSION);
         		break;
         	case "download":
         	case "dl":
@@ -94,7 +93,7 @@ public class MainCommand extends CommandBase {
         	case "grn":
         		if(args.length < 2){
         			ItemStack stack = ((EntityPlayer)sender.getCommandSenderEntity()).getHeldItemMainhand();
-            		print(FI.PREFIX + DGRAY + " RGN: " + LPURPLE + stack.getItem().getRegistryName() + DAQUA + " [M:" + stack.getItemDamage() + "|A:" + stack.getCount() + "]");
+            		print(FI.PREFIX + "&8 RGN: &d" + stack.getItem().getRegistryName() + "&9 [M:" + stack.getItemDamage() + "|A:" + stack.getCount() + "]");
         		}
         		else if(args[1].equals("help")){
         			print(FI.PREFIX + " GRN - Get Registry Name;");
@@ -108,7 +107,7 @@ public class MainCommand extends CommandBase {
         			}
         			else{
         				IBlockState state = ((EntityPlayer)sender.getCommandSenderEntity()).getEntityWorld().getBlockState(rtr.getBlockPos());
-        				print(FI.PREFIX + DGRAY + " RGN: " + LPURPLE + state.getBlock().getRegistryName().toString() + DAQUA + " [M:" + state.getBlock().getMetaFromState(state) + "]");
+        				print(FI.PREFIX + "&8 RGN: &d" + state.getBlock().getRegistryName().toString() + "&9 [M:" + state.getBlock().getMetaFromState(state) + "]");
         			}
         		}
         		else{
@@ -152,21 +151,21 @@ public class MainCommand extends CommandBase {
 
     private void processDownload(String[] args, MinecraftServer server) {
     	if(args.length < 2){
-    		Print.chat(sender, FI.PREFIX + DGRAY + "================");
-    		Print.chat(sender, DAQUA + "List of avaible download sources: ");
+    		Print.chat(sender, FI.PREFIX + "&7================");
+    		Print.chat(sender, "&9List of avaible download sources: ");
     		for(JsonElement elm : Data.getData().get("download_links").getAsJsonArray()){
     			JsonObject obj = elm.getAsJsonObject();
     			String prefix = getRandomPrefix();
-    			Print.chat(sender, prefix + DGREEN + obj.get("name").getAsString());
+    			Print.chat(sender, prefix + "&2" + obj.get("name").getAsString());
     			Print.chat(sender, prefix + obj.get("link").getAsString());
-    			Print.chat(sender, prefix + "Source ID: " + GREEN + obj.get("id").getAsString());
+    			Print.chat(sender, prefix + "Source ID: &a" + obj.get("id").getAsString());
     		}
-    		Print.chat(sender, DAQUA+ "You can also use '/frsm download <source_id>'");
-    		Print.chat(sender, DAQUA + "to open the link in your default browser.");
+    		Print.chat(sender, "&9You can also use '/frsm download <source_id>'");
+    		Print.chat(sender, "&9to open the link in your default browser.");
     	}
     	else if(args[1].equals("help")){
     		Print.chat(sender, "Command used to get the downloading links for this mod, or to directly open an new browser tab with the seleted link.");
-    		Print.chat(sender, DAQUA + "Try '/frsm download'.");
+    		Print.chat(sender, "&9Try '/frsm download'.");
     	}
     	else if(args.length == 2){
     		if(args[1] == null){
@@ -183,19 +182,19 @@ public class MainCommand extends CommandBase {
     			}
     		}
     		if(found == false){
-    			Print.chat(sender, RED + "Error, wrong download source id.");
+    			Print.chat(sender, "&4Error, wrong download source id.");
     		}
     	}
     	else{
     		Print.chat(sender, error);
-    		Print.chat(sender, DAQUA + "Try '/frsm download <source_id>'.");
+    		Print.chat(sender, "&9Try '/frsm download <source_id>'.");
     	}
 	}
     
     public String getRandomPrefix(){
     	int i1 = Static.random.nextInt(15);
     	int i2 = Static.random.nextInt(15);
-    	String string = fromInt(i1) + "[" + fromInt(i2) + "#" + fromInt(i1) + "] " + GRAY;
+    	String string = Formatter.fromInt(i1) + "[" + Formatter.fromInt(i2) + "#" + Formatter.fromInt(i1) + "]&7";
     	return string;
     }
     
