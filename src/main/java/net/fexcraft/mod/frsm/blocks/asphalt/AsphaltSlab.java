@@ -4,6 +4,7 @@ import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -15,7 +16,7 @@ import net.minecraft.world.World;
 public class AsphaltSlab extends Block {
 	
 	public AsphaltSlab(){
-        super(Material.IRON);
+        super(Material.IRON, MapColor.BLACK);
         this.setHarvestLevel("pickaxe", 0);
         this.setHardness(50.0F);
         this.setResistance(300.0F);

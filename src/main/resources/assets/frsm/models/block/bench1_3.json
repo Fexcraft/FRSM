@@ -1,5 +1,6 @@
 {
 	"__comment": "Designed by Ferdinand (FEX___96) with Cubik Studio",
+	"parent": "block/block",
 	"textures": {
 		"particle": "blocks/planks_oak",
 		"planks": "blocks/planks_oak",

@@ -4,6 +4,7 @@ import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -23,7 +24,7 @@ public class Asphalt2 extends Block {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	
 	public Asphalt2(){
-        super(Material.IRON);
+        super(Material.IRON, MapColor.BLACK);
     	this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.setHarvestLevel("pickaxe", 0);
         this.setHardness(50.0F);

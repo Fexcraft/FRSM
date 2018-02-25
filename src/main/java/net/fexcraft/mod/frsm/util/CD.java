@@ -17,7 +17,7 @@ public class CD {
 	
 	public static CreativeTabs MODELS = new CreativeTab("frsm_models", "frsm:model_rail");
 	
-	public static CreativeTabs ROBOTS = new CreativeTab("frsm_robots");
+	//public static CreativeTabs ROBOTS = new CreativeTab("frsm_robots");
 	
 	public static CreativeTabs EXPERIMENTAL = new CreativeTab("frsm_experimental", "frsm:tbm");
 	

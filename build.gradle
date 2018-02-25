@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "4.0.25"
+version = "4.0.25b"
 group = "net.fexcraft.mod.frsm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "FRSM"
 
