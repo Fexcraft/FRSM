@@ -21,7 +21,7 @@ public class PCHardware1Entity extends TileEntity implements IPacketReceiver<Pac
 	private int ps = 0;
 	
 	public PCHardware1Entity(){
-		color.fromDyeColor(EnumDyeColor.GRAY);
+		color = RGB.fromDyeColor(EnumDyeColor.GRAY);
 	}
 
 	public void next(){
@@ -33,12 +33,12 @@ public class PCHardware1Entity extends TileEntity implements IPacketReceiver<Pac
 	}
 	
 	public void applyColor(RGB color){
-		color.copyFrom(color);
+		this.color = new RGB(color);
 		this.sendUpdatePacket();
 	}
 	
 	public void applyColor(EnumDyeColor color){
-		this.color.fromDyeColor(color);
+		this.color = RGB.fromDyeColor(color);
 		this.sendUpdatePacket();
 	}
 
@@ -91,7 +91,7 @@ public class PCHardware1Entity extends TileEntity implements IPacketReceiver<Pac
 	@Override
 	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
 		if(!world.isRemote){
-			this.color.copyFrom(color);
+			this.color = new RGB(color);
 			this.sendUpdatePacket();
 		}
 	}

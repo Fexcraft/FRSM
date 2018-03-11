@@ -38,38 +38,23 @@ public class PaintSet extends Item implements PaintItem {
 	private boolean custom = false;
 	
 	public static void register(){
-		SETS = new PaintSet[]{
-			new PaintSet(0, EnumDyeColor.byMetadata(0)),
-			new PaintSet(1, EnumDyeColor.byMetadata(1)),
-			new PaintSet(2, EnumDyeColor.byMetadata(2)),
-			new PaintSet(3, EnumDyeColor.byMetadata(3)),
-			new PaintSet(4, EnumDyeColor.byMetadata(4)),
-			new PaintSet(5, EnumDyeColor.byMetadata(5)),
-			new PaintSet(6, EnumDyeColor.byMetadata(6)),
-			new PaintSet(7, EnumDyeColor.byMetadata(7)),
-			new PaintSet(8, EnumDyeColor.byMetadata(8)),
-			new PaintSet(9, EnumDyeColor.byMetadata(9)),
-			new PaintSet(10, EnumDyeColor.byMetadata(10)),
-			new PaintSet(11, EnumDyeColor.byMetadata(11)),
-			new PaintSet(12, EnumDyeColor.byMetadata(12)),
-			new PaintSet(13, EnumDyeColor.byMetadata(13)),
-			new PaintSet(14, EnumDyeColor.byMetadata(14)),
-			new PaintSet(15, EnumDyeColor.byMetadata(15)),
-			new PaintSet(16, EnumDyeColor.byMetadata(16), true),
-		};
+		SETS = new PaintSet[17];
+		for(int i = 0; i < 17; i++){
+			SETS[i] = new PaintSet(i, i == 16);
+		}
 	}
 	
-	public PaintSet(int name, EnumDyeColor c){
+	public PaintSet(int name){
 		String id = "paintset" + name;
-		this.color.fromDyeColor(c);
-		this.dye = c;
+		this.dye = EnumDyeColor.byMetadata(name);
+		this.color = RGB.fromDyeColor(dye);
 		this.setCreativeTab(CD.TOOLS);
 		this.setMaxStackSize(1);
 		RegistryUtil.get("frsm").addItem(id, this, 1, null);
 	}
 
-	public PaintSet(int i, EnumDyeColor meta, boolean b){
-		this(i, meta);
+	public PaintSet(int i, boolean b){
+		this(i);
 		custom = b;
 	}
 	

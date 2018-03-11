@@ -22,16 +22,16 @@ public class OfficechairEntity extends TileEntity implements IPacketReceiver<Pac
 	public short rotation = 0;
 	
 	public OfficechairEntity(){
-		primary.fromDyeColor(EnumDyeColor.ORANGE);
+		primary = RGB.fromDyeColor(EnumDyeColor.ORANGE);
 	}
 	
 	public void applyColor(RGB color){
-		primary.copyFrom(color);
+		primary = new RGB(color);
 		this.sendUpdatePacket();
 	}
 	
 	public void applyColor(EnumDyeColor color){
-		primary.fromDyeColor(color);
+		primary = RGB.fromDyeColor(color);
 		this.sendUpdatePacket();
 	}
 
@@ -90,7 +90,7 @@ public class OfficechairEntity extends TileEntity implements IPacketReceiver<Pac
 	@Override
 	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
 		if(!world.isRemote){
-			primary.copyFrom(color);
+			primary = new RGB(color);
 			this.sendUpdatePacket();
 		}
 	}

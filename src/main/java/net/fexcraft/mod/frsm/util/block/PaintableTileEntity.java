@@ -25,11 +25,11 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	}
 	
 	public PaintableTileEntity(RGB rgb){
-		color.copyFrom(rgb);
+		color.packed = rgb.packed;
 	}
 	
 	public void applyColor(RGB color){
-		color.copyFrom(color);
+		this.color.packed = color.packed;
 		this.sendUpdatePacket();
 	}
 	
@@ -87,7 +87,7 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	@Override
 	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
 		if(!world.isRemote){
-			this.color.copyFrom(color);
+			this.color.packed = color.packed;
 			this.sendUpdatePacket();
 			Print.bar(player, "Color Updated! " + color.toString() + "-[" + dye.getDyeColorName() + "];");
 		}

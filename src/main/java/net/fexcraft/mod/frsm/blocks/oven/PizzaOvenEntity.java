@@ -20,7 +20,7 @@ public class PizzaOvenEntity extends TileEntity implements IPacketReceiver<Packe
 	private RGB color = new RGB();
 	
 	public PizzaOvenEntity(){
-		color.fromDyeColor(EnumDyeColor.GRAY);
+		color = RGB.fromDyeColor(EnumDyeColor.GRAY);
 	}
 	
 	public void sendUpdatePacket(){
@@ -66,7 +66,7 @@ public class PizzaOvenEntity extends TileEntity implements IPacketReceiver<Packe
 
 	@Override
 	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
-		this.color.copyFrom(color);
+		this.color = new RGB(color);
 		this.sendUpdatePacket();
 	}
 	

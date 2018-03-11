@@ -21,7 +21,7 @@ public class FridgeTileEntity extends TileEntity implements IPacketReceiver<Pack
 	private boolean open;
 	
 	public FridgeTileEntity(){
-		color.fromDyeColor(EnumDyeColor.WHITE);
+		color = RGB.fromDyeColor(EnumDyeColor.WHITE);
 		open = false;
 	}
 	
@@ -86,7 +86,7 @@ public class FridgeTileEntity extends TileEntity implements IPacketReceiver<Pack
 
 	@Override
 	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
-		this.color.copyFrom(color);
+		this.color = new RGB(color);
 		this.sendUpdatePacket();
 	}
 	
