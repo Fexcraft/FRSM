@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.pchardware;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class ModelPCHardware2 extends ModelBase {
+public class ModelPCHardware2 extends GenericModelBase {
 	int textureX = 64;
 	int textureY = 64;
 

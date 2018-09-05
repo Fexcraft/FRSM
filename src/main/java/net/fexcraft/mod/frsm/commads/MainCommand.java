@@ -6,8 +6,8 @@ import java.util.List;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.Data;
-import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.lib.api.common.fCommand;
 import net.fexcraft.mod.lib.network.Browser;
 import net.fexcraft.mod.lib.network.Network;
@@ -75,16 +75,16 @@ public class MainCommand extends CommandBase {
         	case "help":
         	case "?":
         	case "list":
-        		print(FI.PREFIX + " Welcome back " + sender.getName() + "!");
+        		print(FRSM.PREFIX + " Welcome back " + sender.getName() + "!");
         		print("&9List of available arguments:");
         		print("&fdownload, version, changelog, config, help, reload, resyc, grn");
         		print("&9Do '/frsm <arg> help to find out more.'");
         		break;
         	case "config":
-        		print(FI.PREFIX + " Currently disabled.");
+        		print(FRSM.PREFIX + " Currently disabled.");
         		break;
         	case "version":
-        		print(FI.PREFIX + "&9 Version: &5" + FI.VERSION);
+        		print(FRSM.PREFIX + "&9 Version: &5" + FRSM.VERSION);
         		break;
         	case "download":
         	case "dl":
@@ -93,10 +93,10 @@ public class MainCommand extends CommandBase {
         	case "grn":
         		if(args.length < 2){
         			ItemStack stack = ((EntityPlayer)sender.getCommandSenderEntity()).getHeldItemMainhand();
-            		print(FI.PREFIX + "&8 RGN: &d" + stack.getItem().getRegistryName() + "&9 [M:" + stack.getItemDamage() + "|A:" + stack.getCount() + "]");
+            		print(FRSM.PREFIX + "&8 RGN: &d" + stack.getItem().getRegistryName() + "&9 [M:" + stack.getItemDamage() + "|A:" + stack.getCount() + "]");
         		}
         		else if(args[1].equals("help")){
-        			print(FI.PREFIX + " GRN - Get Registry Name;");
+        			print(FRSM.PREFIX + " GRN - Get Registry Name;");
         			print("Displays the registry name of the currently held item.");
         			print("Use '/frsm grn raytrace' to get the registry name of the block you are currently looking at.");
         		}
@@ -107,7 +107,7 @@ public class MainCommand extends CommandBase {
         			}
         			else{
         				IBlockState state = ((EntityPlayer)sender.getCommandSenderEntity()).getEntityWorld().getBlockState(rtr.getBlockPos());
-        				print(FI.PREFIX + "&8 RGN: &d" + state.getBlock().getRegistryName().toString() + "&9 [M:" + state.getBlock().getMetaFromState(state) + "]");
+        				print(FRSM.PREFIX + "&8 RGN: &d" + state.getBlock().getRegistryName().toString() + "&9 [M:" + state.getBlock().getMetaFromState(state) + "]");
         			}
         		}
         		else{
@@ -151,7 +151,7 @@ public class MainCommand extends CommandBase {
 
     private void processDownload(String[] args, MinecraftServer server) {
     	if(args.length < 2){
-    		Print.chat(sender, FI.PREFIX + "&7================");
+    		Print.chat(sender, FRSM.PREFIX + "&7================");
     		Print.chat(sender, "&9List of avaible download sources: ");
     		for(JsonElement elm : Data.getData().get("download_links").getAsJsonArray()){
     			JsonObject obj = elm.getAsJsonObject();

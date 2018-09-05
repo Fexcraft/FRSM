@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.chair;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class OfficechairModel extends ModelBase {
+public class OfficechairModel extends GenericModelBase {
 	
 	int textureX = 128;
 	int textureY = 128;

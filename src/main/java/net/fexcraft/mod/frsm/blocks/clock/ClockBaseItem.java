@@ -20,6 +20,10 @@ public class ClockBaseItem extends ItemBlock16 {
 	
 	@Override
 	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
+		if(clocktype.isWorldTime()){
+		   	tooltip.add(Formatter.format("&7World Time"));
+			return;
+		}
 		if(clocktype.hasOffset()){
 		   	tooltip.add(Formatter.format("&7Custom &6GMT &7Time"));
 		   	tooltip.add(Formatter.format("&o&aChange time offset by using a FRSM TV Controller, Vanilla Clock/Compass, or a generic Tool."));

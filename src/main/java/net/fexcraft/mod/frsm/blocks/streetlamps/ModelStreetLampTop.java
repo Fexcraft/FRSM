@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.streetlamps;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class ModelStreetLampTop extends ModelBase {
+public class ModelStreetLampTop extends GenericModelBase {
 	
 	int textureX = 64;
 	int textureY = 32;

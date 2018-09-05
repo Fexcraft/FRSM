@@ -8,10 +8,10 @@
 
 package net.fexcraft.mod.frsm.blocks.fridge;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class FridgeModel extends ModelBase {
+public class FridgeModel extends GenericModelBase {
 	
 	int textureX = 256;
 	int textureY = 128;

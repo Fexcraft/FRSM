@@ -26,7 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @fBlock(modid = FI.MODID, name = "chimney", variants = 5)
 public class Chimney extends Block implements StovePipeEntity.Connectable {
 	
-	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 4);
+	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 3);
 
 	public Chimney(){
 		super(Material.ROCK);
@@ -57,8 +57,8 @@ public class Chimney extends Block implements StovePipeEntity.Connectable {
 		double d0 = (double)((float)pos.getX() + 0.4F + random.nextFloat() * 0.2F);
 		double d1 = (double)((float)pos.getY() + 0.7F + random.nextFloat() * 0.3F);
 		double d2 = (double)((float)pos.getZ() + 0.4F + random.nextFloat() * 0.2F);
-		EnumParticleTypes particle0 = state.getValue(TYPE) == 4 ? EnumParticleTypes.PORTAL : EnumParticleTypes.SMOKE_LARGE;
-		EnumParticleTypes particle1 = state.getValue(TYPE) == 4 ? EnumParticleTypes.PORTAL : EnumParticleTypes.SMOKE_NORMAL;
+		EnumParticleTypes particle0 = EnumParticleTypes.SMOKE_LARGE;
+		EnumParticleTypes particle1 = EnumParticleTypes.SMOKE_NORMAL;
 		w.spawnParticle(particle0, d0, d1, d2, 0.0D, 0.0D, 0.0D);
 		w.spawnParticle(particle1, d0, d1, d2, 0.0D, 0.1D, 0.0D);
 		w.spawnParticle(particle0, d0, d1, d2, 0.0D, 0.0D, 0.0D);

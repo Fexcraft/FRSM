@@ -1,4 +1,4 @@
-package net.fexcraft.mod.frsm.items.usable;
+package net.fexcraft.mod.frsm.items;
 
 import java.util.List;
 import java.util.UUID;
@@ -32,7 +32,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @fItem(modid = FI.MODID, name = "key", variants = 3)
 public class Key extends KeyItem {
 	
-	public Key() {
+	public Key(){
 		this.setMaxStackSize(1);
 		this.setCreativeTab(CD.TOOLS);
 		this.setHasSubtypes(true);
@@ -63,7 +63,7 @@ public class Key extends KeyItem {
 	}
 	
 	@Override
-	public void onUpdate(ItemStack itemstack, World world, Entity entity, int itemSlot, boolean isSelected) {
+	public void onUpdate(ItemStack itemstack, World world, Entity entity, int itemSlot, boolean isSelected){
 		if(itemstack.getTagCompound() == null){
 			setDefaults(false, itemstack, entity);
 		}

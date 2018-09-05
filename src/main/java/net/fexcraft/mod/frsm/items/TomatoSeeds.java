@@ -1,4 +1,4 @@
-package net.fexcraft.mod.frsm.items.usable;
+package net.fexcraft.mod.frsm.items;
 
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.lib.api.item.fItem;

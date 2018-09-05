@@ -1,11 +1,9 @@
-package net.fexcraft.mod.frsm.items.tools;
+package net.fexcraft.mod.frsm.items;
 
 import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.item.fItem;
 import net.minecraft.item.ItemAxe;
 
-@fItem(modid = FI.MODID, name = "ironsaw")
+//@fItem(modid = FI.MODID, name = "ironsaw")
 public class IronSaw extends ItemAxe {
 	
 	public IronSaw(){

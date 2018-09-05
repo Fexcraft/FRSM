@@ -3,10 +3,10 @@
 
 package net.fexcraft.mod.frsm.blocks.roadsigns;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class ModelRoadSign6 extends ModelBase {
+public class ModelRoadSign6 extends GenericModelBase {
 	
 	int textureX = 128;
 	int textureY = 64;

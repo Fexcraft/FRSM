@@ -3,10 +3,10 @@
 
 package net.fexcraft.mod.frsm.blocks.furnace;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class ModelFurnace1b extends ModelBase {
+public class ModelFurnace1b extends GenericModelBase {
 	
 	int textureX = 128;
 	int textureY = 128;

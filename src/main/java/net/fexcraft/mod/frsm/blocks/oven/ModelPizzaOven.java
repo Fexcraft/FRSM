@@ -1,13 +1,13 @@
 package net.fexcraft.mod.frsm.blocks.oven;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
 /**
  * 
  * @author Ferdinand (FEX___96)
  */
-public class ModelPizzaOven extends ModelBase{
+public class ModelPizzaOven extends GenericModelBase {
 	
 	int textureX = 256;
 	int textureY = 128;

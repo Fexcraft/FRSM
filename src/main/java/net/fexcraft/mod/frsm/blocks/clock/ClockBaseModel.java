@@ -2,12 +2,12 @@ package net.fexcraft.mod.frsm.blocks.clock;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.lib.tmt.Model;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.entity.Entity;
 
-public class ClockBaseModel extends Model<ClockBaseTileEntity> {
+public class ClockBaseModel extends GenericModelBase {
 	
 	public ModelRendererTurbo base[] = new ModelRendererTurbo[0];
 	public ModelRendererTurbo paintable[] = new ModelRendererTurbo[0];
@@ -24,7 +24,6 @@ public class ClockBaseModel extends Model<ClockBaseTileEntity> {
 		render(paintable);
 	}
 
-	@Override
 	public void render(ClockBaseTileEntity type, Entity entity){
 		render(base);
 		//
@@ -54,9 +53,11 @@ public class ClockBaseModel extends Model<ClockBaseTileEntity> {
 		render(minute);
 		GL11.glRotatef(m * +6, 1.0F, 0.0F, 0.0F);
 		//
-		GL11.glRotatef(s * -6, 1.0F, 0.0F, 0.0F);
-		render(second);
-		GL11.glRotatef(s * +6, 1.0F, 0.0F, 0.0F);
+		if(s != -66){
+			GL11.glRotatef(s * -6, 1.0F, 0.0F, 0.0F);
+			render(second);
+			GL11.glRotatef(s * +6, 1.0F, 0.0F, 0.0F);
+		}
 		//
 		if(type.twoSided()){
 			GL11.glRotatef( 180f, 0, 1, 0);
@@ -68,9 +69,11 @@ public class ClockBaseModel extends Model<ClockBaseTileEntity> {
 			render(minute);
 			GL11.glRotatef(m * +6, 1.0F, 0.0F, 0.0F);
 			//
-			GL11.glRotatef(s * -6, 1.0F, 0.0F, 0.0F);
-			render(second);
-			GL11.glRotatef(s * +6, 1.0F, 0.0F, 0.0F);
+			if(!(s == -66)){
+				GL11.glRotatef(s * -6, 1.0F, 0.0F, 0.0F);
+				render(second);
+				GL11.glRotatef(s * +6, 1.0F, 0.0F, 0.0F);
+			}
 		}
 		//
 	}

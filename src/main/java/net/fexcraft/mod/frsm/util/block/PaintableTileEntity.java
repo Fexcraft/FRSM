@@ -21,7 +21,7 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	protected RGB color = new RGB();
 	
 	public PaintableTileEntity(EnumDyeColor def_color){
-		color.fromDyeColor(def_color);
+		color = RGB.fromDyeColor(def_color);
 	}
 	
 	public PaintableTileEntity(RGB rgb){
@@ -34,7 +34,7 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	}
 	
 	public void applyColor(EnumDyeColor color){
-		this.color.fromDyeColor(color);
+		this.color = RGB.fromDyeColor(color);
 		this.sendUpdatePacket();
 	}
 

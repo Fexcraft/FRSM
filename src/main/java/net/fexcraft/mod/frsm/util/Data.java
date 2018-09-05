@@ -4,7 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.lib.FCL;
 import net.fexcraft.mod.lib.network.Network;
 
@@ -13,7 +13,7 @@ public class Data{
 	private static JsonObject data;
 	
 	public static void getDataFromServer(){
-		JsonObject json = Network.getModData("frsm", FI.VERSION);
+		JsonObject json = Network.getModData("frsm", FRSM.VERSION);
 		if(json == null){
 			setDefault();
 		}
@@ -33,7 +33,7 @@ public class Data{
 	
 	private static void setDefault(){
 		data = new JsonObject();
-		data.addProperty("latest_version", FI.VERSION);
+		data.addProperty("latest_version", FRSM.VERSION);
 		data.addProperty("latest_mc_version", FCL.mcv);
 		data.addProperty("changelog", "error.could.not.connect.to.server\nNo Internet?");
 		

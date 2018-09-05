@@ -1,4 +1,4 @@
-package net.fexcraft.mod.frsm.items.tools;
+package net.fexcraft.mod.frsm.items;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.util;
 
 import com.google.gson.JsonObject;
 
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.lib.FCL;
 import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.common.Print;
@@ -21,15 +21,15 @@ public class UpdateHandler {
 		refresh();
 		
 		if(Data.getData().get("welcome_message").getAsString().length() > 4){
-			wm = FI.PREFIX + " " + Formatter.format(Data.getData().get("welcome_message").getAsString());
+			wm = FRSM.PREFIX + " " + Formatter.format(Data.getData().get("welcome_message").getAsString());
 		}
 		if(newest_version != null) {
-			if(FI.VERSION.equals(newest_version)) {
+			if(FRSM.VERSION.equals(newest_version)) {
 				Status  = null;
 			}
 			else {
-				Status  = FI.PREFIX + "New Version avaible! (&a" + newest_version + "&7)"
-				 + "\n" + FI.PREFIX + "Your Client version: (&c" + FI.VERSION + "&7)";
+				Status  = FRSM.PREFIX + " New Version avaible! (&a" + newest_version + "&7)"
+				 + "\n" + FRSM.PREFIX + " Your Client version: (&c" + FRSM.VERSION + "&7)";
 				// + "\n" + FI.PREFIX + CCS.GRAY + " Use '/frsm download' to get the link.";
 				if(Data.getData().get("update_note").getAsString().length() > 4){
 					Status = Status + "\n&7================";
@@ -53,14 +53,14 @@ public class UpdateHandler {
 	    public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
 	    	if(UpdateHandler.wm != null){
 	    		Print.chat(event.player, UpdateHandler.wm);
-	    		Print.chat(event.player, FI.PREFIX + "&7================");
+	    		Print.chat(event.player, FRSM.PREFIX + "&7================");
 	    	}
 	    	if(UpdateHandler.Status != null){
 	    		Print.chat(event.player, UpdateHandler.Status);
 	    	}
 			if(!UpdateHandler.nMCV.equals(FCL.mcv)){
-				Print.chat(event.player, FI.PREFIX + "&7================");
-				Print.chat(event.player, FI.PREFIX + " Now avaible for Minecraft " + UpdateHandler.nMCV + "!");
+				Print.chat(event.player, FRSM.PREFIX + "&7================");
+				Print.chat(event.player, FRSM.PREFIX + " Now avaible for Minecraft " + UpdateHandler.nMCV + "!");
 			}
 	    }
 	}

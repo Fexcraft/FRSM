@@ -8,10 +8,10 @@
 
 package net.fexcraft.mod.frsm.blocks.tbm;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class ModelTBM3 extends ModelBase{
+public class ModelTBM3 extends GenericModelBase {
 	
 	int textureX = 64;
 	int textureY = 64;

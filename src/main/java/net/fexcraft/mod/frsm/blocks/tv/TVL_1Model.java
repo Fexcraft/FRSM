@@ -3,10 +3,10 @@
 
 package net.fexcraft.mod.frsm.blocks.tv;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class TVL_1Model extends ModelBase {
+public class TVL_1Model extends GenericModelBase {
 	
 	int textureX = 128;
 	int textureY = 128;

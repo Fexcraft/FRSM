@@ -56,15 +56,26 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
 	}
 	
 	public int getHour12(){
-		return clocktype.hasOffset() ? hour() : Time.getHour12();
+		return clocktype.isWorldTime() ? worldHour() : clocktype.hasOffset() ? hour() : Time.getHour12();
+	}
+
+	private int worldHour(){
+        long hours = world.getWorldTime() / 1000 + 6;
+        if(hours >= 12){ hours -= 12; }
+        if(hours >= 12){ hours -= 12; }
+        return (int)hours;
 	}
 
 	public int getMinute(){
-		return clocktype.hasOffset() ? Time.getGMTOffset(offset).getMinute() : Time.getMinute();
+		return clocktype.isWorldTime() ? worldMinute() : clocktype.hasOffset() ? Time.getGMTOffset(offset).getMinute() : Time.getMinute();
+	}
+
+	private int worldMinute(){
+        return (int)((world.getWorldTime() % 1000) * 60 / 1000);
 	}
 
 	public int getSecond(){
-		return clocktype.hasOffset() ? Time.getGMTOffset(offset).getSecond() : Time.getSecond();
+		return clocktype.isWorldTime() ? -66 : clocktype.hasOffset() ? Time.getGMTOffset(offset).getSecond() : Time.getSecond();
 	}
 	
 	@Override

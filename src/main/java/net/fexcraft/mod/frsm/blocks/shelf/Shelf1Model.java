@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.shelf;
 
-import net.fexcraft.mod.lib.tmt.ModelBase;
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
-public class Shelf1Model extends ModelBase {
+public class Shelf1Model extends GenericModelBase {
 	
 	int textureX = 128;
 	int textureY = 64;
