@@ -2,6 +2,7 @@ package net.fexcraft.mod.frsm.util.block;
 
 import org.lwjgl.opengl.GL11;
 
+import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -10,8 +11,16 @@ import net.minecraft.util.ResourceLocation;
 public abstract class FTESR_4R<T extends TileEntity> extends TileEntitySpecialRenderer<T> {
 	
 	public int angle = 0;
-        
-	public abstract ResourceLocation getResourceLocation();
+	private ResourceLocation texture;
+	protected GenericModelBase model;
+	
+	public FTESR_4R(ResourceLocation location, GenericModelBase model){
+		this.texture = location; this.model = model;
+	}
+	
+	public FTESR_4R(String location, GenericModelBase model){
+		this.texture = new ResourceLocation(location); this.model = model;
+	}
 	
 	public abstract void renderModel(T tileentity, float partialticks, int destroystage);
 	
@@ -23,7 +32,7 @@ public abstract class FTESR_4R<T extends TileEntity> extends TileEntitySpecialRe
 	public void render(T tileentity, double posX, double posY, double posZ, float partialticks, int destroystage, float f){
     	GL11.glPushMatrix();
 		GL11.glTranslated(posX + 0.5F, posY + 1.5F, posZ + 0.5F);
-		Minecraft.getMinecraft().renderEngine.bindTexture(this.getResourceLocation());
+		Minecraft.getMinecraft().renderEngine.bindTexture(texture);
 		GL11.glPushMatrix();
 		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
 		if(tileentity.getBlockMetadata() == 2){GL11.glRotated(   0 + adjustAngle(), 0, 1D, 0);}
