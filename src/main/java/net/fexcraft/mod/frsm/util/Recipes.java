@@ -315,7 +315,7 @@ public final class Recipes {
     	RecipeRegistry.addBluePrintRecipe(category, new ItemStack(RegistryUtil.getBlock("frsm:palet1x1"), 1), new ItemStack(RegistryUtil.getItem("frsm:planks_oak"), 8), new ItemStack(Blocks.LOG, 2));
     	RecipeRegistry.addBluePrintRecipe(category, new ItemStack(RegistryUtil.getBlock("frsm:palet1x1_1"), 1), new ItemStack(RegistryUtil.getItem("frsm:palet1x1"), 1), new ItemStack(RegistryUtil.getItem("frsm:nesr"), 1));
     	RecipeRegistry.addBluePrintRecipe(category, new ItemStack(RegistryUtil.getBlock("frsm:palet1x1_2"), 1), new ItemStack(RegistryUtil.getItem("frsm:palet1x1"), 1), new ItemStack(RegistryUtil.getItem("frsm:nesr"), 2));
-    	RecipeRegistry.addShapedRecipe("frsm:pillar1", "frsm:pillars", new ItemStack(RegistryUtil.getBlock("frsm:pillar1"), 4), 1, 1, Ingredient.fromStacks(new ItemStack(Blocks.QUARTZ_BLOCK, 0, 2)));
+    	RecipeRegistry.addShapedRecipe("frsm:pillar1", "frsm:pillars", new ItemStack(RegistryUtil.getBlock("frsm:pillar1"), 4), 1, 1, new Ingredient[]{ Ingredient.fromStacks(new ItemStack(Blocks.QUARTZ_BLOCK, 1, 2)) });
     	RecipeRegistry.addShapedRecipe("frsm:pillar1_top", "frsm:pillars", new ItemStack(RegistryUtil.getBlock("frsm:pillar1_top"), 2), 1, 2, new Ingredient[]{
         	Ingredient.fromStacks(new ItemStack(Blocks.QUARTZ_BLOCK, 0, 0)),
     		Ingredient.fromStacks(new ItemStack(RegistryUtil.getBlock("frsm:pillar1"), 1))
