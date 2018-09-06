@@ -5,7 +5,7 @@
 // - ZeuX
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.kd.KD2Entity;
+import net.fexcraft.mod.frsm.blocks.other.KD2;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -149,12 +149,12 @@ public class KD2Model extends ModelBase{
 	public static KD2Model INSTANCE = new KD2Model();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<KD2Entity> {
+	public static class Renderer extends FTESR_4R<KD2.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/KD2.png", null); }
 
 		@Override
-		public void renderModel(KD2Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(KD2.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

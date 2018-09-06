@@ -147,14 +147,14 @@ public class BusStation extends ModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<net.fexcraft.mod.frsm.blocks.BusStation.Entity> {
+	public static class Renderer extends FTESR_4R<net.fexcraft.mod.frsm.blocks.other.BusStation.Entity> {
 	       
 		public Renderer(){
 			super(new ResourceLocation("frsm:textures/blocks/busstation.png"), null);
 		}
 		
 		@Override
-		public void renderModel(net.fexcraft.mod.frsm.blocks.BusStation.Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(net.fexcraft.mod.frsm.blocks.other.BusStation.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

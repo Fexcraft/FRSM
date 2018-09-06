@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.guis;
 
-import net.fexcraft.mod.frsm.blocks.furnace.Furnace1bEntity;
+import net.fexcraft.mod.frsm.blocks.other.Furnace1bEntity;
 import net.fexcraft.mod.frsm.guis.client.GuiFurnace1;
 import net.fexcraft.mod.frsm.guis.client.GuiLoadingScreen;
 import net.fexcraft.mod.frsm.guis.server.ContainerFurnace1;

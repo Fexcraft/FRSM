@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "palet1x1", tileentity = Palet1x1Entity.class, burn_time = 1200)
+@fBlock(modid = FI.MODID, name = "palet1x1", tileentity = Palet1x1.Entity.class, burn_time = 1200)
 public class Palet1x1 extends FBC_4R_F {
 	
 	public Palet1x1() {
@@ -25,12 +25,14 @@ public class Palet1x1 extends FBC_4R_F {
 	
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Palet1x1Entity();
+		return new Palet1x1.Entity();
 	}
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
         return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.3125F, 1.0F);
     }
+	
+	public static class Entity extends TileEntity {}
 	
 }

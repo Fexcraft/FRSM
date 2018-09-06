@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.guis.client;
 
-import net.fexcraft.mod.frsm.blocks.furnace.Furnace1bEntity;
+import net.fexcraft.mod.frsm.blocks.other.Furnace1bEntity;
 import net.fexcraft.mod.frsm.guis.server.ContainerFurnace1;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;

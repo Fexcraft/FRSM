@@ -2,7 +2,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.vm.VMEntity;
+import net.fexcraft.mod.frsm.blocks.machines.VM.VMEntity;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;

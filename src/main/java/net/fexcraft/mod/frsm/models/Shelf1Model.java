@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.models;
 
 import java.util.TreeMap;
 
-import net.fexcraft.mod.frsm.blocks.shelf.Shelf1Entity;
+import net.fexcraft.mod.frsm.blocks.other.Shelf1;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -88,7 +88,7 @@ public class Shelf1Model extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Shelf1Entity> {
+	public static class Renderer extends FTESR_4R<Shelf1.Entity> {
 		
 		public Renderer(){ super(getFromColor(EnumDyeColor.BLACK), new Shelf1Model()); }
 		
@@ -102,7 +102,7 @@ public class Shelf1Model extends GenericModelBase {
 		}
 
 		@Override
-		public void renderModel(Shelf1Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(Shelf1.Entity tileentity, float partialticks, int destroystage){
 			boolean open = tileentity.getState();
 			EnumDyeColor color = tileentity.getColor();
 			Minecraft.getMinecraft().renderEngine.bindTexture(getFromColor(color));

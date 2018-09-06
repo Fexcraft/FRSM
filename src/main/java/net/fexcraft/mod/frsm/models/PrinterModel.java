@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.printer.PrinterEntity;
+import net.fexcraft.mod.frsm.blocks.machines.Printer;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -104,12 +104,12 @@ public class PrinterModel extends ModelBase {
 	public static PrinterModel INSTANCE = new PrinterModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PrinterEntity> {
+	public static class Renderer extends FTESR_4R<Printer.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/printer.png", null); }
 
 		@Override
-		public void renderModel(PrinterEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Printer.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

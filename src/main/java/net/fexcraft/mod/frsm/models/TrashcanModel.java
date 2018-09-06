@@ -2,7 +2,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.trashcan.TrashcanEntity;
+import net.fexcraft.mod.frsm.blocks.other.Trashcan;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -242,12 +242,12 @@ public class TrashcanModel extends ModelBase {
 	public static TrashcanModel INSTANCE = new TrashcanModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<TrashcanEntity> {
+	public static class Renderer extends FTESR_4R<Trashcan.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/trashcan.png", null); }
 
 		@Override
-		public void renderModel(TrashcanEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Trashcan.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

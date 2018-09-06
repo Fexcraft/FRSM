@@ -2,7 +2,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.pillar.PillarEntity;
+import net.fexcraft.mod.frsm.blocks.pillar.Pillar;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -100,12 +100,12 @@ public class PillarModel extends ModelBase {
 	public static PillarModel INSTANCE = new PillarModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PillarEntity> {
+	public static class Renderer extends FTESR_4R<Pillar.Entity> {
 		
 		public Renderer(String location, GenericModelBase model){ super("frsm:textures/blocks/pillar.png", null); }
 
 		@Override
-		public void renderModel(PillarEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Pillar.Entity tileentity, float partialticks, int destroystage){
 			tileentity.getColor().glColorApply();
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 			RGB.glColorReset();

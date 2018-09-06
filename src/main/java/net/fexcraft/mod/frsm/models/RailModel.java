@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.rail.RailEntity;
+import net.fexcraft.mod.frsm.blocks.rail.Rail;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -112,12 +112,12 @@ public class RailModel extends ModelBase {
 	public static RailModel INSTANCE = new RailModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<RailEntity> {
+	public static class Renderer extends FTESR_4R<Rail.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/rail.png", null); }
 
 		@Override
-		public void renderModel(RailEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Rail.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

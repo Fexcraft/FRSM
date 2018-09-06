@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.streetlamps.StreetLampEntity;
+import net.fexcraft.mod.frsm.blocks.streetlamps.StreetLamp;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -37,7 +37,7 @@ public class ModelStreetLampTop extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<StreetLampEntity> {
+	public static class Renderer extends FTESR_4R<StreetLamp.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/streetlamp1e.png", new ModelStreetLampTop()); }
 		
@@ -45,7 +45,7 @@ public class ModelStreetLampTop extends GenericModelBase {
 		public int adjustAngle(){ return 90; }
 
 		@Override
-		public void renderModel(StreetLampEntity tileentity, float partialticks, int destroystage){ model.render(); }
+		public void renderModel(StreetLamp.Entity tileentity, float partialticks, int destroystage){ model.render(); }
 		
 	}
 	

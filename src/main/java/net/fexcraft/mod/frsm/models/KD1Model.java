@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.kd.KD1Entity;
+import net.fexcraft.mod.frsm.blocks.other.KD1;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -160,12 +160,12 @@ public class KD1Model extends ModelBase {
 	public static  KD1Model INSTANCE = new KD1Model();
     
     @fTESR
-    public static class Renderer extends FTESR_4R<KD1Entity> {
+    public static class Renderer extends FTESR_4R<KD1.Entity> {
     	
     	public Renderer(){ super("frsm:textures/blocks/KD1.png", null); }
 
     	@Override
-    	public void renderModel(KD1Entity tileentity, float partialticks, int destroystage){
+    	public void renderModel(KD1.Entity tileentity, float partialticks, int destroystage){
     		INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
     	}
     	

@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.wm.WMEntity;
+import net.fexcraft.mod.frsm.blocks.machines.WM;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -136,12 +136,12 @@ public class WMModel extends ModelBase {
 	public static WMModel INSTANCE = new WMModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<WMEntity> {
+	public static class Renderer extends FTESR_4R<WM.Entity> {
 	       
 		public Renderer(){ super("frsm:textures/blocks/washingmachine.png", null); }
 
 		@Override
-		public void renderModel(WMEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(WM.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

@@ -10,7 +10,7 @@ package net.fexcraft.mod.frsm.models;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.frsm.blocks.tv.TVS2Entity;
+import net.fexcraft.mod.frsm.blocks.tv.TVS2;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -65,12 +65,12 @@ public class TVS2Model extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<TVS2Entity> {
+	public static class Renderer extends FTESR_4R<TVS2.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/TVS2.png", new TVS2Model()); }
 
 		@Override
-		public void renderModel(TVS2Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(TVS2.Entity tileentity, float partialticks, int destroystage){
 			GL11.glRotated(180, 0F, 1F, 0F);
 			GL11.glTranslatef(-0.5F, 1.5F, -0.5F);
 			GL11.glRotatef(Math.round(22.5F * tileentity.getRotation()), 0F, 1F, 0F);

@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.model.Car1DEntity;
+import net.fexcraft.mod.frsm.blocks.other.Car1D;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -120,12 +120,12 @@ public class Car1DModel extends ModelBase {
 	public static Car1DModel INSTANCE = new Car1DModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Car1DEntity> {
+	public static class Renderer extends FTESR_4R<Car1D.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/Car1D.png", null); }
 
 		@Override
-		public void renderModel(Car1DEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Car1D.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

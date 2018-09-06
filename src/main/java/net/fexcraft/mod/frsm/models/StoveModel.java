@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.stove.StoveEntity;
+import net.fexcraft.mod.frsm.blocks.machines.Stove;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -345,12 +345,12 @@ public class StoveModel extends ModelBase {
 	public static StoveModel INSTANCE = new StoveModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<StoveEntity> {
+	public static class Renderer extends FTESR_4R<Stove.Entity> {
 	       
 		public Renderer(){ super("frsm:textures/blocks/Stove.png", null); }
 		
 		@Override
-		public void renderModel(StoveEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Stove.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "palet1x1_1", tileentity = Palet1x1_1Entity.class, burn_time = 1500)
+@fBlock(modid = FI.MODID, name = "palet1x1_1", tileentity = Palet1x1_1.Entity.class, burn_time = 1500)
 public class Palet1x1_1 extends FBC_4R_F {
 	
 	public Palet1x1_1() {
@@ -21,7 +21,9 @@ public class Palet1x1_1 extends FBC_4R_F {
 	
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Palet1x1_1Entity();
+		return new Palet1x1_1.Entity();
 	}
+	
+	public static class Entity extends TileEntity {}
 	
 }

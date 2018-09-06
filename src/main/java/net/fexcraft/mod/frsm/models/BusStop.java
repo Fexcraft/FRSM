@@ -2,7 +2,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.bus.BSSEntity;
+import net.fexcraft.mod.frsm.blocks.other.BusStopSign;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -60,14 +60,14 @@ public class BusStop extends ModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<BSSEntity> {
+	public static class Renderer extends FTESR_4R<BusStopSign.Entity> {
 			
 		public Renderer(){
 			super(new ResourceLocation("frsm:textures/blocks/busstop_0.png"), null);
 		}
 
 		@Override
-		public void renderModel(BSSEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(BusStopSign.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

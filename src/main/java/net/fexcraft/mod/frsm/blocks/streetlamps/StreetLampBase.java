@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "streetlamp_base", tileentity = StreetLampBaseEntity.class)
+@fBlock(modid = FI.MODID, name = "streetlamp_base", tileentity = StreetLampBase.Entity.class)
 public class StreetLampBase extends FBC_4R implements StreetLampPostEntity.Connectable {
 
 	public StreetLampBase(){
@@ -18,7 +18,9 @@ public class StreetLampBase extends FBC_4R implements StreetLampPostEntity.Conne
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta){
-		return new StreetLampBaseEntity();
+		return new StreetLampBase.Entity();
 	}
+	
+	public static class Entity extends TileEntity {}
 	
 }

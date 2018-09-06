@@ -3,7 +3,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.furnace.Furnace1bEntity;
+import net.fexcraft.mod.frsm.blocks.other.Furnace1bEntity;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;

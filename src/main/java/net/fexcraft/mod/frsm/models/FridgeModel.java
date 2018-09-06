@@ -8,7 +8,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.fridge.FridgeTileEntity;
+import net.fexcraft.mod.frsm.blocks.machines.Fridge;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -439,14 +439,14 @@ public class FridgeModel extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<FridgeTileEntity> {
+	public static class Renderer extends FTESR_4R<Fridge.Entity> {
 		
 		public Renderer() {
 			super(new ResourceLocation("frsm:textures/blocks/fridge.png"), new FridgeModel());
 		}
 
 		@Override
-		public void renderModel(FridgeTileEntity tileentity, float partialticks, int destroystage) {
+		public void renderModel(Fridge.Entity tileentity, float partialticks, int destroystage) {
 			boolean open = tileentity.getState();
 			RGB color = tileentity.getColor();
 			

@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "tvs", tileentity = TVSEntity.class)
+@fBlock(modid = FI.MODID, name = "tvs", tileentity = TVS.Entity.class)
 public class TVS extends FBC_4R {
 
 	public TVS() {
@@ -21,7 +21,9 @@ public class TVS extends FBC_4R {
 	
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TVSEntity();
+		return new TVS.Entity();
 	}
+	
+	public static class Entity extends TileEntity {}
 
 }

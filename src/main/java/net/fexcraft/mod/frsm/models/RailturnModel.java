@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.rail.RailTurnEntity;
+import net.fexcraft.mod.frsm.blocks.rail.RailTurn;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -144,12 +144,12 @@ public class RailturnModel extends ModelBase {
 	public static RailturnModel INSTANCE = new RailturnModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<RailTurnEntity> {
+	public static class Renderer extends FTESR_4R<RailTurn.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/railturn.png", null); }
 
 		@Override
-		public void renderModel(RailTurnEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(RailTurn.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

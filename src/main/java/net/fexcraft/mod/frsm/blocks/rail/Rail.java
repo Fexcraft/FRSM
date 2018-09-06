@@ -12,7 +12,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "model_rail", tileentity = RailEntity.class)
+@fBlock(modid = FI.MODID, name = "model_rail", tileentity = Rail.Entity.class)
 public class Rail extends FBC_4R {
 
 	public Rail() {
@@ -30,7 +30,9 @@ public class Rail extends FBC_4R {
 	
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta){
-		return new RailEntity();
+		return new Entity();
 	}
+	
+	public static class Entity extends TileEntity {}
 	
 }

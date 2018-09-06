@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.oven.PizzaOvenEntity;
+import net.fexcraft.mod.frsm.blocks.machines.PizzaOven;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -280,12 +280,12 @@ public class ModelPizzaOven extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PizzaOvenEntity> {
+	public static class Renderer extends FTESR_4R<PizzaOven.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/pizza_oven.png", new ModelPizzaOven()); }
 
 		@Override
-		public void renderModel(PizzaOvenEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(PizzaOven.Entity tileentity, float partialticks, int destroystage){
 			model.render(model.base);
 			model.render(model.closed);
 			model.render(model.r0);

@@ -4,7 +4,7 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.palet.Palet1x1_1Entity;
+import net.fexcraft.mod.frsm.blocks.palet.Palet1x1_1;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -256,12 +256,12 @@ public class Palet1x1_1Model extends ModelBase {
 	public static Palet1x1_1Model INSTANCE = new Palet1x1_1Model();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Palet1x1_1Entity> {
+	public static class Renderer extends FTESR_4R<Palet1x1_1.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/Palet1x1_1.png", null); }
 
 		@Override
-		public void renderModel(Palet1x1_1Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(Palet1x1_1.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

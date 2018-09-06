@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.pchardware.PCHardware2Entity;
+import net.fexcraft.mod.frsm.blocks.machines.PCHardware2;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -78,12 +78,12 @@ public class ModelPCHardware2 extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PCHardware2Entity> {
+	public static class Renderer extends FTESR_4R<PCHardware2.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/pchardware2.png", new ModelPCHardware2()); }
 
 		@Override
-		public void renderModel(PCHardware2Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(PCHardware2.Entity tileentity, float partialticks, int destroystage){
 			model.render(model.base);
 			tileentity.getColor().glColorApply();
 			model.render(model.r0);

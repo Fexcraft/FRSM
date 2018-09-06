@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.models;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.frsm.blocks.chair.OfficechairEntity;
+import net.fexcraft.mod.frsm.blocks.other.Officechair;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -336,14 +336,14 @@ public class OfficechairModel extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<OfficechairEntity> {
+	public static class Renderer extends FTESR_4R<Officechair.Entity> {
 		
 		public Renderer(ResourceLocation location, ModelBase model) {
 			super(new ResourceLocation("frsm:textures/blocks/officechair.png"), new OfficechairModel());
 		}
 		
 		@Override
-		public void renderModel(OfficechairEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(Officechair.Entity tileentity, float partialticks, int destroystage){
 			model.render(model.base);
 			GL11.glRotated(tileentity.rotation * 10, 0, 1, 0);
 			model.render(model.r1);

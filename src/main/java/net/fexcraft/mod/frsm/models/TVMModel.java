@@ -1,7 +1,7 @@
 // Date: 08.02.2015 13:27:40
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.mod.frsm.blocks.tv.TVMEntity;
+import net.fexcraft.mod.frsm.blocks.tv.TVM;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.minecraft.client.model.ModelBase;
@@ -73,12 +73,12 @@ public class TVMModel extends ModelBase {
 	public static TVMModel INSTANCE = new TVMModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<TVMEntity> {
+	public static class Renderer extends FTESR_4R<TVM.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/TVM.png", null); }
 
 		@Override
-		public void renderModel(TVMEntity tileentity, float partialticks, int destroystage){
+		public void renderModel(TVM.Entity tileentity, float partialticks, int destroystage){
 			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		}
 		

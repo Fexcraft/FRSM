@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.models;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.frsm.blocks.pchardware.PCHardware1Entity;
+import net.fexcraft.mod.frsm.blocks.machines.PCHardware1;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
 import net.fexcraft.mod.lib.tmt.GenericModelBase;
@@ -163,12 +163,12 @@ public class ModelPCHardware1 extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PCHardware1Entity> {
+	public static class Renderer extends FTESR_4R<PCHardware1.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/pchardware1.png", new ModelPCHardware1()); }
 
 		@Override
-		public void renderModel(PCHardware1Entity tileentity, float partialticks, int destroystage){
+		public void renderModel(PCHardware1.Entity tileentity, float partialticks, int destroystage){
 			int i = tileentity.getPosition();
 			if(i == 1){
 				GL11.glTranslatef(0.375f, 0, 0);
