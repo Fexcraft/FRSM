@@ -1,10 +1,10 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.lib.api.block.fBlock;
 import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -37,7 +37,7 @@ public class DecoBlock1 extends Block implements PaintableObject {
     	this.setDefaultState(this.blockState.getBaseState().withProperty(COLOR, EnumDyeColor.WHITE));
     }
     
-    public static class IB extends ItemBlock16 {
+    public static class IB extends PaintableInfo {
     	
     	public IB(Block block){
 			super(block);
@@ -72,6 +72,7 @@ public class DecoBlock1 extends Block implements PaintableObject {
 	    public int getMetadata(int meta) {
 	    	return meta;
 	    }
+		
     }
     
     @Override

@@ -1,5 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
@@ -20,7 +21,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "electric_pizza_oven", tileentity = PizzaOven.Entity.class)
+@fBlock(modid = FI.MODID, name = "electric_pizza_oven", tileentity = PizzaOven.Entity.class, item = PaintableInfo.class)
 public class PizzaOven extends FBC_4R {
 
 	public PizzaOven() {

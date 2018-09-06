@@ -1,5 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.pillar;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
@@ -10,7 +11,7 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "pillar1_bottom", tileentity = Pillar3.Entity.class)
+@fBlock(modid = FI.MODID, name = "pillar1_bottom", tileentity = Pillar3.Entity.class, item = PaintableInfo.class)
 public class Pillar3 extends FBC_4R {
 	
 	public Pillar3() {

@@ -1,11 +1,11 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FM;
 import net.fexcraft.mod.lib.api.block.fBlock;
 import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.Block;
@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "lamp", variants = 16, burn_time = 100)
+@fBlock(modid = FI.MODID, name = "lamp", variants = 16, burn_time = 100, item = /*Lamp.IB*/PaintableInfo.class)
 public class Lamp extends Block  implements PaintableObject {
 	
 	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
@@ -41,16 +41,15 @@ public class Lamp extends Block  implements PaintableObject {
     	this.setCreativeTab(CD.BLOCKS);
 	}
     
-    public static class IB extends ItemBlock16 {
+    public static class IB extends PaintableInfo {
 
-		public IB(Block block) {
-			super(block);
-		}
+		public IB(Block block){ super(block); }
 		
 		@Override
-	    public String getUnlocalizedName(ItemStack itemStack) {
+	    public String getUnlocalizedName(ItemStack stack){
+			if(stack.getItemDamage() > 15) return this.getRegistryName().toString();
 	        String name = this.getRegistryName().toString();
-	        switch(itemStack.getItemDamage()) {
+	        switch(stack.getItemDamage()){
 	            case 0:
 	            	return name + ".white";
 	            case 1:
@@ -88,10 +87,6 @@ public class Lamp extends Block  implements PaintableObject {
 	        }
 	    }
 		
-		@Override
-	    public int getMetadata(int meta) {
-	    	return meta;
-	    }
     }
     
     @Override

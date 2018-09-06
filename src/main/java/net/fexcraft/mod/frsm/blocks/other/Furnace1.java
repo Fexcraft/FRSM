@@ -1,14 +1,23 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
 import net.fexcraft.mod.lib.api.block.fBlock;
+import net.fexcraft.mod.lib.util.common.Formatter;
 import net.fexcraft.mod.lib.util.registry.RegistryUtil;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -16,8 +25,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "furnace1", tileentity = Furnace1.Entity.class)
+@fBlock(modid = FI.MODID, name = "furnace1", item = Furnace1.Item.class, tileentity = Furnace1.Entity.class)
 public class Furnace1 extends FBC_4R {
 	
 	public Furnace1() {
@@ -50,5 +61,16 @@ public class Furnace1 extends FBC_4R {
     }
     
     public static class Entity extends TileEntity {}
+    
+    public static class Item extends ItemBlock {
+
+		public Item(Block block){ super(block); }
+		
+	    @SideOnly(Side.CLIENT)
+	    public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag flag){
+	    	tooltip.add(Formatter.format("&9Rightlick with &7Flint and Steel&9 to put the fire on."));
+	    }
+    	
+    }
 
 }

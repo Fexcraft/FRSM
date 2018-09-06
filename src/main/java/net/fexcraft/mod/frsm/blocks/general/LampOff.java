@@ -26,7 +26,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "lampoff", variants = 16, burn_time = 100)
+@fBlock(modid = FI.MODID, name = "lampoff", variants = 16, burn_time = 100, item = Lamp.IB.class)
 public class LampOff extends Block implements PaintableObject {
 	
 	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);

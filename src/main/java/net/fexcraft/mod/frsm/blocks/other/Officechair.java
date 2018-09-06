@@ -1,5 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
@@ -26,7 +27,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "officechair", tileentity = Officechair.Entity.class)
+@fBlock(modid = FI.MODID, name = "officechair", tileentity = Officechair.Entity.class, item = PaintableInfo.class)
 public class Officechair extends FBC_4R{
 	
 	public Officechair() {

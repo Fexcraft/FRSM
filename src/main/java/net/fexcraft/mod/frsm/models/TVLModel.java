@@ -265,7 +265,7 @@ public class TVLModel extends GenericModelBase {
 	}
 	
 	@fTESR
-	public class Renderer extends FTESR_4R<TVL.TEB> {
+	public static class Renderer extends FTESR_4R<TVL.TEB> {
 		
 		public Renderer(){ super("frsm:textures/blocks/TVL.png", new TVLModel()); }
 

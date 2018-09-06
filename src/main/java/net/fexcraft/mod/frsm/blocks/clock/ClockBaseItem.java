@@ -2,14 +2,15 @@ package net.fexcraft.mod.frsm.blocks.clock;
 
 import java.util.List;
 import javax.annotation.Nullable;
+
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.lib.util.common.Formatter;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ClockBaseItem extends ItemBlock16 {
+public class ClockBaseItem extends PaintableInfo {
 	
 	private EnumClock clocktype;
 	
@@ -19,7 +20,8 @@ public class ClockBaseItem extends ItemBlock16 {
 	}
 	
 	@Override
-	public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
+	public void addInformation(ItemStack stack, @Nullable World world, List<String> tooltip, ITooltipFlag flag){
+		super.addInformation(stack, world, tooltip, flag);
 		if(clocktype.isWorldTime()){
 		   	tooltip.add(Formatter.format("&7World Time"));
 			return;

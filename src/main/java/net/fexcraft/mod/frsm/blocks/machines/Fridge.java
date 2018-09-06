@@ -1,5 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
+import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
@@ -25,7 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "fridge", tileentity = Fridge.Entity.class)
+@fBlock(modid = FI.MODID, name = "fridge", tileentity = Fridge.Entity.class, item = PaintableInfo.class)
 public class Fridge extends FBC_4R {
 	
 	public Fridge() {

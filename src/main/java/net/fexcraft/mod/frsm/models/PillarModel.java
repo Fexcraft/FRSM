@@ -5,7 +5,6 @@ package net.fexcraft.mod.frsm.models;
 import net.fexcraft.mod.frsm.blocks.pillar.Pillar;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.fexcraft.mod.lib.api.render.fTESR;
-import net.fexcraft.mod.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
@@ -102,7 +101,7 @@ public class PillarModel extends ModelBase {
 	@fTESR
 	public static class Renderer extends FTESR_4R<Pillar.Entity> {
 		
-		public Renderer(String location, GenericModelBase model){ super("frsm:textures/blocks/pillar.png", null); }
+		public Renderer(){ super("frsm:textures/blocks/pillar.png", null); }
 
 		@Override
 		public void renderModel(Pillar.Entity tileentity, float partialticks, int destroystage){
