@@ -1,8 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
-import net.fexcraft.mod.frsm.blocks.clock.models.*;
-import net.fexcraft.mod.lib.tmt.GenericModelBase;
+import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.*;
+import net.fexcraft.mod.frsm.models.ModelClock1;
+import net.fexcraft.mod.frsm.models.ModelClock2;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;

@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.util;
 
-import net.fexcraft.mod.lib.util.registry.CreativeTab;
+import net.fexcraft.lib.mc.registry.CreativeTab;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class CD {

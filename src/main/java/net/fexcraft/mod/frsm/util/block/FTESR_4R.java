@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.util.block;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.lib.tmt.GenericModelBase;
+import net.fexcraft.lib.tmt.GenericModelBase;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

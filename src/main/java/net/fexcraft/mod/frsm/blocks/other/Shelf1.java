@@ -1,16 +1,16 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.PaintableObject;
+import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
+import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
+import net.fexcraft.lib.mc.utils.ApiUtil;
+import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
-import net.fexcraft.mod.lib.api.block.fBlock;
-import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.api.network.IPacketReceiver;
-import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
-import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.common.Print;
-import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,6 +27,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "shelf1", tileentity = Shelf1.Entity.class, item = PaintableInfo.class)
 public class Shelf1 extends FBC_4R {
 

@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.blocks.streetlamps;
 
+import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

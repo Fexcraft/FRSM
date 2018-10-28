@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.registry.ItemBlock16;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.block.fBlock;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -31,7 +31,8 @@ public class FramedGlowstone extends Block {
     }
     
 	public static class IB extends ItemBlock16 {
-		public IB(Block block) {
+		
+		public IB(Block block){
 			super(block);
 		}
 		
@@ -39,6 +40,7 @@ public class FramedGlowstone extends Block {
 		public int getMetadata(int meta){
 			return meta >= 6 ? 0 : meta;
 		}
+		
 	}
 	
     @Override

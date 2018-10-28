@@ -2,8 +2,8 @@ package net.fexcraft.mod.frsm.util.block;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.lib.tmt.Tessellator;
-import net.fexcraft.mod.lib.util.render.RGB;
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.tmt.Tessellator;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.tileentity.TileEntity;

@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.util.block;
 
-import net.fexcraft.mod.lib.util.registry.RegistryUtil;
+import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,7 +32,7 @@ public abstract class FBC_4R_L extends FBC_4R {
 			ItemStack ei = p.getHeldItemMainhand();
 			
 			//Key Code
-			if (ei != null && ei.getItem() == RegistryUtil.getItem("frsm:key")) {
+			if (ei != null && ei.getItem() == FCLRegistry.getItem("frsm:key")) {
 				
 				ItemStack key = p.getHeldItemMainhand().copy();
 				String owner = key.getTagCompound().getString("owner");
@@ -77,7 +77,7 @@ public abstract class FBC_4R_L extends FBC_4R {
 				else return false;
 			}
 			//Key2 code
-			if (ei != null && ei.getItem() == RegistryUtil.getItem("frsm:key2")) {
+			if (ei != null && ei.getItem() == FCLRegistry.getItem("frsm:key2")) {
 				
 				ItemStack key = p.getHeldItemMainhand().copy();
 				String owner = key.getTagCompound().getString("owner");
@@ -122,7 +122,7 @@ public abstract class FBC_4R_L extends FBC_4R {
 				else return false;
 			}
 			//Key3 code
-			if (ei != null && ei.getItem() == RegistryUtil.getItem("frsm:key3")){
+			if (ei != null && ei.getItem() == FCLRegistry.getItem("frsm:key3")){
 				ItemStack key = p.getHeldItemMainhand().copy();
 				String owner = key.getTagCompound().getString("owner");
 				int code = key.getTagCompound().getInteger("code");

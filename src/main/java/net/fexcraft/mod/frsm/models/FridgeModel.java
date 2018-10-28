@@ -8,12 +8,12 @@
 
 package net.fexcraft.mod.frsm.models;
 
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.tmt.GenericModelBase;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.machines.Fridge;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
-import net.fexcraft.mod.lib.api.render.fTESR;
-import net.fexcraft.mod.lib.tmt.GenericModelBase;
-import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.util.ResourceLocation;
 
 public class FridgeModel extends GenericModelBase {

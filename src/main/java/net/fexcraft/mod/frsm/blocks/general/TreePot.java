@@ -2,10 +2,10 @@ package net.fexcraft.mod.frsm.blocks.general;
 
 import java.util.List;
 
+import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.registry.ItemBlock16;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.block.fBlock;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -64,12 +64,7 @@ public class TreePot extends Block {
     	this.setCreativeTab(CD.TREEPOTS);
     }
     
-    public static class IB extends ItemBlock16 {
-    	public IB(Block block){
-    		super(block);
-    		setMaxStackSize(1);
-    	}
-    }
+    public static class IB extends ItemBlock16 { public IB(Block block){ super(block); setMaxStackSize(1); } }
     
     @Override
 	public boolean isFullBlock(IBlockState state) {

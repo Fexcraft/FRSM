@@ -6,14 +6,13 @@ import java.util.List;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import net.fexcraft.lib.mc.api.registry.fCommand;
+import net.fexcraft.lib.mc.network.Network;
+import net.fexcraft.lib.mc.utils.Formatter;
+import net.fexcraft.lib.mc.utils.Print;
+import net.fexcraft.lib.mc.utils.Static;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.Data;
-import net.fexcraft.mod.lib.api.common.fCommand;
-import net.fexcraft.mod.lib.network.Browser;
-import net.fexcraft.mod.lib.network.Network;
-import net.fexcraft.mod.lib.util.common.Formatter;
-import net.fexcraft.mod.lib.util.common.Print;
-import net.fexcraft.mod.lib.util.common.Static;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -25,7 +24,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.text.TextComponentString;
 
 @fCommand
-public class MainCommand extends CommandBase {
+public class Command extends CommandBase {
 
 	private final ArrayList<String> aliases;
 	//private static final String restart = RED + "Changes apply after game restart.";
@@ -33,11 +32,7 @@ public class MainCommand extends CommandBase {
 	private static final String error = "&4Error, Invalid argument.";
 	private ICommandSender sender;
   
-    public MainCommand(){ 
-        aliases = new ArrayList<String>(); 
-        aliases.add("fex");
-        aliases.add("frsmod");
-    }
+    public Command(){ aliases = new ArrayList<String>(); aliases.add("fex"); aliases.add("frsmod"); }
     
     @Override 
     public String getName(){ 
@@ -177,7 +172,7 @@ public class MainCommand extends CommandBase {
     		for(JsonElement elm : Data.getData().get("download_links").getAsJsonArray()){
     			if(elm.getAsJsonObject().get("id").getAsString().equals(arg)){
     				Print.chat(sender, "opening...");
-    				Browser.browse(sender, elm.getAsJsonObject().get("link").getAsString());
+    				Network.browse(sender, elm.getAsJsonObject().get("link").getAsString());
     				found = true;
     			}
     		}

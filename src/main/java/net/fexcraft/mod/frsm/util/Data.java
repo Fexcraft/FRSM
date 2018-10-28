@@ -4,9 +4,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import net.fexcraft.lib.mc.FCL;
+import net.fexcraft.lib.mc.network.Network;
 import net.fexcraft.mod.frsm.FRSM;
-import net.fexcraft.mod.lib.FCL;
-import net.fexcraft.mod.lib.network.Network;
 
 public class Data{
 	

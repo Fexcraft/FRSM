@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
+import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
-import net.fexcraft.mod.lib.util.common.Print;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;

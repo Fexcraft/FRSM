@@ -4,14 +4,14 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.PaintItem;
+import net.fexcraft.lib.mc.api.PaintableObject;
+import net.fexcraft.lib.mc.registry.FCLRegistry;
+import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.api.item.PaintItem;
-import net.fexcraft.mod.lib.util.common.Formatter;
-import net.fexcraft.mod.lib.util.registry.RegistryUtil;
-import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.BlockCarpet;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.BlockStainedGlass;
@@ -29,6 +29,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+@SuppressWarnings("deprecation")
 public class PaintSet extends Item implements PaintItem {
 	
 	public static PaintSet[] SETS;
@@ -50,7 +51,7 @@ public class PaintSet extends Item implements PaintItem {
 		this.color = RGB.fromDyeColor(dye);
 		this.setCreativeTab(CD.TOOLS);
 		this.setMaxStackSize(1);
-		RegistryUtil.get("frsm").addItem(id, this, 1, null);
+		FCLRegistry.getAutoRegistry("frsm").addItem(id, this, 1, null);
 	}
 
 	public PaintSet(int i, boolean b){

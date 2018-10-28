@@ -1,15 +1,15 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.PaintableObject;
+import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
+import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
+import net.fexcraft.lib.mc.utils.ApiUtil;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
-import net.fexcraft.mod.lib.api.block.fBlock;
-import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.api.network.IPacketReceiver;
-import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
-import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -24,6 +24,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "pchardware1", tileentity = PCHardware1.Entity.class, item = PaintableInfo.class)
 public class PCHardware1 extends FBC_4R {
 	
@@ -78,12 +79,12 @@ public class PCHardware1 extends FBC_4R {
 
 		@Override
 		public void processClientPacket(PacketTileEntityUpdate pkt){
-			color.readFromNBT(pkt.nbt, null);
+			ApiUtil.readFromNBT(color, pkt.nbt, null);
 			ps = pkt.nbt.getInteger("position");
 		}
 		
 		public void sendUpdatePacket(){
-			NBTTagCompound nbt = color.writeToNBT(new NBTTagCompound(), null);
+			NBTTagCompound nbt = ApiUtil.writeToNBT(color, new NBTTagCompound(), null);
 			nbt.setInteger("position", ps);
 			ApiUtil.sendTileEntityUpdatePacket(world, pos, nbt, 64);
 		}
@@ -106,7 +107,7 @@ public class PCHardware1 extends FBC_4R {
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound tag){
 			super.writeToNBT(tag);
-			color.writeToNBT(tag, null);
+			ApiUtil.writeToNBT(color, tag, null);
 			tag.setInteger("Position", ps);
 			return tag;
 		}
@@ -114,7 +115,7 @@ public class PCHardware1 extends FBC_4R {
 		@Override
 		public void readFromNBT(NBTTagCompound tag){
 			super.readFromNBT(tag);
-			color.readFromNBT(tag, null);
+			ApiUtil.readFromNBT(color, tag, null);
 			ps = tag.getInteger("Position");
 		}
 		

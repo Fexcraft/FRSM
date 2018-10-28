@@ -1,13 +1,13 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.PaintableObject;
+import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FM;
-import net.fexcraft.mod.lib.api.block.fBlock;
-import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.util.registry.RegistryUtil;
-import net.fexcraft.mod.lib.util.render.RGB;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -27,6 +27,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "lamp", variants = 16, burn_time = 100, item = /*Lamp.IB*/PaintableInfo.class)
 public class Lamp extends Block  implements PaintableObject {
 	
@@ -112,7 +113,7 @@ public class Lamp extends Block  implements PaintableObject {
     @Override
     public boolean onBlockActivated(World w, BlockPos pos, IBlockState state, EntityPlayer p, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ){
     	if(!w.isRemote && p.getHeldItemMainhand().isEmpty()){
-    		w.setBlockState(pos, RegistryUtil.getBlock("frsm:lamp_off").getDefaultState().withProperty(COLOR, state.getValue(COLOR)));
+    		w.setBlockState(pos, FCLRegistry.getBlock("frsm:lamp_off").getDefaultState().withProperty(COLOR, state.getValue(COLOR)));
     	}
 		return true;
 	}

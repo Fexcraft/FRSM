@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.laptop;
 
+import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBN_4R;
-import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.material.Material;
 
 @fBlock(modid = FI.MODID, name = "laptop_white")

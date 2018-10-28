@@ -4,13 +4,13 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import net.fexcraft.lib.mc.registry.FCLRegistry;
+import net.fexcraft.lib.mc.registry.FCLRegistry.AutoRegisterer;
 import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.IronSaw;
 import net.fexcraft.mod.frsm.items.PaintSet;
 import net.fexcraft.mod.frsm.util.*;
-import net.fexcraft.mod.lib.util.registry.RegistryUtil;
-import net.fexcraft.mod.lib.util.registry.RegistryUtil.AutoRegisterer;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -43,7 +43,7 @@ public class FRSM {
 	public static final String PREFIX = "&0[&6FRSM&0]&7";
 	public static final String VERSION = "4.1.0";
 	public static final String VNOTE = "Another rework/rewrite.";
-	public static RegistryUtil.AutoRegisterer AUTOREG;
+	public static FCLRegistry.AutoRegisterer AUTOREG;
 	//Config
 	public static boolean COOKIES_IN_GRASS, UPDATE_CHECK;
 	
@@ -58,11 +58,11 @@ public class FRSM {
 	    //conf5       = config.getBoolean("robo_entities", "###[> RoboStuff <]###", true, "Should FRSM robots be enabled?");
 	    config.save();
 	    
-	    AUTOREG = new RegistryUtil.AutoRegisterer(MODID);
+	    AUTOREG = new FCLRegistry.AutoRegisterer(MODID);
 	    //RegistryUtil.registerEntitiesOf(MODID);
 		if(COOKIES_IN_GRASS == true){
 			MinecraftForge.addGrassSeed(new ItemStack(Items.WHEAT), 1);
-			MinecraftForge.addGrassSeed(new ItemStack(RegistryUtil.getItem("frsm:chocolatecookie")), 2);
+			MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:chocolatecookie")), 2);
 		}
 		//
 		AUTOREG.addItem("brush", new Item().setMaxStackSize(6).setCreativeTab(CD.MATERIALS), 0, null);
@@ -131,7 +131,7 @@ public class FRSM {
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 				player.addPotionEffect(new PotionEffect(Potion.getPotionById(6), 360));
-				player.inventory.addItemStackToInventory(new ItemStack(RegistryUtil.getItem("frsm:cup"), 1, 0));
+				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:cup"), 1, 0));
 			}
 		}.setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
 		AUTOREG.addItem("donut", new ItemFood(6, 0.6F, false).setMaxStackSize(32).setCreativeTab(CD.EATABLES), 0, null);
@@ -169,7 +169,7 @@ public class FRSM {
 		AUTOREG.addItem("stonemugwithbeer", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(RegistryUtil.getItem("frsm:stonemug"), 1, 0));
+				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:stonemug"), 1, 0));
 			}
 		}.setMaxStackSize(4).setCreativeTab(CD.EATABLES), 0, null);
 		AUTOREG.addItem("tomato", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
@@ -180,7 +180,7 @@ public class FRSM {
 			}
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(RegistryUtil.getItem("frsm:jar"), 1, 0));
+				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:jar"), 1, 0));
 			}
 		}.setMaxStackSize(16).setCreativeTab(CD.EATABLES), 0, null);
 		AUTOREG.addItem("tomatosoup", new ItemFood(2, 0.4F, true){
@@ -197,7 +197,7 @@ public class FRSM {
 	@Mod.EventHandler
     public void init(FMLInitializationEvent event){
 		GameRegistry.registerTileEntity(ClockBaseTileEntity.class, new ResourceLocation("frsm:clock_tileentity"));
-		MinecraftForge.addGrassSeed(new ItemStack(RegistryUtil.getItem("frsm:tomatoseeds")), 1);
+		MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:tomatoseeds")), 1);
 		
 		Data.getDataFromServer();
 		MinecraftForge.EVENT_BUS.register(new UpdateHandler.EventHandler());

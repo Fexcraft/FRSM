@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBN_4R;
-import net.fexcraft.mod.lib.api.block.fBlock;
 import net.minecraft.block.material.Material;
 
 public class Cobble extends FBN_4R {

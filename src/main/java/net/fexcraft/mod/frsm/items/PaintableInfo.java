@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.fexcraft.mod.lib.util.common.Formatter;
-import net.fexcraft.mod.lib.util.registry.ItemBlock16;
+import net.fexcraft.lib.mc.registry.ItemBlock16;
+import net.fexcraft.lib.mc.utils.Formatter;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;

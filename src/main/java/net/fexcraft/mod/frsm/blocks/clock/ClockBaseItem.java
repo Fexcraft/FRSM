@@ -3,8 +3,8 @@ package net.fexcraft.mod.frsm.blocks.clock;
 import java.util.List;
 import javax.annotation.Nullable;
 
+import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.lib.util.common.Formatter;
 import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;

@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.block.fBlock;
+import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.blocks.pipes.StovePipeEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

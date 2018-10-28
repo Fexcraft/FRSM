@@ -2,10 +2,10 @@ package net.fexcraft.mod.frsm.util;
 
 import com.google.gson.JsonObject;
 
+import net.fexcraft.lib.mc.FCL;
+import net.fexcraft.lib.mc.utils.Formatter;
+import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.FRSM;
-import net.fexcraft.mod.lib.FCL;
-import net.fexcraft.mod.lib.util.common.Formatter;
-import net.fexcraft.mod.lib.util.common.Print;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 

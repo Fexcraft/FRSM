@@ -2,9 +2,9 @@ package net.fexcraft.mod.frsm.blocks.clock;
 
 import org.lwjgl.opengl.GL11;
 
-import net.fexcraft.mod.lib.tmt.GenericModelBase;
-import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.lib.util.render.RGB;
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.tmt.GenericModelBase;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.minecraft.entity.Entity;
 
 public class ClockBaseModel extends GenericModelBase {

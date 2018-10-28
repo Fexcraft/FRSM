@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.items;
 
+import net.fexcraft.lib.mc.api.registry.fItem;
+import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.lib.api.item.fItem;
-import net.fexcraft.mod.lib.util.registry.RegistryUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,7 +23,7 @@ public class TomatoSeeds extends ItemFood implements IPlantable {
     
     public TomatoSeeds(){
         super(4, 0.4F, true);
-        this.tomatoPlant = RegistryUtil.getBlock("frsm:tomatoplant");
+        this.tomatoPlant = FCLRegistry.getBlock("frsm:tomatoplant");
         //this.soilBlockID = Blocks.FARMLAND;
         this.setMaxStackSize(32);
     }

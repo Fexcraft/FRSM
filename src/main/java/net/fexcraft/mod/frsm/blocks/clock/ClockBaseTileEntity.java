@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
+import net.fexcraft.lib.common.math.Time;
+import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
+import net.fexcraft.lib.mc.utils.ApiUtil;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
-import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
-import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.math.Time;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -85,7 +85,7 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
 
 	@Override
 	public void processClientPacket(PacketTileEntityUpdate pkt){
-		color.readFromNBT(pkt.nbt, null);
+		ApiUtil.readFromNBT(color, pkt.nbt, null);
 		offset = pkt.nbt.getInteger("frsm:offset");
 	}
 	

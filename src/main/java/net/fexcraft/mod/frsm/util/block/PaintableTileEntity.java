@@ -1,11 +1,11 @@
 package net.fexcraft.mod.frsm.util.block;
 
-import net.fexcraft.mod.lib.api.common.PaintableObject;
-import net.fexcraft.mod.lib.api.network.IPacketReceiver;
-import net.fexcraft.mod.lib.network.packet.PacketTileEntityUpdate;
-import net.fexcraft.mod.lib.util.common.ApiUtil;
-import net.fexcraft.mod.lib.util.common.Print;
-import net.fexcraft.mod.lib.util.render.RGB;
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.PaintableObject;
+import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
+import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
+import net.fexcraft.lib.mc.utils.ApiUtil;
+import net.fexcraft.lib.mc.utils.Print;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -16,6 +16,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+@SuppressWarnings("deprecation")
 public class PaintableTileEntity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
 	
 	protected RGB color = new RGB();
@@ -45,11 +46,11 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 
 	@Override
 	public void processClientPacket(PacketTileEntityUpdate pkt){
-		color.readFromNBT(pkt.nbt, null);
+		ApiUtil.readFromNBT(color, pkt.nbt, null);
 	}
 	
 	public void sendUpdatePacket(){
-		ApiUtil.sendTileEntityUpdatePacket(world, pos, color.writeToNBT(new NBTTagCompound(), null), 64);
+		ApiUtil.sendTileEntityUpdatePacket(world, pos, ApiUtil.writeToNBT(color, new NBTTagCompound(), null), 64);
 	}
 	
 	@Override
@@ -70,14 +71,14 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound tag){
 		super.writeToNBT(tag);
-		color.writeToNBT(tag, null);
+		ApiUtil.writeToNBT(color, tag, null);
 		return tag;
 	}
 	
 	@Override
 	public void readFromNBT(NBTTagCompound tag){
 		super.readFromNBT(tag);
-		color.readFromNBT(tag, null);
+		ApiUtil.readFromNBT(color, tag, null);
 	}
 	
 	public RGB getColor(){

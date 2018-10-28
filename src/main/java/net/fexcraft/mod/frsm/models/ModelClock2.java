@@ -1,7 +1,7 @@
-package net.fexcraft.mod.frsm.blocks.clock.models;
+package net.fexcraft.mod.frsm.models;
 
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.clock.ClockBaseModel;
-import net.fexcraft.mod.lib.tmt.ModelRendererTurbo;
 
 public class ModelClock2 extends ClockBaseModel {
 	
