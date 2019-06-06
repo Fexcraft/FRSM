@@ -159,7 +159,7 @@ public class ModelPCHardware1 extends GenericModelBase {
 		r0[2].addShapeBox(0F, 0F, -4F, 2, 5, 1, 0F, 0F, 0F, -0.5F, -0.25F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 4
 		r0[2].setRotationPoint(0F, -12F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

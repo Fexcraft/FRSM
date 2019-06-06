@@ -53,7 +53,7 @@ public class ModelRoadSign2 extends GenericModelBase {
 
 		base[7].addShapeBox(0F, 0F, 0F, 16, 16, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.2F, -0.2F, 0F, -0.2F, -0.2F, 0F); // Box 7
 		base[7].setRotationPoint(-11.3F, -25F, -2F);
-		base[7].rotateAngleZ = -0.78539816F;
+		base[7].rotationAngleZ = -45F;
 
 		base[8].addShapeBox(0F, 0F, 0F, 1, 1, 3, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 1F, 0F, 0F); // Box 8
 		base[8].setRotationPoint(1.25F, -25F, -1F);
@@ -73,7 +73,7 @@ public class ModelRoadSign2 extends GenericModelBase {
 		base[13].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 13
 		base[13].setRotationPoint(-0.5F, -20F, 1F);
 		
-		translateAll(0F, 14F, 0F);
+		translate(0F, 14F, 0F);
 		flipAll();
 	}
 	

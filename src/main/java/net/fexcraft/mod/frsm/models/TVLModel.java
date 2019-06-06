@@ -261,7 +261,7 @@ public class TVLModel extends GenericModelBase {
 		base[60].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F); // Box 60
 		base[60].setRotationPoint(-14F, -6.5F, 0.75F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

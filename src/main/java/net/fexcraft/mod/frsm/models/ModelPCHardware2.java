@@ -30,7 +30,7 @@ public class ModelPCHardware2 extends GenericModelBase {
 
 		base[2].addBox(-7F, 0F, -6F, 10, 1, 5, 0F); // Box 2
 		base[2].setRotationPoint(0F, -2F, 0F);
-		base[2].rotateAngleX = 0.17453293F;
+		base[2].rotationAngleX = 10F;
 
 		base[3].addShapeBox(-4F, 0F, 2F, 8, 1, 5, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 3
 		base[3].setRotationPoint(0F, -1F, 0F);
@@ -40,15 +40,15 @@ public class ModelPCHardware2 extends GenericModelBase {
 
 		base[5].addBox(-6F, -5F, 3F, 12, 10, 1, 0F); // Box 5
 		base[5].setRotationPoint(0F, -9F, 0F);
-		base[5].rotateAngleX = -0.13962634F;
+		base[5].rotationAngleX = -8F;
 
 		base[6].addBox(-1.5F, 1.5F, 4.5F, 3, 2, 1, 0F); // Box 7
 		base[6].setRotationPoint(0F, -9F, 0F);
-		base[6].rotateAngleX = -0.13962634F;
+		base[6].rotationAngleX = -8F;
 
 		base[7].addShapeBox(-4F, -2.5F, 5F, 8, 6, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.8F, 0F, 0F, -0.8F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.8F, 0F, 0F, -0.8F); // Box 12
 		base[7].setRotationPoint(0F, -9F, 0F);
-		base[7].rotateAngleX = -0.13962634F;
+		base[7].rotationAngleX = -8F;
 
 
 		r0 = new ModelRendererTurbo[5];
@@ -60,7 +60,7 @@ public class ModelPCHardware2 extends GenericModelBase {
 
 		r0[0].addShapeBox(-6F, -2.5F, 4F, 12, 6, 1, 0F, 0F, 2F, 0F, 0F, 2F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, -2F, 0F, 0F, -2F, 0F, 0F); // Box 6
 		r0[0].setRotationPoint(0F, -9F, 0F);
-		r0[0].rotateAngleX = -0.13962634F;
+		r0[0].rotationAngleX = -8F;
 
 		r0[1].addShapeBox(5F, 0F, -5F, 2, 1, 3, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 8
 		r0[1].setRotationPoint(0F, -1F, 0F);
@@ -74,7 +74,7 @@ public class ModelPCHardware2 extends GenericModelBase {
 		r0[4].addShapeBox(6F, 0F, -4F, 1, 1, 2, 0F, 0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.1F, -0.25F, -0.1F, -0.1F, -0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 11
 		r0[4].setRotationPoint(0F, -1F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

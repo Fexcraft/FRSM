@@ -247,7 +247,7 @@ public class ModelPizzaOven extends GenericModelBase {
 
 		r1[0].addShapeBox(-0.5F, -0.5F, 0F, 1, 1, 1, 0F, -0.3F, 0F, 0F, -0.3F, 0F, 0F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, 0F, -0.3F, 0.4F, 0F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, -0.6F); // Box 63
 		r1[0].setRotationPoint(6.5F, -4F, -8F);
-		r1[0].rotateAngleZ = 0.85521133F;
+		r1[0].rotationAngleZ = 49F;
 
 
 		r2 = new ModelRendererTurbo[1];
@@ -255,7 +255,7 @@ public class ModelPizzaOven extends GenericModelBase {
 
 		r2[0].addShapeBox(-0.5F, -0.5F, 0F, 1, 1, 1, 0F, -0.3F, 0F, 0F, -0.3F, 0F, 0F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, 0F, -0.3F, 0.4F, 0F, -0.3F, 0.4F, -0.6F, -0.3F, 0.4F, -0.6F); // Box 62
 		r2[0].setRotationPoint(6.5F, -7F, -8F);
-		r2[0].rotateAngleZ = -0.76794487F;
+		r2[0].rotationAngleZ = -44F;
 
 
 		r3 = new ModelRendererTurbo[4];
@@ -276,7 +276,7 @@ public class ModelPizzaOven extends GenericModelBase {
 		r3[3].addShapeBox(0F, 0F, 0F, 15, 7, 1, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 11
 		r3[3].setRotationPoint(-7.5F, -9F, 7F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

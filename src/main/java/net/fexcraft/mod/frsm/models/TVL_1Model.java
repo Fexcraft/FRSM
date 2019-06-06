@@ -79,7 +79,7 @@ public class TVL_1Model extends GenericModelBase {
 
 		base[0].addBox(0F, 0F, 0F, 10, 1, 6, 0F); // Box 0
 		base[0].setRotationPoint(-5F, -6F, 7.5F);
-		base[0].rotateAngleX = 1.57079633F;
+		base[0].rotationAngleX = 90;
 
 		base[1].addShapeBox(0F, 0F, 0F, 3, 4, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F); // Box 1
 		base[1].setRotationPoint(-1.5F, -11F, 6.5F);
@@ -261,7 +261,7 @@ public class TVL_1Model extends GenericModelBase {
 		base[60].addShapeBox(0F, 0F, 0F, 1, 1, 1, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F, -0.4F, 0F, 0F); // Box 60
 		base[60].setRotationPoint(-14F, -6.5F, 5.75F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

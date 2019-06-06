@@ -31,7 +31,9 @@ import net.minecraft.world.World;
 @fBlock(modid = FI.MODID, name = "officechair", tileentity = Officechair.Entity.class, item = PaintableInfo.class)
 public class Officechair extends FBC_4R{
 	
-	public Officechair() {
+	private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.5625F, 1.0F);
+	
+	public Officechair(){
     	super(Material.GLASS);
     	this.setHarvestLevel("axe", 1);
     	this.setHardness(2.0F);
@@ -59,8 +61,13 @@ public class Officechair extends FBC_4R{
     }
 	
 	@Override
+	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World source, BlockPos pos){
+		return AABB.offset(pos);
+	}
+	
+	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
-		return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.5625F, 1.0F);
+		return AABB;
 	}
 	
 	public static class Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {

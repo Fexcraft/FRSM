@@ -79,7 +79,7 @@ public class ClockBaseModel extends GenericModelBase {
 	}
 
 	@Override
-	public void translateAll(float x, float y, float z){
+	public void translate(float x, float y, float z){
 		translate(base, x, y, z);
 		translate(paintable, x, y, z);
 		translate(hour, x, y, z);
@@ -88,7 +88,7 @@ public class ClockBaseModel extends GenericModelBase {
 	}
 
 	@Override
-	public void rotateAll(float x, float y, float z){
+	public void rotate(float x, float y, float z){
 		rotate(base, x, y, z);
 		rotate(paintable, x, y, z);
 		rotate(hour, x, y, z);

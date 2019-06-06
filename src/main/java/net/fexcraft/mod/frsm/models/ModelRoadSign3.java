@@ -104,7 +104,7 @@ public class ModelRoadSign3 extends GenericModelBase {
 		base[21].addShapeBox(0F, 0F, 0F, 4, 1, 1, 0F, -1F, 3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 3F, 0F, 0F, -4F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -4F, 0F); // Box 21
 		base[21].setRotationPoint(-8F, -19F, -2F);
 		
-		translateAll(0F, 14F, 0F);
+		translate(0F, 14F, 0F);
 	}
 	
 	@fTESR

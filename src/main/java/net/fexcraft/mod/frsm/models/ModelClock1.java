@@ -197,7 +197,7 @@ public class ModelClock1 extends ClockBaseModel {
 		minute[0].addShapeBox(0F, 0F, -0.5F, 1, 6, 1, 0F, 0F, 0F, -0.3F, -0.8F, 0F, -0.3F, -0.8F, 0F, -0.3F, 0F, 0F, -0.3F, 0F, -0.5F, -0.45F, -0.8F, -0.5F, -0.45F, -0.8F, -0.5F, -0.45F, 0F, -0.5F, -0.45F); // Box 36
 		minute[0].setRotationPoint(-6.25F, -24F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 		
 	}
 	

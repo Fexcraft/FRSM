@@ -21,7 +21,7 @@ public class ModelStreetLampBase extends GenericModelBase {
 		base[1].setRotationPoint(-1F, -6F, -1F);
 		base[2].addShapeBox(0F, 0F, 0F, 4, 1, 4, 0F, -0.7F, 0F, -0.7F, -0.7F, 0F, -0.7F, -0.7F, 0F, -0.7F, -0.7F, 0F, -0.7F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 2
 		base[2].setRotationPoint(-2F, 2F, -2F);
-		translateAll(0F, 14F, 0F);
+		translate(0F, 14F, 0F);
 	}
 	
 	@fTESR

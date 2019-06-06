@@ -230,7 +230,7 @@ public class ModelFurnace1 extends GenericModelBase {
 		base[53].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 56
 		base[53].setRotationPoint(-14.5F, 2F, -2.5F);
 		
-		translateAll(0F, 0F, 0F);
+		translate(0F, 0F, 0F);
 	}
 	
 	@fTESR

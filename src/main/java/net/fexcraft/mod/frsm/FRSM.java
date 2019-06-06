@@ -41,7 +41,7 @@ public class FRSM {
     public static final String NAME = "Fex's Random Stuff Mod";
     public static final String MODID = "frsm";
 	public static final String PREFIX = "&0[&6FRSM&0]&7";
-	public static final String VERSION = "4.1.0";
+	public static final String VERSION = "4.2.0";
 	public static final String VNOTE = "Another rework/rewrite.";
 	public static FCLRegistry.AutoRegisterer AUTOREG;
 	//Config

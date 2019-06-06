@@ -23,7 +23,7 @@ public class ModelStreetLampPost extends GenericModelBase {
 		r0[0].addBox(-1F, 1F, -1F, 2, 7, 2, 0F);
 		r0[0].setRotationPoint(0F, 16F, 0F);
 		//
-		translateAll(0F, 0F, 0F);
+		translate(0F, 0F, 0F);
 	}
 	
 	@fTESR

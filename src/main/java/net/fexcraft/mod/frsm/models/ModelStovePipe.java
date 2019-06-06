@@ -53,7 +53,7 @@ public class ModelStovePipe extends GenericModelBase {
 		r0[7].addShapeBox(-2.5F, 2F, 1.5F, 1, 6, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F); // Box 61
 		r0[7].setRotationPoint(0F, -8F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

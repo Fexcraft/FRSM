@@ -205,14 +205,14 @@ public class FridgeModel extends GenericModelBase {
 
 		open[14].addBox(0F, 0F, 0F, 2, 4, 2, 0F); // Box 38
 		open[14].setRotationPoint(-3.5F, -6F, -3.5F);
-		open[14].rotateAngleY = 0.27925268F;
+		open[14].rotationAngleY = 16f;
 
 		open[15].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 39
 		open[15].setRotationPoint(-0.5F, -4F, -3.5F);
 
 		open[16].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 40
 		open[16].setRotationPoint(3.5F, -4F, -3.5F);
-		open[16].rotateAngleY = -0.34906585F;
+		open[16].rotationAngleY = -20f;
 
 		open[17].addShapeBox(0F, 0F, 0F, 2, 1, 12, 0F, 0F, 0F, 0.2F, 0F, 0F, 1F, 0F, 0F, 1F, 0F, 0F, 0.2F, -0.5F, -0.75F, 0F, 0F, -0.75F, 0F, 0F, -0.75F, 0F, -0.5F, -0.75F, 0F); // Box 41
 		open[17].setRotationPoint(5F, -13F, -20.5F);
@@ -252,11 +252,11 @@ public class FridgeModel extends GenericModelBase {
 
 		open[29].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 53
 		open[29].setRotationPoint(1.5F, -20F, 4.5F);
-		open[29].rotateAngleY = -0.6981317F;
+		open[29].rotationAngleY = -40f;
 
 		open[30].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 54
 		open[30].setRotationPoint(3.5F, -20F, 0.5F);
-		open[30].rotateAngleY = -0.34906585F;
+		open[30].rotationAngleY = -20f;
 
 		open[31].addBox(0F, 0F, 0F, 2, 5, 2, 0F); // Box 55
 		open[31].setRotationPoint(2F, -17F, 3.5F);
@@ -266,26 +266,26 @@ public class FridgeModel extends GenericModelBase {
 
 		open[33].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 57
 		open[33].setRotationPoint(0.5F, -13F, -2F);
-		open[33].rotateAngleY = -0.34906585F;
+		open[33].rotationAngleY = -20f;
 
 		open[34].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 58
 		open[34].setRotationPoint(-6F, -24F, 4.5F);
 
 		open[35].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 59
 		open[35].setRotationPoint(-6F, -24F, 2F);
-		open[35].rotateAngleY = -0.08726646F;
+		open[35].rotationAngleY = -5f;
 
 		open[36].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 60
 		open[36].setRotationPoint(-6F, -24F, -0.5F);
-		open[36].rotateAngleY = 0.06981317F;
+		open[36].rotationAngleY = 4F;
 
 		open[37].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 61
 		open[37].setRotationPoint(-3F, -24F, 3.5F);
-		open[37].rotateAngleY = 0.06981317F;
+		open[37].rotationAngleY = 4F;
 
 		open[38].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 62
 		open[38].setRotationPoint(-3F, -24F, 1F);
-		open[38].rotateAngleY = -0.08726646F;
+		open[38].rotationAngleY = -5F;
 
 		open[39].addBox(0F, 0F, 0F, 1, 1, 6, 0F); // Box 63
 		open[39].setRotationPoint(1F, -23F, 0F);
@@ -319,69 +319,69 @@ public class FridgeModel extends GenericModelBase {
 
 		open[49].addBox(0F, 0F, 0F, 4, 1, 4, 0F); // Box 73
 		open[49].setRotationPoint(-6.5F, -28F, 2F);
-		open[49].rotateAngleY = -0.29670597F;
+		open[49].rotationAngleY = -17F;
 
 		open[50].addBox(0F, 0F, 0F, 2, 1, 6, 0F); // Box 74
 		open[50].setRotationPoint(0.5F, -27F, 0F);
 
 		open[51].addBox(0F, 0F, 0F, 2, 1, 6, 0F); // Box 75
 		open[51].setRotationPoint(3F, -27F, -0.5F);
-		open[51].rotateAngleY = -0.08726646F;
+		open[51].rotationAngleY = -5F;
 
 		open[52].addBox(0F, 0F, 0F, 2, 1, 6, 0F); // Box 76
 		open[52].setRotationPoint(2F, -28F, -1F);
-		open[52].rotateAngleY = 0.26179939F;
+		open[52].rotationAngleY = 15F;
 
 		open[53].addBox(0F, 0F, 0F, 1, 5, 2, 0F); // Box 77
 		open[53].setRotationPoint(5.5F, -18F, -20F);
 
 		open[54].addBox(0F, 0F, 0F, 1, 5, 2, 0F); // Box 78
 		open[54].setRotationPoint(5.5F, -18F, -17F);
-		open[54].rotateAngleY = -0.03490659F;
+		open[54].rotationAngleY = -2F;
 
 		open[55].addBox(0F, 0F, 0F, 1, 5, 2, 0F); // Box 79
 		open[55].setRotationPoint(5.5F, -18F, -14F);
-		open[55].rotateAngleY = 0.17453293F;
+		open[55].rotationAngleY = 10F;
 
 		open[56].addBox(0F, 0F, 0F, 1, 5, 1, 0F); // Box 80
 		open[56].setRotationPoint(5.5F, -17.5F, -12F);
-		open[56].rotateAngleX = 0.33161256F;
-		open[56].rotateAngleY = -0.10471976F;
+		open[56].rotationAngleX = 19F;
+		open[56].rotationAngleY = -6F;
 
 		open[57].addBox(0F, 0F, 0F, 1, 2, 2, 0F); // Box 81
 		open[57].setRotationPoint(5.5F, -21F, -20F);
 
 		open[58].addBox(0F, 0F, 0F, 1, 2, 2, 0F); // Box 82
 		open[58].setRotationPoint(5.5F, -21F, -13F);
-		open[58].rotateAngleY = -0.08726646F;
+		open[58].rotationAngleY = -5F;
 
 		open[59].addBox(0F, 0F, 0F, 1, 2, 1, 0F); // Box 83
 		open[59].setRotationPoint(5.5F, -25F, -10F);
-		open[59].rotateAngleY = -0.08726646F;
+		open[59].rotationAngleY = -5F;
 
 		open[60].addBox(0F, 0F, 0F, 1, 2, 1, 0F); // Box 84
 		open[60].setRotationPoint(5.5F, -25F, -12F);
-		open[60].rotateAngleY = 0.26179939F;
+		open[60].rotationAngleY = 15F;
 
 		open[61].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 85
 		open[61].setRotationPoint(5.5F, -24F, -14F);
-		open[61].rotateAngleY = 0.26179939F;
+		open[61].rotationAngleY = 15F;
 
 		open[62].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 86
 		open[62].setRotationPoint(5.5F, -24F, -16F);
-		open[62].rotateAngleY = 0.2443461F;
+		open[62].rotationAngleY = 14F;
 
 		open[63].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 87
 		open[63].setRotationPoint(5.5F, -25F, -16F);
-		open[63].rotateAngleY = 0.38397244F;
+		open[63].rotationAngleY = 22F;
 
 		open[64].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 88
 		open[64].setRotationPoint(5.5F, -24F, -20F);
-		open[64].rotateAngleY = -0.19198622F;
+		open[64].rotationAngleY = -11F;
 
 		open[65].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 89
 		open[65].setRotationPoint(5.5F, -24F, -18.5F);
-		open[65].rotateAngleY = 0.15707963F;
+		open[65].rotationAngleY = 9F;
 
 
 		closed = new ModelRendererTurbo[2];
@@ -435,7 +435,7 @@ public class FridgeModel extends GenericModelBase {
 		r2[1].addShapeBox(0F, 0F, 0F, 1, 19, 15, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F); // Box 23
 		r2[1].setRotationPoint(7F, -30.5F, -22F);
 		
-		translateAll(0F, 24F, 0F);		
+		translate(0F, 24F, 0F);		
 	}
 	
 	@fTESR

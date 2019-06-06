@@ -244,49 +244,49 @@ public class ModelFurnace1b extends GenericModelBase {
 
 		base[54].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 0
 		base[54].setRotationPoint(1.5F, 16F, 0.5F);
-		base[54].rotateAngleY = 0.55850536F;
-		base[54].rotateAngleZ = 0.03490659F;
+		base[54].rotationAngleY = 32F;
+		base[54].rotationAngleZ = 2F;
 
 		base[55].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 1
 		base[55].setRotationPoint(1.5F, 16F, -3.5F);
-		base[55].rotateAngleY = -0.10471976F;
-		base[55].rotateAngleZ = 0.03490659F;
+		base[55].rotationAngleY = -6F;
+		base[55].rotationAngleZ = 2F;
 
 		base[56].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 2
 		base[56].setRotationPoint(-3.5F, 16F, -3.5F);
-		base[56].rotateAngleY = 0.80285146F;
-		base[56].rotateAngleZ = 0.03490659F;
+		base[56].rotationAngleY = 46F;
+		base[56].rotationAngleZ = 2F;
 
 		base[57].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 3
 		base[57].setRotationPoint(-3.5F, 16F, 0.5F);
-		base[57].rotateAngleY = 0.40142573F;
-		base[57].rotateAngleZ = 0.03490659F;
+		base[57].rotationAngleY = 23F;
+		base[57].rotationAngleZ = 2F;
 
 		base[58].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 4
 		base[58].setRotationPoint(0.5F, 16F, -4.5F);
-		base[58].rotateAngleX = 0.19198622F;
-		base[58].rotateAngleY = 0.40142573F;
-		base[58].rotateAngleZ = 0.26179939F;
+		base[58].rotationAngleX = 11F;
+		base[58].rotationAngleY = 23F;
+		base[58].rotationAngleZ = 15F;
 
 		base[59].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 5
 		base[59].setRotationPoint(0.5F, 16F, -1.5F);
-		base[59].rotateAngleX = 0.20943951F;
-		base[59].rotateAngleY = 0.6981317F;
-		base[59].rotateAngleZ = 0.13962634F;
+		base[59].rotationAngleX = 12F;
+		base[59].rotationAngleY = 40F;
+		base[59].rotationAngleZ = 8F;
 
 		base[60].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 6
 		base[60].setRotationPoint(0.5F, 14F, 2.5F);
-		base[60].rotateAngleX = -0.34906585F;
-		base[60].rotateAngleY = 1.30899694F;
-		base[60].rotateAngleZ = -0.52359878F;
+		base[60].rotationAngleX = -20F;
+		base[60].rotationAngleY = 75F;
+		base[60].rotationAngleZ = -30F;
 
 		base[61].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 7
 		base[61].setRotationPoint(-0.5F, 14.5F, -2.5F);
-		base[61].rotateAngleX = -0.34906585F;
-		base[61].rotateAngleY = 1.30899694F;
-		base[61].rotateAngleZ = 0.08726646F;
+		base[61].rotationAngleX = -20F;
+		base[61].rotationAngleY = 75F;
+		base[61].rotationAngleZ = 5F;
 		
-		translateAll(0F, 0F, 0F);
+		translate(0F, 0F, 0F);
 	}
 	
 	@fTESR

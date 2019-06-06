@@ -156,7 +156,7 @@ public class ModelClock2 extends ClockBaseModel {
 
 		base[30].addBox(-1F, 0F, -6F, 1, 6, 6, 0F); // Box 57
 		base[30].setRotationPoint(-1F, -11F, -3F);
-		base[30].rotateAngleY = -3.14159265F;
+		base[30].rotationAngleY = -180F;
 
 		base[31].addShapeBox(0F, 0F, 0F, 1, 4, 4, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -3F, 0F, 0F, -3F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 58
 		base[31].setRotationPoint(-1F, -15F, 3F);
@@ -181,51 +181,51 @@ public class ModelClock2 extends ClockBaseModel {
 
 		base[38].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 65
 		base[38].setRotationPoint(-1.1F, -3.2F, -1F);
-		base[38].rotateAngleY = -3.14159265F;
+		base[38].rotationAngleY = -180F;
 
 		base[39].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 66
 		base[39].setRotationPoint(-1.1F, -14.8F, -1F);
-		base[39].rotateAngleY = -3.14159265F;
+		base[39].rotationAngleY = -180F;
 
 		base[40].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 67
 		base[40].setRotationPoint(-1.1F, -9F, -6.8F);
-		base[40].rotateAngleY = -3.14159265F;
+		base[40].rotationAngleY = -180F;
 
 		base[41].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 68
 		base[41].setRotationPoint(-1.1F, -9F, 4.8F);
-		base[41].rotateAngleY = -3.14159265F;
+		base[41].rotationAngleY = -180F;
 
 		base[42].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 69
 		base[42].setRotationPoint(-1.1F, -11.75F, -6F);
-		base[42].rotateAngleY = -3.14159265F;
+		base[42].rotationAngleY = -180F;
 
 		base[43].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 70
 		base[43].setRotationPoint(-1.1F, -14F, -3.75F);
-		base[43].rotateAngleY = -3.14159265F;
+		base[43].rotationAngleY = -180F;
 
 		base[44].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 71
 		base[44].setRotationPoint(-1.1F, -6.25F, -6F);
-		base[44].rotateAngleY = -3.14159265F;
+		base[44].rotationAngleY = -180F;
 
 		base[45].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 72
 		base[45].setRotationPoint(-1.1F, -4F, -3.75F);
-		base[45].rotateAngleY = -3.14159265F;
+		base[45].rotationAngleY = -180F;
 
 		base[46].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 73
 		base[46].setRotationPoint(-1.1F, -4F, 1.75F);
-		base[46].rotateAngleY = -3.14159265F;
+		base[46].rotationAngleY = -180F;
 
 		base[47].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 74
 		base[47].setRotationPoint(-1.1F, -14F, 1.75F);
-		base[47].rotateAngleY = -3.14159265F;
+		base[47].rotationAngleY = -180F;
 
 		base[48].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 75
 		base[48].setRotationPoint(-1.1F, -11.75F, 4F);
-		base[48].rotateAngleY = -3.14159265F;
+		base[48].rotationAngleY = -180F;
 
 		base[49].addBox(-1F, 0F, -2F, 1, 2, 2, 0F); // Box 76
 		base[49].setRotationPoint(-1.1F, -6.25F, 4F);
-		base[49].rotateAngleY = -3.14159265F;
+		base[49].rotationAngleY = -180F;
 
 		base[50].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 78
 		base[50].setRotationPoint(-2.5F, -8.5F, -0.5F);
@@ -374,7 +374,7 @@ public class ModelClock2 extends ClockBaseModel {
 		hour_[0].addShapeBox(0F, 0F, -0.5F, 1, 5, 1, 0F, 0F, 0F, -0.2F, -0.8F, 0F, -0.2F, -0.8F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.5F, -0.4F, -0.8F, -0.5F, -0.4F, -0.8F, -0.5F, -0.4F, 0F, -0.5F, -0.4F); // Box 79
 		hour_[0].setRotationPoint(-1.5F, -24F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 		
 	}
 	

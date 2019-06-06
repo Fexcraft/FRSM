@@ -55,70 +55,70 @@ public class OfficechairModel extends GenericModelBase {
 
 		base[0].addShapeBox(0F, 0F, 0F, 1, 1, 8, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F); // Box 0
 		base[0].setRotationPoint(0F, -3F, 0F);
-		base[0].rotateAngleX = -0.01745329F;
+		base[0].rotationAngleX = -1F;
 
 		base[1].addShapeBox(-1F, 0F, 0F, 1, 1, 8, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F); // Box 1
 		base[1].setRotationPoint(0F, -3F, 0F);
-		base[1].rotateAngleX = -0.01745329F;
+		base[1].rotationAngleX = -1F;
 
 		base[2].addShapeBox(0F, 0F, 0F, 1, 1, 8, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F); // Box 2
 		base[2].setRotationPoint(0F, -3F, 0F);
-		base[2].rotateAngleX = -0.01745329F;
-		base[2].rotateAngleY = -1.25663706F;
+		base[2].rotationAngleX = -1F;
+		base[2].rotationAngleY = -72F;
 
 		base[3].addShapeBox(-1F, 0F, 0F, 1, 1, 8, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F); // Box 3
 		base[3].setRotationPoint(0F, -3F, 0F);
-		base[3].rotateAngleX = -0.01745329F;
-		base[3].rotateAngleY = -1.25663706F;
+		base[3].rotationAngleX = -1F;
+		base[3].rotationAngleY = -72F;
 
 		base[4].addShapeBox(0F, 0F, 0F, 1, 1, 8, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F); // Box 4
 		base[4].setRotationPoint(0F, -3F, 0F);
-		base[4].rotateAngleX = -0.01745329F;
-		base[4].rotateAngleY = -2.51327412F;
+		base[4].rotationAngleX = -1F;
+		base[4].rotationAngleY = -144F;
 
 		base[5].addShapeBox(-1F, 0F, 0F, 1, 1, 8, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F); // Box 5
 		base[5].setRotationPoint(0F, -3F, 0F);
-		base[5].rotateAngleX = -0.01745329F;
-		base[5].rotateAngleY = -2.51327412F;
+		base[5].rotationAngleX = -1F;
+		base[5].rotationAngleY = -144F;
 
 		base[6].addShapeBox(-1F, 0F, 0F, 1, 1, 8, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F); // Box 6
 		base[6].setRotationPoint(0F, -3F, 0F);
-		base[6].rotateAngleX = -0.01745329F;
-		base[6].rotateAngleY = 2.51327412F;
+		base[6].rotationAngleX = -1F;
+		base[6].rotationAngleY = 144F;
 
 		base[7].addShapeBox(0F, 0F, 0F, 1, 1, 8, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F); // Box 7
 		base[7].setRotationPoint(0F, -3F, 0F);
-		base[7].rotateAngleX = -0.01745329F;
-		base[7].rotateAngleY = 2.51327412F;
+		base[7].rotationAngleX = -1F;
+		base[7].rotationAngleY = 144F;
 
 		base[8].addShapeBox(-1F, 0F, 0F, 1, 1, 8, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F); // Box 8
 		base[8].setRotationPoint(0F, -3F, 0F);
-		base[8].rotateAngleX = -0.01745329F;
-		base[8].rotateAngleY = 1.25663706F;
+		base[8].rotationAngleX = -1F;
+		base[8].rotationAngleY = 72F;
 
 		base[9].addShapeBox(0F, 0F, 0F, 1, 1, 8, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F); // Box 9
 		base[9].setRotationPoint(0F, -3F, 0F);
-		base[9].rotateAngleX = -0.01745329F;
-		base[9].rotateAngleY = 1.25663706F;
+		base[9].rotationAngleX = -1F;
+		base[9].rotationAngleY = 72F;
 
 		base[10].addBox(-0.5F, -0.5F, 6.5F, 1, 1, 1, 0F); // Box 10
 		base[10].setRotationPoint(0F, -2F, 0F);
 
 		base[11].addBox(-0.5F, -0.5F, 6.5F, 1, 1, 1, 0F); // Box 11
 		base[11].setRotationPoint(0F, -2F, 0F);
-		base[11].rotateAngleY = -1.25663706F;
+		base[11].rotationAngleY = -72F;
 
 		base[12].addBox(-0.5F, -0.5F, 6.5F, 1, 1, 1, 0F); // Box 12
 		base[12].setRotationPoint(0F, -2F, 0F);
-		base[12].rotateAngleY = -2.51327412F;
+		base[12].rotationAngleY = -144F;
 
 		base[13].addBox(-0.5F, -0.5F, 6.5F, 1, 1, 1, 0F); // Box 13
 		base[13].setRotationPoint(0F, -2F, 0F);
-		base[13].rotateAngleY = 1.25663706F;
+		base[13].rotationAngleY = 72F;
 
 		base[14].addBox(-0.5F, -0.5F, 6.5F, 1, 1, 1, 0F); // Box 14
 		base[14].setRotationPoint(0F, -2F, 0F);
-		base[14].rotateAngleY = 2.51327412F;
+		base[14].rotationAngleY = 144F;
 
 		base[15].addShapeBox(-1F, 1.5F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F); // Box 15
 		base[15].setRotationPoint(0F, -2F, 0F);
@@ -131,51 +131,51 @@ public class OfficechairModel extends GenericModelBase {
 
 		base[18].addShapeBox(-1F, -0.25F, 6F, 2, 1, 2, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F); // Box 18
 		base[18].setRotationPoint(0F, -2F, 0F);
-		base[18].rotateAngleY = -1.25663706F;
+		base[18].rotationAngleY = -72F;
 
 		base[19].addShapeBox(-1F, 0.75F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F); // Box 19
 		base[19].setRotationPoint(0F, -2F, 0F);
-		base[19].rotateAngleY = -1.25663706F;
+		base[19].rotationAngleY = -72F;
 
 		base[20].addShapeBox(-1F, 1.5F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F); // Box 20
 		base[20].setRotationPoint(0F, -2F, 0F);
-		base[20].rotateAngleY = -1.25663706F;
+		base[20].rotationAngleY = -72F;
 
 		base[21].addShapeBox(-1F, -0.25F, 6F, 2, 1, 2, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F); // Box 21
 		base[21].setRotationPoint(0F, -2F, 0F);
-		base[21].rotateAngleY = -2.51327412F;
+		base[21].rotationAngleY = -144F;
 
 		base[22].addShapeBox(-1F, 0.75F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F); // Box 22
 		base[22].setRotationPoint(0F, -2F, 0F);
-		base[22].rotateAngleY = -2.51327412F;
+		base[22].rotationAngleY = -144F;
 
 		base[23].addShapeBox(-1F, 1.5F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F); // Box 23
 		base[23].setRotationPoint(0F, -2F, 0F);
-		base[23].rotateAngleY = -2.51327412F;
+		base[23].rotationAngleY = -144F;
 
 		base[24].addShapeBox(-1F, -0.25F, 6F, 2, 1, 2, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F); // Box 24
 		base[24].setRotationPoint(0F, -2F, 0F);
-		base[24].rotateAngleY = 1.25663706F;
+		base[24].rotationAngleY = 72F;
 
 		base[25].addShapeBox(-1F, 0.75F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F); // Box 25
 		base[25].setRotationPoint(0F, -2F, 0F);
-		base[25].rotateAngleY = 1.25663706F;
+		base[25].rotationAngleY = 72F;
 
 		base[26].addShapeBox(-1F, 1.5F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F); // Box 26
 		base[26].setRotationPoint(0F, -2F, 0F);
-		base[26].rotateAngleY = 1.25663706F;
+		base[26].rotationAngleY = 72F;
 
 		base[27].addShapeBox(-1F, -0.25F, 6F, 2, 1, 2, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F); // Box 27
 		base[27].setRotationPoint(0F, -2F, 0F);
-		base[27].rotateAngleY = 2.51327412F;
+		base[27].rotationAngleY = 144F;
 
 		base[28].addShapeBox(-1F, 0.75F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F, -0.2F, -0.25F, 0F); // Box 28
 		base[28].setRotationPoint(0F, -2F, 0F);
-		base[28].rotateAngleY = 2.51327412F;
+		base[28].rotationAngleY = 144F;
 
 		base[29].addShapeBox(-1F, 1.5F, 6F, 2, 1, 2, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F, -0.2F, -0.5F, -0.5F); // Box 29
 		base[29].setRotationPoint(0F, -2F, 0F);
-		base[29].rotateAngleY = 2.51327412F;
+		base[29].rotationAngleY = 144F;
 
 		base[30].addShapeBox(0F, -0.5F, -1F, 1, 3, 2, 0F, 0F, 0F, 0.2F, 0.2F, 0F, -0.3F, 0.2F, 0F, -0.3F, 0F, 0F, 0.2F, 0F, 0F, 0.2F, 0.2F, 0F, -0.3F, 0.2F, 0F, -0.3F, 0F, 0F, 0.2F); // Box 30
 		base[30].setRotationPoint(0F, -5F, 0F);
@@ -248,11 +248,11 @@ public class OfficechairModel extends GenericModelBase {
 
 		r1[9].addBox(-2F, -9F, 6.5F, 4, 4, 1, 0F); // Box 46
 		r1[9].setRotationPoint(0F, -9F, 0F);
-		r1[9].rotateAngleX = -0.05235988F;
+		r1[9].rotationAngleX = -3F;
 
 		r1[10].addShapeBox(-2F, -11F, 6.5F, 4, 2, 1, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 47
 		r1[10].setRotationPoint(0F, -9F, 0F);
-		r1[10].rotateAngleX = -0.05235988F;
+		r1[10].rotationAngleX = -3F;
 
 		r1[11].addBox(3.5F, -0.25F, 1.5F, 3, 1, 1, 0F); // Box 51
 		r1[11].setRotationPoint(0F, -9F, 0F);
@@ -322,17 +322,17 @@ public class OfficechairModel extends GenericModelBase {
 
 		r0[3].addBox(-3F, -15F, 6F, 6, 12, 1, 0F); // Box 48
 		r0[3].setRotationPoint(0F, -8F, 0F);
-		r0[3].rotateAngleX = -0.05235988F;
+		r0[3].rotationAngleX = -3F;
 
 		r0[4].addShapeBox(-5F, -15F, 6F, 2, 12, 1, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F); // Box 49
 		r0[4].setRotationPoint(0F, -8F, 0F);
-		r0[4].rotateAngleX = -0.05235988F;
+		r0[4].rotationAngleX = -3F;
 
 		r0[5].addShapeBox(3F, -15F, 6F, 2, 12, 1, 0F, 0F, 0F, 0F, 0F, -2F, 0F, 0F, -2F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, -1F, 0F, 0F, 0F, 0F); // Box 50
 		r0[5].setRotationPoint(0F, -8F, 0F);
-		r0[5].rotateAngleX = -0.05235988F;
+		r0[5].rotationAngleX = -3F;
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

@@ -33,7 +33,7 @@ public class ModelStreetLampTop extends GenericModelBase {
 		base[5].setRotationPoint(-4F, 2.5F, -2F);
 		base[6].addShapeBox(0F, 0F, 0F, 1, 1, 4, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F); // Box 7
 		base[6].setRotationPoint(3.5F, 2.5F, -2F);
-		translateAll(0F, 14F, 0F);
+		translate(0F, 14F, 0F);
 	}
 	
 	@fTESR

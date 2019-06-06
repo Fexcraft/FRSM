@@ -84,7 +84,7 @@ public class Shelf1Model extends GenericModelBase {
 		closed[3].addBox(6F, 6.5F, -0.5F, 1, 3, 1, 0F); // Box 8
 		closed[3].setRotationPoint(-8F, -16F, 0F);
 		
-		translateAll(0F, 24F, 0F);
+		translate(0F, 24F, 0F);
 	}
 	
 	@fTESR

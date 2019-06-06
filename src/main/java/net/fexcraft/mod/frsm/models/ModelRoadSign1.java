@@ -72,7 +72,7 @@ public class ModelRoadSign1 extends GenericModelBase {
 		base[13].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 13
 		base[13].setRotationPoint(-0.5F, -20F, 1F);
 		
-		translateAll(0F, 14F, 0F);
+		translate(0F, 14F, 0F);
 	}
 	
 	@fTESR

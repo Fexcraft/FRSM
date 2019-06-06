@@ -81,19 +81,19 @@ public class ModelTBM2 extends GenericModelBase {
 
 		base[12].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 12
 		base[12].setRotationPoint(13.6F, -2F, 1F);
-		base[12].rotateAngleY = -0.78539816F;
+		base[12].rotationAngleY = -45F;
 
 		base[13].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F); // Box 13
 		base[13].setRotationPoint(11.6F, -2F, 13F);
-		base[13].rotateAngleY = 0.78539816F;
+		base[13].rotationAngleY = 45F;
 
 		base[14].addShapeBox(0F, 0F, 0F, 3, 2, 2, 0F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F); // Box 14
 		base[14].setRotationPoint(1F, -2F, 13.6F);
-		base[14].rotateAngleY = 0.78539816F;
+		base[14].rotationAngleY = 45F;
 
 		base[15].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 15
 		base[15].setRotationPoint(1F, -2F, 2.6F);
-		base[15].rotateAngleY = 0.78539816F;
+		base[15].rotationAngleY = 45F;
 
 		base[16].addBox(0F, 0F, 0F, 8, 1, 2, 0F); // Box 16
 		base[16].setRotationPoint(4F, -1.5F, 7F);
@@ -106,9 +106,9 @@ public class ModelTBM2 extends GenericModelBase {
 
 		base[19].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 19
 		base[19].setRotationPoint(6.5F, -2F, 8F);
-		base[19].rotateAngleY = 0.78539816F;
+		base[19].rotationAngleY = 45F;
 
-		translateAll(0F, 0F, 0F);
+		translate(0F, 0F, 0F);
 	}
 	
 	@fTESR

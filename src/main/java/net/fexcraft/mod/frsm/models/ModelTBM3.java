@@ -105,19 +105,19 @@ public class ModelTBM3 extends GenericModelBase {
 
 		base[12].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 12
 		base[12].setRotationPoint(13.6F, -2F, 1F);
-		base[12].rotateAngleY = -0.78539816F;
+		base[12].rotationAngleY = -45F;
 
 		base[13].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F); // Box 13
 		base[13].setRotationPoint(11.6F, -2F, 13F);
-		base[13].rotateAngleY = 0.78539816F;
+		base[13].rotationAngleY = 45F;
 
 		base[14].addShapeBox(0F, 0F, 0F, 3, 2, 2, 0F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F); // Box 14
 		base[14].setRotationPoint(1F, -2F, 13.6F);
-		base[14].rotateAngleY = 0.78539816F;
+		base[14].rotationAngleY = 45F;
 
 		base[15].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 15
 		base[15].setRotationPoint(1F, -2F, 2.6F);
-		base[15].rotateAngleY = 0.78539816F;
+		base[15].rotationAngleY = 45F;
 
 		base[16].addBox(0F, 0F, 0F, 8, 1, 2, 0F); // Box 16
 		base[16].setRotationPoint(4F, -1.5F, 7F);
@@ -130,15 +130,15 @@ public class ModelTBM3 extends GenericModelBase {
 
 		base[19].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 19
 		base[19].setRotationPoint(6.5F, -2F, 8F);
-		base[19].rotateAngleY = 0.78539816F;
+		base[19].rotationAngleY = 45F;
 
 		r0[0].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 20
 		r0[0].setRotationPoint(6.5F, -4F, 8F);
-		r0[0].rotateAngleY = 0.78539816F;
+		r0[0].rotationAngleY = 45F;
 
 		r1[0].addBox(0F, 0F, 0F, 2, 2, 2, 0F); // Box 21
 		r1[0].setRotationPoint(6.5F, -6F, 8F);
-		r1[0].rotateAngleY = 0.78539816F;
+		r1[0].rotationAngleY = 45F;
 
 		r1[1].addBox(0F, 0F, 0F, 8, 1, 2, 0F); // Box 22
 		r1[1].setRotationPoint(4F, -5.5F, 7F);
@@ -175,33 +175,33 @@ public class ModelTBM3 extends GenericModelBase {
 
 		r1[12].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 33
 		r1[12].setRotationPoint(1F, -6F, 2.6F);
-		r1[12].rotateAngleY = 0.78539816F;
+		r1[12].rotationAngleY = 45F;
 
 		r1[13].addShapeBox(0F, 0F, 0F, 3, 2, 2, 0F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F); // Box 34
 		r1[13].setRotationPoint(-1F, -6F, 7F);
 
 		r1[14].addShapeBox(0F, 0F, 0F, 3, 2, 2, 0F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F); // Box 35
 		r1[14].setRotationPoint(1F, -6F, 13.6F);
-		r1[14].rotateAngleY = 0.78539816F;
+		r1[14].rotationAngleY = 45F;
 
 		r1[15].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F); // Box 36
 		r1[15].setRotationPoint(7F, -6F, 14F);
 		
 		r1[16].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F); // Box 37
 		r1[16].setRotationPoint(11.6F, -6F, 13F);
-		r1[16].rotateAngleY = 0.78539816F;
+		r1[16].rotationAngleY = 45F;
 
 		r1[17].addShapeBox(0F, 0F, 0F, 3, 2, 2, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, 0F, -0.6F, -0.2F, 0F, -0.6F, -0.2F, 0F, -0.2F, 0F); // Box 38
 		r1[17].setRotationPoint(14F, -6F, 7F);
 
 		r1[18].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 39
 		r1[18].setRotationPoint(13.6F, -6F, 1F);
-		r1[18].rotateAngleY = -0.78539816F;
+		r1[18].rotationAngleY = -45F;
 
 		r1[19].addShapeBox(0F, 0F, 0F, 2, 2, 3, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F, -0.2F, -0.6F, 0F, -0.2F, -0.6F, 0F, 0F, -0.2F, 0F, 0F, -0.2F, 0F); // Box 40
 		r1[19].setRotationPoint(7F, -6F, -1F);
 		
-		translateAll(0F, 0F, 0F);
+		translate(0F, 0F, 0F);
 	}
 	
 	@fTESR
