@@ -6,11 +6,18 @@ import javax.annotation.Nullable;
 
 import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.registry.FCLRegistry.AutoRegisterer;
+import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt;
+import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt2;
+import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt2Slab;
+import net.fexcraft.mod.frsm.blocks.asphalt.AsphaltFull;
+import net.fexcraft.mod.frsm.blocks.asphalt.AsphaltSlab;
 import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.IronSaw;
 import net.fexcraft.mod.frsm.items.PaintSet;
-import net.fexcraft.mod.frsm.util.*;
+import net.fexcraft.mod.frsm.util.CD;
+import net.fexcraft.mod.frsm.util.Data;
+import net.fexcraft.mod.frsm.util.UpdateHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -41,11 +48,11 @@ public class FRSM {
     public static final String NAME = "Fex's Random Stuff Mod";
     public static final String MODID = "frsm";
 	public static final String PREFIX = "&0[&6FRSM&0]&7";
-	public static final String VERSION = "4.2.0";
-	public static final String VNOTE = "Another rework/rewrite.";
+	public static final String VERSION = "4.3.0";
+	public static final String VNOTE = "Generic Update";
 	public static FCLRegistry.AutoRegisterer AUTOREG;
 	//Config
-	public static boolean COOKIES_IN_GRASS, UPDATE_CHECK;
+	public static boolean COOKIES_IN_GRASS, UPDATE_CHECK, ASPHALT;
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -56,10 +63,18 @@ public class FRSM {
 	    //conf3       = config.getBoolean("generate_stone_light_box", "###{> Generator <]###", true, "This function is unavaible actually.");
 	    UPDATE_CHECK = config.getBoolean("enable_update_checker", "General", true, "Self-explaining.");
 	    //conf5       = config.getBoolean("robo_entities", "###[> RoboStuff <]###", true, "Should FRSM robots be enabled?");
+	    ASPHALT = config.getBoolean("enable_asphalt", "General", true, "If Asphalt Blocks should be enabled.");
 	    config.save();
 	    
 	    AUTOREG = new FCLRegistry.AutoRegisterer(MODID);
 	    //RegistryUtil.registerEntitiesOf(MODID);
+	    if(ASPHALT){
+	    	AUTOREG.addBlock("asphalt", new Asphalt(), null, 0, null);
+	    	AUTOREG.addBlock("asphalt2", new Asphalt2(), null, 0, null);
+	    	AUTOREG.addBlock("asphalt2Slab", new Asphalt2Slab(), null, 0, null);
+	    	AUTOREG.addBlock("asphaltFull", new AsphaltFull(), null, 0, null);
+	    	AUTOREG.addBlock("asphaltSlab", new AsphaltSlab(), null, 0, null);
+	    }
 		if(COOKIES_IN_GRASS == true){
 			MinecraftForge.addGrassSeed(new ItemStack(Items.WHEAT), 1);
 			MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:chocolatecookie")), 2);

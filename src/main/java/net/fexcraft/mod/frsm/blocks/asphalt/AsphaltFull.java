@@ -1,13 +1,11 @@
 package net.fexcraft.mod.frsm.blocks.asphalt;
 
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.util.CD;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 
-@fBlock(modid = FI.MODID, name = "asphaltFull")
+//@fBlock(modid = FI.MODID, name = "asphaltFull")
 public class AsphaltFull extends Block {
 	
 	public AsphaltFull(){

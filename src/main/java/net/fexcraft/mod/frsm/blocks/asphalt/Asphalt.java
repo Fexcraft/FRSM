@@ -1,8 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.asphalt;
 
-import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -12,10 +10,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "asphalt")
+//@fBlock(modid = FI.MODID, name = "asphalt")
 public class Asphalt extends Block {
-	
-	public static final Block asphalt = null;
 	
 	public Asphalt(){
         super(Material.IRON, MapColor.BLACK);
