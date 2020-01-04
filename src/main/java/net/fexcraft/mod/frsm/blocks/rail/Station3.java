@@ -17,7 +17,7 @@ public class Station3 extends FBC_4R {
 
 	public Station3() {
     	super(Material.IRON);
-        this.setLightLevel(0.3F);
+        this.setLightLevel(0.5F);
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(2.0F);
     	this.setResistance(32.0F);

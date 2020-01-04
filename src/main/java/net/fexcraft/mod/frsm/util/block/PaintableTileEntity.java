@@ -1,27 +1,18 @@
 package net.fexcraft.mod.frsm.util.block;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
 import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
+import net.fexcraft.lib.mc.capabilities.FCLCapabilities;
+import net.fexcraft.lib.mc.capabilities.paint.Paintable;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
-import net.fexcraft.lib.mc.utils.ApiUtil;
-import net.fexcraft.lib.mc.utils.Print;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
-public class PaintableTileEntity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
+public class PaintableTileEntity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate> {
 	
-	protected RGB color = new RGB();
-	
-	public PaintableTileEntity(EnumDyeColor def_color){
+	/*public PaintableTileEntity(EnumDyeColor def_color){
 		color = RGB.fromDyeColor(def_color);
 	}
 	
@@ -37,7 +28,7 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	public void applyColor(EnumDyeColor color){
 		this.color = RGB.fromDyeColor(color);
 		this.sendUpdatePacket();
-	}
+	}*/
 
 	@Override
 	public void processServerPacket(PacketTileEntityUpdate pkt){
@@ -46,11 +37,7 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 
 	@Override
 	public void processClientPacket(PacketTileEntityUpdate pkt){
-		ApiUtil.readFromNBT(color, pkt.nbt, null);
-	}
-	
-	public void sendUpdatePacket(){
-		ApiUtil.sendTileEntityUpdatePacket(world, pos, ApiUtil.writeToNBT(color, new NBTTagCompound(), null), 64);
+		//
 	}
 	
 	@Override
@@ -70,29 +57,19 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound tag){
-		super.writeToNBT(tag);
-		ApiUtil.writeToNBT(color, tag, null);
-		return tag;
+		super.writeToNBT(tag); return tag;
 	}
 	
 	@Override
 	public void readFromNBT(NBTTagCompound tag){
 		super.readFromNBT(tag);
-		ApiUtil.readFromNBT(color, tag, null);
 	}
+	
+	private Paintable cap;
 	
 	public RGB getColor(){
-		return color;
-	}
-
-	@Override
-	public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
-		if(!world.isRemote){
-			this.color.packed = color.packed;
-			this.sendUpdatePacket();
-			Print.bar(player, "Color Updated! " + color.toString() + "-[" + dye.getDyeColorName() + "];");
-		}
+		if(cap == null) cap = this.getCapability(FCLCapabilities.PAINTABLE, null);
+		return cap == null ? RGB.WHITE : cap.getColor();
 	}
 	
-	//
 }

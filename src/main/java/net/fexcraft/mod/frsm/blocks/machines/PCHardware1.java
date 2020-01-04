@@ -1,8 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
-import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
@@ -10,11 +8,11 @@ import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -24,7 +22,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "pchardware1", tileentity = PCHardware1.Entity.class, item = PaintableInfo.class)
 public class PCHardware1 extends FBC_4R {
 	
@@ -50,14 +47,11 @@ public class PCHardware1 extends FBC_4R {
 		return true;
 	}
 	
-	public static class Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
+	public static class Entity extends PaintableTileEntity {
 		
-		private RGB color = new RGB();
 		private int ps = 0;
 		
-		public Entity(){
-			color = RGB.fromDyeColor(EnumDyeColor.GRAY);
-		}
+		public Entity(){}
 
 		public void next(){
 			ps++;
@@ -68,23 +62,20 @@ public class PCHardware1 extends FBC_4R {
 		}
 		
 		public void applyColor(RGB color){
-			this.color = new RGB(color);
 			this.sendUpdatePacket();
 		}
 		
 		public void applyColor(EnumDyeColor color){
-			this.color = RGB.fromDyeColor(color);
 			this.sendUpdatePacket();
 		}
 
 		@Override
 		public void processClientPacket(PacketTileEntityUpdate pkt){
-			ApiUtil.readFromNBT(color, pkt.nbt, null);
 			ps = pkt.nbt.getInteger("position");
 		}
 		
 		public void sendUpdatePacket(){
-			NBTTagCompound nbt = ApiUtil.writeToNBT(color, new NBTTagCompound(), null);
+			NBTTagCompound nbt = new NBTTagCompound();
 			nbt.setInteger("position", ps);
 			ApiUtil.sendTileEntityUpdatePacket(world, pos, nbt, 64);
 		}
@@ -107,7 +98,6 @@ public class PCHardware1 extends FBC_4R {
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound tag){
 			super.writeToNBT(tag);
-			ApiUtil.writeToNBT(color, tag, null);
 			tag.setInteger("Position", ps);
 			return tag;
 		}
@@ -115,20 +105,7 @@ public class PCHardware1 extends FBC_4R {
 		@Override
 		public void readFromNBT(NBTTagCompound tag){
 			super.readFromNBT(tag);
-			ApiUtil.readFromNBT(color, tag, null);
 			ps = tag.getInteger("Position");
-		}
-		
-		public RGB getColor(){
-			return color;
-		}
-
-		@Override
-		public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
-			if(!world.isRemote){
-				this.color = new RGB(color);
-				this.sendUpdatePacket();
-			}
 		}
 
 		public int getPosition(){

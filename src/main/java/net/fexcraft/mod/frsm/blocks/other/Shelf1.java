@@ -1,21 +1,16 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
-import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
-import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
-import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -27,7 +22,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "shelf1", tileentity = Shelf1.Entity.class, item = PaintableInfo.class)
 public class Shelf1 extends FBC_4R {
 
@@ -81,13 +75,11 @@ public class Shelf1 extends FBC_4R {
 		return true;
     }
 	
-	public static class Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
+	public static class Entity extends PaintableTileEntity {
 
-		private EnumDyeColor color;
 		private boolean open;
 		
 		public Entity(){
-			color = EnumDyeColor.WHITE;
 			open = false;
 		}
 		
@@ -113,9 +105,6 @@ public class Shelf1 extends FBC_4R {
 
 		@Override
 		public void processClientPacket(PacketTileEntityUpdate packet){
-			if(packet.nbt.hasKey("color")){
-				this.color = ApiUtil.getDyeColorFromString(packet.nbt.getString("color"));
-			}
 			if(packet.nbt.hasKey("open")){
 				this.open = packet.nbt.getBoolean("open");
 			}
@@ -135,7 +124,6 @@ public class Shelf1 extends FBC_4R {
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound compound){
 			super.writeToNBT(compound);
-			compound.setString("frsm_color", color.getName());
 			compound.setBoolean("frsm_open", open);
 			return compound;
 		}
@@ -143,25 +131,11 @@ public class Shelf1 extends FBC_4R {
 		@Override
 		public void readFromNBT(NBTTagCompound compound){
 			super.readFromNBT(compound);
-			color = ApiUtil.getDyeColorFromString("frsm_color");
 			open = compound.getBoolean("frsm_open");
 		}
 
 		public boolean getState(){
 			return open;
-		}
-
-		public EnumDyeColor getColor(){
-			return color;
-		}
-
-		@Override
-		public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
-			this.color = dye;
-			NBTTagCompound nbt = new NBTTagCompound();
-			nbt.setString("color", color.toString());
-			ApiUtil.sendTileEntityUpdatePacket(this.getWorld(), this.getPos(), nbt);
-			Print.chat(player, "Color set to " + color.toString() + "!");
 		}
 		
 	}

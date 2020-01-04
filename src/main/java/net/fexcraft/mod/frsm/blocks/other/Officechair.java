@@ -1,21 +1,19 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
-import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
-import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
 import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.lib.mc.capabilities.FCLCapabilities;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemDye;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -27,7 +25,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "officechair", tileentity = Officechair.Entity.class, item = PaintableInfo.class)
 public class Officechair extends FBC_4R{
 	
@@ -50,7 +47,7 @@ public class Officechair extends FBC_4R{
     public boolean onBlockActivated(World w, BlockPos pos, IBlockState state, EntityPlayer p, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ){
     	if(!w.isRemote){
     		if(!p.getHeldItemMainhand().isEmpty() && p.getHeldItemMainhand().getItem() instanceof ItemDye){
-    			((Officechair.Entity)w.getTileEntity(pos)).applyColor(EnumDyeColor.byDyeDamage(p.getHeldItemMainhand().getMetadata()));
+    			((Officechair.Entity)w.getTileEntity(pos)).getCapability(FCLCapabilities.PAINTABLE, null).setColor(EnumDyeColor.byDyeDamage(p.getHeldItemMainhand().getMetadata()));
     		}
     		else{
     			((Officechair.Entity)w.getTileEntity(pos)).applyRotation();
@@ -70,35 +67,20 @@ public class Officechair extends FBC_4R{
 		return AABB;
 	}
 	
-	public static class Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
+	public static class Entity extends PaintableTileEntity {
 		
-		public RGB primary = new RGB(); //RGB secondary = RGB.WHITE;
 		public short rotation = 0;
 		
-		public Entity(){
-			primary = RGB.fromDyeColor(EnumDyeColor.ORANGE);
-		}
-		
-		public void applyColor(RGB color){
-			primary = new RGB(color);
-			this.sendUpdatePacket();
-		}
-		
-		public void applyColor(EnumDyeColor color){
-			primary = RGB.fromDyeColor(color);
-			this.sendUpdatePacket();
-		}
+		public Entity(){}
 
 		@Override
 		public void processClientPacket(PacketTileEntityUpdate pkt){
 			NBTTagCompound nbt = pkt.nbt;
-			ApiUtil.readFromNBT(primary, nbt, null);
 			rotation = nbt.getShort("rotation");
 		}
 		
 		public void sendUpdatePacket(){
 			NBTTagCompound nbt = new NBTTagCompound();
-			nbt = ApiUtil.writeToNBT(primary, nbt, null);
 			nbt.setShort("rotation", rotation);
 			ApiUtil.sendTileEntityUpdatePacket(world, pos, nbt, 64);
 		}
@@ -121,7 +103,6 @@ public class Officechair extends FBC_4R{
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound tag){
 			super.writeToNBT(tag);
-			ApiUtil.writeToNBT(primary, tag, "Primary");
 			tag.setShort("frsm_rotation", rotation);
 			return tag;
 		}
@@ -129,24 +110,12 @@ public class Officechair extends FBC_4R{
 		@Override
 		public void readFromNBT(NBTTagCompound tag){
 			super.readFromNBT(tag);
-			ApiUtil.readFromNBT(primary, tag, "Primary");
 			rotation = tag.getShort("frsm_rotation");
 		}
 
 		public void applyRotation(){
-			rotation++;
-			if(rotation >= 36){
-				rotation = 0;
-			}
+			rotation++; if(rotation >= 36){ rotation = 0; }
 			this.sendUpdatePacket();
-		}
-
-		@Override
-		public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
-			if(!world.isRemote){
-				primary = new RGB(color);
-				this.sendUpdatePacket();
-			}
 		}
 		
 	}

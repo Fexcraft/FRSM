@@ -1,10 +1,10 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
+import net.fexcraft.mod.frsm.util.DyePaintable;
 import net.fexcraft.mod.frsm.util.FI;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,9 +23,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "decoblock1", variants = 16, item = DecoBlock1.IB.class, burn_time = 300)
-public class DecoBlock1 extends Block implements PaintableObject {
+public class DecoBlock1 extends Block implements DyePaintable {
 
 	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
 	

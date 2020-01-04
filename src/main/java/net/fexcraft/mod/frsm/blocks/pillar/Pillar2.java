@@ -7,7 +7,6 @@ import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -27,6 +26,6 @@ public class Pillar2 extends FBC_4R {
 		return new Entity();
 	}
 	
-	public static class Entity extends PaintableTileEntity { public Entity(){ super(EnumDyeColor.WHITE); } }
+	public static class Entity extends PaintableTileEntity { public Entity(){ super(); } }
 	
 }

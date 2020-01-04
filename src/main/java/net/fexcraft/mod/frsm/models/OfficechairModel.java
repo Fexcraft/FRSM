@@ -347,7 +347,7 @@ public class OfficechairModel extends GenericModelBase {
 			model.render(model.base);
 			GL11.glRotated(tileentity.rotation * 10, 0, 1, 0);
 			model.render(model.r1);
-			tileentity.primary.glColorApply();
+			tileentity.getColor().glColorApply();
 			model.render(model.r0);
 			RGB.glColorReset();
 		}

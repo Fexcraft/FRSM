@@ -3,9 +3,13 @@ package net.fexcraft.mod.frsm.util;
 import com.google.gson.JsonObject;
 
 import net.fexcraft.lib.mc.FCL;
+import net.fexcraft.lib.mc.capabilities.paint.PaintableSerializer;
 import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 
@@ -49,6 +53,7 @@ public class UpdateHandler {
 	}
 	
 	public static class EventHandler {
+		
 	    @SubscribeEvent
 	    public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
 	    	if(UpdateHandler.wm != null){
@@ -63,6 +68,14 @@ public class UpdateHandler {
 				Print.chat(event.player, FRSM.PREFIX + " Now avaible for Minecraft " + UpdateHandler.nMCV + "!");
 			}
 	    }
+		
+	    @SubscribeEvent
+		public void onAttachCapabilities(AttachCapabilitiesEvent<TileEntity> event){
+			if(event.getObject() instanceof PaintableTileEntity){
+				event.addCapability(PaintableSerializer.REGISTRY_NAME, new PaintableSerializer(event.getObject()));
+			}
+		}
+		
 	}
 	
 }

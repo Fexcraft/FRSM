@@ -1,8 +1,5 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
-import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.PaintableObject;
-import net.fexcraft.lib.mc.api.packet.IPacketReceiver;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
@@ -10,11 +7,10 @@ import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -26,7 +22,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@SuppressWarnings("deprecation")
 @fBlock(modid = FI.MODID, name = "fridge", tileentity = Fridge.Entity.class, item = PaintableInfo.class)
 public class Fridge extends FBC_4R {
 	
@@ -58,15 +53,11 @@ public class Fridge extends FBC_4R {
 		return new Entity();
 	}
 	
-	public static class Entity extends TileEntity implements IPacketReceiver<PacketTileEntityUpdate>, PaintableObject {
+	public static class Entity extends PaintableTileEntity {
 		
-		private RGB color = new RGB();
-		private boolean open;
+		private boolean open = false;
 		
-		public Entity(){
-			color = RGB.fromDyeColor(EnumDyeColor.WHITE);
-			open = false;
-		}
+		public Entity(){}
 		
 		public boolean getState(){
 			return open;
@@ -75,28 +66,20 @@ public class Fridge extends FBC_4R {
 		public void setState(boolean b){
 			this.open = b;
 		}
-		
-		public RGB getColor(){
-			return this.color;
-		}
 
 		@Override
 		public void processClientPacket(PacketTileEntityUpdate packet){
-			ApiUtil.readFromNBT(color, packet.nbt, null);
 			open = packet.nbt.getBoolean("open");
 		}
 		
 		public void sendUpdatePacket(){
-			NBTTagCompound nbt = new NBTTagCompound();
-			nbt = ApiUtil.writeToNBT(color, nbt, null);
-			nbt.setBoolean("open", open);
+			NBTTagCompound nbt = new NBTTagCompound(); nbt.setBoolean("open", open);
 			ApiUtil.sendTileEntityUpdatePacket(world.provider.getDimension(), pos, nbt, 64);
 		}
 		
 		@Override
 		public SPacketUpdateTileEntity getUpdatePacket(){
-			NBTTagCompound nbt = new NBTTagCompound();
-			nbt = this.writeToNBT(nbt);
+			NBTTagCompound nbt = new NBTTagCompound(); nbt = this.writeToNBT(nbt);
 			return new SPacketUpdateTileEntity(this.getPos(), this.getBlockMetadata(), nbt);
 		}
 		
@@ -115,7 +98,6 @@ public class Fridge extends FBC_4R {
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound compound){
 			super.writeToNBT(compound);
-			ApiUtil.writeToNBT(color, compound, null);
 			compound.setBoolean("frsm_open", open);
 			return compound;
 		}
@@ -123,14 +105,7 @@ public class Fridge extends FBC_4R {
 		@Override
 		public void readFromNBT(NBTTagCompound compound){
 			super.readFromNBT(compound);
-			ApiUtil.readFromNBT(color, compound, null);
 			open = compound.getBoolean("frsm_open");
-		}
-
-		@Override
-		public void onPaintItemUse(RGB color, EnumDyeColor dye, ItemStack stack, EntityPlayer player, BlockPos pos, World world) {
-			this.color = new RGB(color);
-			this.sendUpdatePacket();
 		}
 		
 	}

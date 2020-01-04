@@ -4,11 +4,13 @@ import net.fexcraft.lib.common.math.Time;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ClockBaseTileEntity extends PaintableTileEntity {
 	
@@ -17,11 +19,11 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
 	private int offset = 0;
 	
 	public ClockBaseTileEntity(){
-		super(EnumDyeColor.BLACK);
+		super();
 	}
 
 	public ClockBaseTileEntity(Class<? extends ClockBase> clazz){
-		super(EnumDyeColor.BLACK);
+		super();
 		this.clazz = clazz;
 		this.clocktype = EnumClock.fromClass(this.clazz);
 	}
@@ -85,7 +87,6 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
 
 	@Override
 	public void processClientPacket(PacketTileEntityUpdate pkt){
-		ApiUtil.readFromNBT(color, pkt.nbt, null);
 		offset = pkt.nbt.getInteger("frsm:offset");
 	}
 	
@@ -122,5 +123,15 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
 		offset = tag.getInteger("frsm:offset");
 		clocktype = EnumClock.fromString(tag.getString("frsm:clocktype"));
 	}
+	
+	@SideOnly(Side.CLIENT) @Override
+    public double getMaxRenderDistanceSquared(){
+        return super.getMaxRenderDistanceSquared() * 8;
+    }
+
+    @SideOnly(Side.CLIENT) @Override
+    public AxisAlignedBB getRenderBoundingBox(){
+        return INFINITE_EXTENT_AABB;
+    }
 	
 }

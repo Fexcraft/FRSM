@@ -1,14 +1,11 @@
 package net.fexcraft.mod.frsm.models;
 
-import java.util.TreeMap;
-
 import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.other.Shelf1;
 import net.fexcraft.mod.frsm.util.block.FTESR_4R;
 import net.minecraft.client.Minecraft;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.util.ResourceLocation;
 
 public class Shelf1Model extends GenericModelBase {
@@ -87,25 +84,27 @@ public class Shelf1Model extends GenericModelBase {
 		translate(0F, 24F, 0F);
 	}
 	
-	@fTESR
+	@fTESR //TODO
 	public static class Renderer extends FTESR_4R<Shelf1.Entity> {
 		
-		public Renderer(){ super(getFromColor(EnumDyeColor.BLACK), new Shelf1Model()); }
+		public Renderer(){
+			super(temp/*getFromColor(EnumDyeColor.BLACK)*/, new Shelf1Model());
+		}
 		
-		private static TreeMap<EnumDyeColor, ResourceLocation> LOCS = new TreeMap<>();
-		private static ResourceLocation temp;
+		//private static TreeMap<EnumDyeColor, ResourceLocation> LOCS = new TreeMap<>();
+		private static ResourceLocation temp = new ResourceLocation("frsm:textures/blocks/shelf1_white.png");
 		
-		private static ResourceLocation getFromColor(EnumDyeColor color){
+		/*private static ResourceLocation getFromColor(EnumDyeColor color){
 			if((temp = LOCS.get(color)) == null){
 				LOCS.put(color, temp = new ResourceLocation("frsm:textures/blocks/shelf1_" + color.getMetadata() + ".png"));
 			} return temp;
-		}
+		}*/
 
 		@Override
 		public void renderModel(Shelf1.Entity tileentity, float partialticks, int destroystage){
 			boolean open = tileentity.getState();
-			EnumDyeColor color = tileentity.getColor();
-			Minecraft.getMinecraft().renderEngine.bindTexture(getFromColor(color));
+			//EnumDyeColor color = tileentity.getColor();
+			Minecraft.getMinecraft().renderEngine.bindTexture(temp);//getFromColor(color));
 			model.render(model.base);
 			if(open == true){
 				model.render(model.open);
