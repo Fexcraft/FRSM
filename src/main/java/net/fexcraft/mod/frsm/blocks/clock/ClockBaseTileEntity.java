@@ -133,5 +133,9 @@ public class ClockBaseTileEntity extends PaintableTileEntity {
     public AxisAlignedBB getRenderBoundingBox(){
         return INFINITE_EXTENT_AABB;
     }
+
+	public EnumClock getClockType(){
+		return clocktype;
+	}
 	
 }

@@ -1,7 +1,12 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
 import net.fexcraft.lib.tmt.GenericModelBase;
-import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.*;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock1;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock1C;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock1W;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock2;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock2C;
+import net.fexcraft.mod.frsm.blocks.clock.ClockInstances.Clock2W;
 import net.fexcraft.mod.frsm.models.ModelClock1;
 import net.fexcraft.mod.frsm.models.ModelClock2;
 import net.minecraft.block.Block;
@@ -74,8 +79,7 @@ public enum EnumClock {
 			case CLOCK2_WORLDT:{
 				return new ResourceLocation("frsm:textures/blocks/clock1.png");
 			}
-			default:
-				break;
+			default: break;
 		}
 		return null;
 	}

@@ -1,6 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
 import java.util.List;
+
 import javax.annotation.Nullable;
 
 import net.fexcraft.lib.mc.utils.Formatter;
@@ -15,8 +16,7 @@ public class ClockBaseItem extends PaintableInfo {
 	private EnumClock clocktype;
 	
 	public ClockBaseItem(Block block){
-		super(block);
-		clocktype = EnumClock.fromClass(block.getClass());
+		super(block); clocktype = EnumClock.fromClass(block.getClass());
 	}
 	
 	@Override

@@ -3,7 +3,6 @@ package net.fexcraft.mod.frsm.blocks.clock;
 import org.lwjgl.opengl.GL11;
 
 import net.fexcraft.lib.mc.api.registry.fTESR;
-import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 
