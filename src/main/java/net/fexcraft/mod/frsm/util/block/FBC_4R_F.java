@@ -33,7 +33,7 @@ public abstract class FBC_4R_F extends FBC_4R {
 
     @Override
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand){
-        if (!worldIn.isRemote){
+        if(!worldIn.isRemote){
             this.checkFallable(worldIn, pos);
         }
     }

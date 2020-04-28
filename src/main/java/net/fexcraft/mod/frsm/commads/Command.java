@@ -59,7 +59,8 @@ public class Command extends CommandBase {
         return this.aliases;
     } 
 
-    @Override 
+    @SuppressWarnings("deprecation")
+	@Override 
     public void execute(MinecraftServer server, ICommandSender sender, String[] args)  throws CommandException{
     	this.sender = sender;
         if(args.length < 1){
