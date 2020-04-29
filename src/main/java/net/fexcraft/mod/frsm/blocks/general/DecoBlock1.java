@@ -45,8 +45,8 @@ public class DecoBlock1 extends Block implements DyePaintable {
 		}
 
 		@Override
-        public String getUnlocalizedName(ItemStack itemStack){
-            String name = getUnlocalizedName();
+        public String getTranslationKey(ItemStack itemStack){
+            String name = getTranslationKey();
             switch(itemStack.getItemDamage()) {
                 case 0: return name + ".white";
                 case 1: return name + ".orange";

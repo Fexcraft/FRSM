@@ -80,7 +80,7 @@ public abstract class ClockBase extends FBC_4R {
 	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float x, float y, float z){
     	if(!world.isRemote && hand != EnumHand.OFF_HAND){
     		ClockBaseTileEntity entity = (ClockBaseTileEntity)world.getTileEntity(pos);
-    		if(entity.isOffset() && (player.getHeldItem(hand).getItem() instanceof ItemTool || player.getHeldItem(hand).getItem().getRegistryName().getResourcePath().equals("tvcontroller") || player.getHeldItem(hand).getItem() instanceof ItemCompass || player.getHeldItem(hand).getItem() instanceof ItemClock)){
+    		if(entity.isOffset() && (player.getHeldItem(hand).getItem() instanceof ItemTool || player.getHeldItem(hand).getItem().getRegistryName().getPath().equals("tvcontroller") || player.getHeldItem(hand).getItem() instanceof ItemCompass || player.getHeldItem(hand).getItem() instanceof ItemClock)){
     			int i = entity.changeOffset();
     			Print.bar(player, "GMT" + (i >= 0 ? "+" + i : i));
     			entity.sendUpdatePacket();

@@ -8,18 +8,19 @@
 
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.machines.Fridge;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
-import net.minecraft.util.ResourceLocation;
 
+@fModel(registryname = "frsm:models/block/fridge")
 public class FridgeModel extends GenericModelBase {
 	
 	int textureX = 256;
-	int textureY = 128;
+	int textureY = 256;
 
 	public FridgeModel(){
 		base = new ModelRendererTurbo[17];
@@ -435,39 +436,23 @@ public class FridgeModel extends GenericModelBase {
 		r2[1].addShapeBox(0F, 0F, 0F, 1, 19, 15, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.25F, 0F, 0F, -0.25F, 0F, 0F, 0F, 0F, 0F); // Box 23
 		r2[1].setRotationPoint(7F, -30.5F, -22F);
 		
-		translate(0F, 24F, 0F);		
+		//translate(0F, 24F, 0F);		
 	}
-	
-	@fTESR
-	public static class Renderer extends FTESR_4R<Fridge.Entity> {
-		
-		public Renderer() {
-			super(new ResourceLocation("frsm:textures/blocks/fridge.png"), new FridgeModel());
-		}
 
-		@Override
-		public void renderModel(Fridge.Entity tileentity, float partialticks, int destroystage) {
-			boolean open = tileentity.getState();
-			RGB color = tileentity.getColor();
-			
-			model.render(model.base);
-			if(open == true){
-				model.render(model.open);
-			}
-			if(open == false){
-				model.render(model.closed);
-			}
-			color.glColorApply();
-			model.render(model.r0);
-			if(open == true){
-				model.render(model.r2);
-			}
-			if(open == false){
-				model.render(model.r1);
-			}
-			RGB.glColorReset();
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(Map<String, String> args){
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		addAll(mrts, r0);
+		if(args.containsKey("open") && Boolean.parseBoolean(args.get("open"))){
+			addAll(mrts, open);
+			addAll(mrts, r2);
 		}
-		
+		else{
+			addAll(mrts, closed);
+			addAll(mrts, r1);
+		}
+		return mrts;
 	}
 	
 }

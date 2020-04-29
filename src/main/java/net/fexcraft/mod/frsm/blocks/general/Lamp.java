@@ -46,7 +46,7 @@ public class Lamp extends Block  implements DyePaintable {
 		public IB(Block block){ super(block); }
 		
 		@Override
-	    public String getUnlocalizedName(ItemStack stack){
+	    public String getTranslationKey(ItemStack stack){
 			if(stack.getItemDamage() > 15) return this.getRegistryName().toString();
 	        String name = this.getRegistryName().toString();
 	        switch(stack.getItemDamage()){

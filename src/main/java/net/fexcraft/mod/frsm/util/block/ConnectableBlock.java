@@ -63,6 +63,7 @@ public class ConnectableBlock extends Block {
     	this.setDefaultState(this.blockState.getBaseState().withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean b){
         if(!b){
             state = state.getActualState(worldIn, pos);
@@ -119,7 +120,7 @@ public class ConnectableBlock extends Block {
     public boolean canConnectTo(IBlockAccess world, BlockPos pos){
         IBlockState state = world.getBlockState(pos);
         Block block = state.getBlock();
-        return block == Blocks.BARRIER ? false : ((!(block instanceof ConnectableBlock) || state.getMaterial() != this.blockMaterial) && !(block instanceof BlockWall) ? (state.getMaterial().isOpaque() && state.isFullCube() ? state.getMaterial() != Material.GOURD : false) : true);
+        return block == Blocks.BARRIER ? false : ((!(block instanceof ConnectableBlock) || state.getMaterial() != this.material) && !(block instanceof BlockWall) ? (state.getMaterial().isOpaque() && state.isFullCube() ? state.getMaterial() != Material.GOURD : false) : true);
     }
 
     @SideOnly(Side.CLIENT)

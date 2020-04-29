@@ -62,7 +62,7 @@ public class Radio2 extends Block {
     
 	@Override
     public IBlockState getStateFromMeta(int meta){
-        EnumFacing enumfacing = EnumFacing.getFront(meta);
+        EnumFacing enumfacing = EnumFacing.byIndex(meta);
         if (enumfacing.getAxis() == EnumFacing.Axis.Y){
             enumfacing = EnumFacing.NORTH;
         }

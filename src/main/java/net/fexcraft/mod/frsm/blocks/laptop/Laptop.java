@@ -14,7 +14,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 @fBlock(modid = FI.MODID, name = "laptop")
-public class Laptop extends FBN_4R{
+public class Laptop extends FBN_4R {
 	
 	public Laptop() {
 		super(Material.GLASS);
