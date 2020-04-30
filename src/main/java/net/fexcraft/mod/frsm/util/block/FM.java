@@ -4,7 +4,7 @@ import net.minecraft.block.material.EnumPushReaction;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 
-public class FM extends Material{
+public class FM extends Material {
 	
 	public FM(MapColor color) {
 		super(color);

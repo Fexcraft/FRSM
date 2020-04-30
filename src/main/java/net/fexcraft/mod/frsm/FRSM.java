@@ -205,8 +205,8 @@ public class FRSM {
 			}
 		}.setMaxStackSize(16).setCreativeTab(CD.EATABLES), 0, null);
 		//
-		AUTOREG.addItem("ironsaw", new IronSaw(), 0, null); PaintSet.register();
-		
+		AUTOREG.addItem("ironsaw", new IronSaw(), 0, null);
+		PaintSet.register();
 	}
 	
 	@Mod.EventHandler

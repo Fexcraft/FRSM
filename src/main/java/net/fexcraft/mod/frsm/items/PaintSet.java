@@ -62,45 +62,42 @@ public class PaintSet extends Item {
 	
 	@Override
 	public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
-		if(world.isRemote){
-			return EnumActionResult.PASS;
+		if(world.isRemote) return EnumActionResult.PASS;
+		//
+		IBlockState state = world.getBlockState(pos); TileEntity tile;
+		if(state.getBlock() instanceof DyePaintable){
+			((DyePaintable)state.getBlock()).onPaintItemUse(color, dye, player.getHeldItem(hand), player, pos, world);
+		}
+		else if(state.getBlock() == Blocks.WOOL){
+			world.setBlockState(pos, Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, dye));
+		}
+		else if(state.getBlock() == Blocks.STAINED_HARDENED_CLAY){
+			world.setBlockState(pos, Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, dye));
+		}
+		else if(state.getBlock() instanceof BlockStainedGlass){
+			world.setBlockState(pos, Blocks.STAINED_GLASS.getDefaultState().withProperty(BlockColored.COLOR, dye));
+		}
+		else if(state.getBlock() instanceof BlockStainedGlassPane){
+			world.setBlockState(pos, Blocks.STAINED_GLASS_PANE.getDefaultState().withProperty(BlockColored.COLOR, dye));
+		}
+		else if(state.getBlock() instanceof BlockCarpet){
+			world.setBlockState(pos, Blocks.CARPET.getDefaultState().withProperty(BlockColored.COLOR, dye));
+		}
+		else if((tile = world.getTileEntity(pos)) != null){
+			if(tile.hasCapability(FCLCapabilities.PAINTABLE, facing)){
+				tile.getCapability(FCLCapabilities.PAINTABLE, facing).setColor(color);
+				Print.bar(player, "Color Updated! " + color.toString() + "-[" + dye.getDyeColorName() + "];");
+				tile.getCapability(FCLCapabilities.PAINTABLE, facing).updateClient();
+				return EnumActionResult.SUCCESS;
+			} return EnumActionResult.PASS;
 		}
 		else{
-			IBlockState state = world.getBlockState(pos); TileEntity tile;
-			if(state.getBlock() instanceof DyePaintable){
-				((DyePaintable)state.getBlock()).onPaintItemUse(color, dye, player.getHeldItem(hand), player, pos, world);
-			}
-			else if(state.getBlock() == Blocks.WOOL){
-				world.setBlockState(pos, Blocks.WOOL.getDefaultState().withProperty(BlockColored.COLOR, dye));
-			}
-			else if(state.getBlock() == Blocks.STAINED_HARDENED_CLAY){
-				world.setBlockState(pos, Blocks.STAINED_HARDENED_CLAY.getDefaultState().withProperty(BlockColored.COLOR, dye));
-			}
-			else if(state.getBlock() instanceof BlockStainedGlass){
-				world.setBlockState(pos, Blocks.STAINED_GLASS.getDefaultState().withProperty(BlockColored.COLOR, dye));
-			}
-			else if(state.getBlock() instanceof BlockStainedGlassPane){
-				world.setBlockState(pos, Blocks.STAINED_GLASS_PANE.getDefaultState().withProperty(BlockColored.COLOR, dye));
-			}
-			else if(state.getBlock() instanceof BlockCarpet){
-				world.setBlockState(pos, Blocks.CARPET.getDefaultState().withProperty(BlockColored.COLOR, dye));
-			}
-			else if((tile = world.getTileEntity(pos)) != null){
-				if(tile.hasCapability(FCLCapabilities.PAINTABLE, facing)){
-					tile.getCapability(FCLCapabilities.PAINTABLE, facing).setColor(color);
-					Print.bar(player, "Color Updated! " + color.toString() + "-[" + dye.getDyeColorName() + "];");
-					tile.getCapability(FCLCapabilities.PAINTABLE, facing).updateClient();
-					return EnumActionResult.SUCCESS;
-				} return EnumActionResult.PASS;
-			}
-			else{
-				if(this.getRegistryName().toString().contains("16")){
-					player.openGui(FRSM.getInstance(), GuiHandler.RGB, world, player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
-					return EnumActionResult.SUCCESS;
-				} return EnumActionResult.PASS;
-			}
-			return EnumActionResult.SUCCESS;
+			if(custom){
+				player.openGui(FRSM.getInstance(), GuiHandler.RGB, world, player.getPosition().getX(), player.getPosition().getY(), player.getPosition().getZ());
+				return EnumActionResult.SUCCESS;
+			} return EnumActionResult.PASS;
 		}
+		return EnumActionResult.SUCCESS;
     }
 
 	@Override

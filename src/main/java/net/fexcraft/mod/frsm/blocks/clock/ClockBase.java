@@ -1,5 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
+import static net.fexcraft.mod.frsm.util.Properties.FACING;
+
 import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.block.FBC_4R;

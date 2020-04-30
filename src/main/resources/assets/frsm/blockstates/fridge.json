@@ -22,14 +22,6 @@
       "east": {
         "custom": { "y": -90 }
       }
-    },
-    "closed":{
-    	"true":{
-        	"custom": { "open": false }
-    	},
-    	"false":{
-        	"custom": { "open": true }
-    	}
     }
   }
 }

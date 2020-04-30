@@ -1,5 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import static net.fexcraft.mod.frsm.util.Properties.FACING;
+
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;

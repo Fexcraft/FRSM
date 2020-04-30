@@ -1,9 +1,10 @@
 package net.fexcraft.mod.frsm.util.block;
 
+import static net.fexcraft.mod.frsm.util.Properties.FACING;
+
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -16,8 +17,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class FBC_4R_H extends BlockContainer {
-
-	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	
 	protected FBC_4R_H(Material material) {
 		super(material);

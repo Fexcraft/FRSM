@@ -12,9 +12,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
+import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
 @fModel(registryname = "frsm:models/block/fridge")
 public class FridgeModel extends GenericModelBase {
@@ -440,11 +445,21 @@ public class FridgeModel extends GenericModelBase {
 	}
 
 	@Override
-	public Collection<ModelRendererTurbo> getPolygons(Map<String, String> args){
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		boolean isopen = false;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
+			isopen = !ext.getValue(Properties.CLOSED);
+		}
+		applyColor(r0, color);
+		applyColor(r1, color);
+		applyColor(r2, color);
 		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
 		addAll(mrts, base);
 		addAll(mrts, r0);
-		if(args.containsKey("open") && Boolean.parseBoolean(args.get("open"))){
+		if(isopen){
 			addAll(mrts, open);
 			addAll(mrts, r2);
 		}

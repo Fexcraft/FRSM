@@ -1,5 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.general;
 
+import static net.fexcraft.mod.frsm.util.Properties.DYECOLOR;
+
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
@@ -8,8 +10,6 @@ import net.fexcraft.mod.frsm.util.DyePaintable;
 import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.mod.frsm.util.block.FM;
 import net.minecraft.block.Block;
-import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -28,8 +28,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @fBlock(modid = FI.MODID, name = "lampoff", variants = 16, burn_time = 100, item = Lamp.IB.class)
 public class LampOff extends Block implements DyePaintable {
-	
-	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
 	
 	public LampOff() {
 		super(FM.normal);
@@ -62,14 +60,14 @@ public class LampOff extends Block implements DyePaintable {
     @Override
     public boolean onBlockActivated(World w, BlockPos pos, IBlockState state, EntityPlayer p, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ){
     	if(!w.isRemote && !p.getHeldItemMainhand().isEmpty()){
-    		w.setBlockState(pos, FCLRegistry.getBlock("frsm:lamp").getDefaultState().withProperty(COLOR, state.getValue(COLOR)));
+    		w.setBlockState(pos, FCLRegistry.getBlock("frsm:lamp").getDefaultState().withProperty(DYECOLOR, state.getValue(DYECOLOR)));
     	}
 		return true;
 	}
     
     @Override
     public int damageDropped(IBlockState state){
-        return ((EnumDyeColor)state.getValue(COLOR)).getMetadata();
+        return ((EnumDyeColor)state.getValue(DYECOLOR)).getMetadata();
     }
     
     @SideOnly(Side.CLIENT) @Override
@@ -81,22 +79,22 @@ public class LampOff extends Block implements DyePaintable {
     
     @Override
     public IBlockState getStateFromMeta(int meta){
-        return this.getDefaultState().withProperty(COLOR, EnumDyeColor.byMetadata(meta));
+        return this.getDefaultState().withProperty(DYECOLOR, EnumDyeColor.byMetadata(meta));
     }
     
     @Override
     public int getMetaFromState(IBlockState state){
-        return ((EnumDyeColor)state.getValue(COLOR)).getMetadata();
+        return ((EnumDyeColor)state.getValue(DYECOLOR)).getMetadata();
     }
     
     @Override
     protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, new IProperty[] {COLOR});
+        return new BlockStateContainer(this, DYECOLOR);
     }
 
 	@Override
 	public void onPaintItemUse(RGB rgb, EnumDyeColor color, ItemStack stack, EntityPlayer player, BlockPos pos, World world){
-		world.setBlockState(pos, this.getDefaultState().withProperty(COLOR, color));
+		world.setBlockState(pos, this.getDefaultState().withProperty(DYECOLOR, color));
 	}
 	
 }

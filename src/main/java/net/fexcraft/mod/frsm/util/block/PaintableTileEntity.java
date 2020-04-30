@@ -63,6 +63,9 @@ public class PaintableTileEntity extends TileEntity implements IPacketReceiver<P
 	@Override
 	public void readFromNBT(NBTTagCompound tag){
 		super.readFromNBT(tag);
+		if(world != null && world.isRemote){
+			world.markBlockRangeForRenderUpdate(pos, pos);
+		}
 	}
 	
 	private Paintable cap;

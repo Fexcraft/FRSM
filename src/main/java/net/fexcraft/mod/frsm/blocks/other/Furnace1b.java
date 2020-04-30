@@ -1,5 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import static net.fexcraft.mod.frsm.util.Properties.FACING;
+
 import java.util.Random;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
