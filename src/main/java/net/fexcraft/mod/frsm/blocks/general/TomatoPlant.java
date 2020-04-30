@@ -7,8 +7,8 @@ import javax.annotation.Nullable;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
@@ -25,7 +25,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "tomatoplant")
+@fBlock(modid = FRSM.MODID, name = "tomatoplant")
 public class TomatoPlant extends BlockBush implements IGrowable {
 	
     public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 7);
@@ -47,7 +47,7 @@ public class TomatoPlant extends BlockBush implements IGrowable {
         this.setHardness(0.0F);
         this.setSoundType(SoundType.PLANT);
         this.disableStats();
-        this.setCreativeTab(CD.EXPERIMENTAL);
+        this.setCreativeTab(FRSMTabs.EXPERIMENTAL);
     }
     
     @Override

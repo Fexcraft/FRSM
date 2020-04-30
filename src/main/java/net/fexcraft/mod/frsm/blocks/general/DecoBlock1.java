@@ -2,10 +2,10 @@ package net.fexcraft.mod.frsm.blocks.general;
 
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.DyePaintable;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "decoblock1", variants = 16, item = DecoBlock1.IB.class, burn_time = 300)
+@fBlock(modid = FRSM.MODID, name = "decoblock1", variants = 16, item = DecoBlock1.IB.class, burn_time = 300)
 public class DecoBlock1 extends Block implements DyePaintable {
 
 	public static final PropertyEnum<EnumDyeColor> COLOR = PropertyEnum.create("color", EnumDyeColor.class);
@@ -33,7 +33,7 @@ public class DecoBlock1 extends Block implements DyePaintable {
         this.setHarvestLevel("axe", 1);
         this.setHardness(1.0F);
         this.setResistance(10.0F);
-        this.setCreativeTab(CD.BLOCKS);
+        this.setCreativeTab(FRSMTabs.BLOCKS);
     	this.setDefaultState(this.blockState.getBaseState().withProperty(COLOR, EnumDyeColor.WHITE));
     }
     

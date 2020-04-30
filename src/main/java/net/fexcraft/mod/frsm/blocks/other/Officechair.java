@@ -4,10 +4,10 @@ import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.capabilities.FCLCapabilities;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -25,8 +25,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "officechair", tileentity = Officechair.Entity.class, item = PaintableInfo.class)
-public class Officechair extends FBC_4R{
+@fBlock(modid = FRSM.MODID, name = "officechair", tileentity = Officechair.Entity.class, item = PaintableInfo.class)
+public class Officechair extends BasicContainer4R{
 	
 	private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.5625F, 1.0F);
 	
@@ -35,7 +35,7 @@ public class Officechair extends FBC_4R{
     	this.setHarvestLevel("axe", 1);
     	this.setHardness(2.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.BLOCKS);
+    	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
     	
 	@Override

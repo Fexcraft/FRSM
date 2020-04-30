@@ -13,9 +13,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public abstract class FBC_4R_F extends FBC_4R {
+public abstract class BasicContainer4RFalling extends BasicContainer4R {
 
-	public FBC_4R_F(Material material) {
+	public BasicContainer4RFalling(Material material){
 		super(material);
 	}
 	

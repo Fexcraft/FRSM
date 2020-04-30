@@ -4,7 +4,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.other.Shelf1;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 
@@ -85,7 +85,7 @@ public class Shelf1Model extends GenericModelBase {
 	}
 	
 	@fTESR //TODO
-	public static class Renderer extends FTESR_4R<Shelf1.Entity> {
+	public static class Renderer extends TileRenderer4R<Shelf1.Entity> {
 		
 		public Renderer(){
 			super(temp/*getFromColor(EnumDyeColor.BLACK)*/, new Shelf1Model());

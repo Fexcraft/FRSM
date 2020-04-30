@@ -8,7 +8,7 @@ import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.other.Officechair;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.util.ResourceLocation;
 
 public class OfficechairModel extends GenericModelBase {
@@ -336,7 +336,7 @@ public class OfficechairModel extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Officechair.Entity> {
+	public static class Renderer extends TileRenderer4R<Officechair.Entity> {
 		
 		public Renderer(ResourceLocation location, ModelBase model) {
 			super(new ResourceLocation("frsm:textures/blocks/officechair.png"), new OfficechairModel());

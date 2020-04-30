@@ -17,9 +17,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public abstract class FBC_4R extends BlockContainer {
+public abstract class BasicContainer4R extends BlockContainer {
 	
-	public FBC_4R(Material material) {
+	public BasicContainer4R(Material material) {
     	super(material);
     	this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}

@@ -7,11 +7,11 @@ import static net.fexcraft.mod.frsm.util.Properties.FACING;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
 import net.fexcraft.mod.frsm.util.AABBs;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
@@ -29,15 +29,15 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.property.IExtendedBlockState;
 
-@fBlock(modid = FI.MODID, name = "fridge", tileentity = Fridge.Entity.class, item = PaintableInfo.class)
-public class Fridge extends FBC_4R {
+@fBlock(modid = FRSM.MODID, name = "fridge", tileentity = Fridge.Entity.class, item = PaintableInfo.class)
+public class Fridge extends BasicContainer4R {
 	
 	public Fridge() {
 		super(Material.IRON);
 		this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(5.0F);
     	this.setResistance(32.0F);
-		this.setCreativeTab(CD.TECHNIC);
+		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
 	
 	@Override

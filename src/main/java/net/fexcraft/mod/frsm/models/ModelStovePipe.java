@@ -6,7 +6,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.pipes.StovePipeEntity;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
 public class ModelStovePipe extends GenericModelBase {
 	
@@ -57,7 +57,7 @@ public class ModelStovePipe extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<StovePipeEntity> {
+	public static class Renderer extends TileRenderer4R<StovePipeEntity> {
 		
 		public Renderer(){ super("minecraft:textures/blocks/anvil_base.png", new ModelStovePipe()); }
 

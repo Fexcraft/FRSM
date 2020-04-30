@@ -4,9 +4,9 @@ import static net.fexcraft.mod.frsm.util.Properties.FACING;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBN_4R;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.Basic4R;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,15 +15,15 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "laptop")
-public class Laptop extends FBN_4R {
+@fBlock(modid = FRSM.MODID, name = "laptop")
+public class Laptop extends Basic4R {
 	
 	public Laptop() {
 		super(Material.GLASS);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(2.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.TECHNIC);
+		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
 	
     @Override

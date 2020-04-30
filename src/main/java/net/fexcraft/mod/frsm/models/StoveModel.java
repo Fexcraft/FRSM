@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.mod.frsm.blocks.machines.Stove;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -345,7 +345,7 @@ public class StoveModel extends ModelBase {
 	public static StoveModel INSTANCE = new StoveModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Stove.Entity> {
+	public static class Renderer extends TileRenderer4R<Stove.Entity> {
 	       
 		public Renderer(){ super("frsm:textures/blocks/Stove.png", null); }
 		

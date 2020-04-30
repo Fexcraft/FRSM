@@ -4,7 +4,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.streetlamps.StreetLampBase;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
 public class ModelStreetLampBase extends GenericModelBase {
 	
@@ -25,7 +25,7 @@ public class ModelStreetLampBase extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<StreetLampBase.Entity> {
+	public static class Renderer extends TileRenderer4R<StreetLampBase.Entity> {
 		
 		public Renderer(){ super("minecraft:textures/blocks/anvil_base.png", new ModelStreetLampBase()); }
 

@@ -15,7 +15,7 @@ import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.IronSaw;
 import net.fexcraft.mod.frsm.items.PaintSet;
-import net.fexcraft.mod.frsm.util.CD;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.Data;
 import net.fexcraft.mod.frsm.util.UpdateHandler;
 import net.minecraft.client.util.ITooltipFlag;
@@ -80,64 +80,64 @@ public class FRSM {
 			MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:chocolatecookie")), 2);
 		}
 		//
-		AUTOREG.addItem("brush", new Item().setMaxStackSize(6).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("cup", new Item().setMaxStackSize(6).setCreativeTab(CD.MATERIALS), 0, null);
+		AUTOREG.addItem("brush", new Item().setMaxStackSize(6).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("cup", new Item().setMaxStackSize(6).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		AUTOREG.addItem("tilesempty", new Item(){
 			@Override
 			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
 				tooltip.add("Used to craft different types of Tiles");
 			}
-		}.setMaxStackSize(64).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("jar", new Item().setMaxStackSize(16).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("keyboard", new Item().setMaxStackSize(32).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("laptopmainboard", new Item().setMaxStackSize(8).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("nesr", new Item().setMaxStackSize(64).setCreativeTab(CD.MATERIALS), 0, null);
+		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("jar", new Item().setMaxStackSize(16).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("keyboard", new Item().setMaxStackSize(32).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("laptopmainboard", new Item().setMaxStackSize(8).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("nesr", new Item().setMaxStackSize(64).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		AUTOREG.addItem("planks_oak", new Item(){
 			@Override public int getItemBurnTime(ItemStack stack){ return 75; }
-		}.setMaxStackSize(64).setCreativeTab(CD.MATERIALS), 0, null);
+		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		AUTOREG.addItem("paintbucket", new Item(){
 			@Override
 		    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list){
-				if(tab != CD.MATERIALS) return; for(int i = 0; i < 16; i++) list.add(new ItemStack(this, 1, i));
+				if(tab != FRSMTabs.MATERIALS) return; for(int i = 0; i < 16; i++) list.add(new ItemStack(this, 1, i));
 		    }
-		}.setMaxStackSize(1).setCreativeTab(CD.MATERIALS), 16, null);
-		AUTOREG.addItem("pcmainboard", new Item().setMaxStackSize(8).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("prozessor", new Item().setMaxStackSize(32).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("prozessor2", new Item().setMaxStackSize(32).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("prozessor4", new Item().setMaxStackSize(32).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("redstoneinput", new Item().setMaxStackSize(32).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("stonemug", new Item().setMaxStackSize(4).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("tvcontroller", new Item().setMaxStackSize(16).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("tvscreenlarge", new Item().setMaxStackSize(2).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("tvscreenmedium", new Item().setMaxStackSize(2).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("tvscreensmall", new Item().setMaxStackSize(4).setCreativeTab(CD.MATERIALS), 0, null);
-		AUTOREG.addItem("upgradekit", new Item().setMaxStackSize(16).setCreativeTab(CD.MATERIALS), 0, null);
+		}.setMaxStackSize(1).setCreativeTab(FRSMTabs.MATERIALS), 16, null);
+		AUTOREG.addItem("pcmainboard", new Item().setMaxStackSize(8).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("prozessor", new Item().setMaxStackSize(32).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("prozessor2", new Item().setMaxStackSize(32).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("prozessor4", new Item().setMaxStackSize(32).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("redstoneinput", new Item().setMaxStackSize(32).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("stonemug", new Item().setMaxStackSize(4).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("tvcontroller", new Item().setMaxStackSize(16).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("tvscreenlarge", new Item().setMaxStackSize(2).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("tvscreenmedium", new Item().setMaxStackSize(2).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("tvscreensmall", new Item().setMaxStackSize(4).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
+		AUTOREG.addItem("upgradekit", new Item().setMaxStackSize(16).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		//
-		AUTOREG.addItem("bacon", new ItemFood(6, 0.6F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("baconraw", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("cheese", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("cheesepie", new ItemFood(10, 1F, true).setMaxStackSize(8).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("cheesewhite", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		AUTOREG.addItem("bacon", new ItemFood(6, 0.6F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("baconraw", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("cheese", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("cheesepie", new ItemFood(10, 1F, true).setMaxStackSize(8).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("cheesewhite", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("chocolatebar", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
 			}
-		}.setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("chocolatebarwhite", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
 			}
-		}.setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("chocolatecookie", new ItemFood(4, 0.4F, false).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("chocolatecookie", new ItemFood(4, 0.4F, false).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("chocolatemilk", new ItemFood(4, 0.4F, true){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
 			}
-		}.setMaxStackSize(1).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("cookedegg", new ItemFood(4, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(1).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("cookedegg", new ItemFood(4, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("cupwithcacao", new ItemFood(4, 0.4F, false){
 			@Override
 			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
@@ -148,46 +148,46 @@ public class FRSM {
 				player.addPotionEffect(new PotionEffect(Potion.getPotionById(6), 360));
 				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:cup"), 1, 0));
 			}
-		}.setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("donut", new ItemFood(6, 0.6F, false).setMaxStackSize(32).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("donut", new ItemFood(6, 0.6F, false).setMaxStackSize(32).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("hamburger", new ItemFood(9, 0.9F, true){
 			@Override
 			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
 				tooltip.add("Fast food, fastly programmed.");
 			}
-		}.setMaxStackSize(4).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(4).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("pizza", new ItemFood(10, 1F, true){
 			@Override
 			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
 				tooltip.add("Default.");
 			}
-		}.setMaxStackSize(1).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(1).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("potatochipsbag", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
 			}
-		}.setMaxStackSize(60).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("potatochipscheese", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
 			}
-		}.setMaxStackSize(60).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("potatochipstomato", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
 			}
-		}.setMaxStackSize(60).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("salami", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("salami", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("stonemugwithbeer", new ItemFood(4, 0.4F, false){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:stonemug"), 1, 0));
 			}
-		}.setMaxStackSize(4).setCreativeTab(CD.EATABLES), 0, null);
-		AUTOREG.addItem("tomato", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(4).setCreativeTab(FRSMTabs.EATABLES), 0, null);
+		AUTOREG.addItem("tomato", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("tomatojar", new ItemFood(2, 0.4F, true){
 			@Override
 			public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
@@ -197,13 +197,13 @@ public class FRSM {
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:jar"), 1, 0));
 			}
-		}.setMaxStackSize(16).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(16).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		AUTOREG.addItem("tomatosoup", new ItemFood(2, 0.4F, true){
 			@Override
 			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
 				player.inventory.addItemStackToInventory(new ItemStack(Items.BOWL, 1, 0));
 			}
-		}.setMaxStackSize(16).setCreativeTab(CD.EATABLES), 0, null);
+		}.setMaxStackSize(16).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		//
 		AUTOREG.addItem("ironsaw", new IronSaw(), 0, null);
 		PaintSet.register();

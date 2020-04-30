@@ -7,7 +7,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.roadsigns.RoadSign6;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
 public class ModelRoadSign6 extends GenericModelBase {
 	
@@ -140,7 +140,7 @@ public class ModelRoadSign6 extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<RoadSign6.TE> {
+	public static class Renderer extends TileRenderer4R<RoadSign6.TE> {
 		
 		public Renderer(){ super("frsm:textures/blocks/RoadSign6.png", new ModelRoadSign6()); }
 

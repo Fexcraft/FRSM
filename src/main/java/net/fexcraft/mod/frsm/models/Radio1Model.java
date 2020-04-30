@@ -4,7 +4,7 @@ package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.mod.frsm.blocks.machines.Radio1;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -50,7 +50,7 @@ public class Radio1Model extends ModelBase{
 	public static Radio1Model INSTANCE = new Radio1Model();
     
     @fTESR
-    public static class Renderer extends FTESR_4R<Radio1.Entity> {
+    public static class Renderer extends TileRenderer4R<Radio1.Entity> {
     	
     	public Renderer(){ super("frsm:textures/blocks/Radio1.png", null); }
 

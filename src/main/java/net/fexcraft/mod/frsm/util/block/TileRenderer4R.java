@@ -8,17 +8,17 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
-public abstract class FTESR_4R<T extends TileEntity> extends TileEntitySpecialRenderer<T> {
+public abstract class TileRenderer4R<T extends TileEntity> extends TileEntitySpecialRenderer<T> {
 	
 	public int angle = 0;
 	private ResourceLocation texture;
 	protected GenericModelBase model;
 	
-	public FTESR_4R(ResourceLocation location, GenericModelBase model){
+	public TileRenderer4R(ResourceLocation location, GenericModelBase model){
 		this.texture = location; this.model = model;
 	}
 	
-	public FTESR_4R(String location, GenericModelBase model){
+	public TileRenderer4R(String location, GenericModelBase model){
 		this.texture = new ResourceLocation(location); this.model = model;
 	}
 	

@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.blocks.machines;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -17,7 +17,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "radio2")
+@fBlock(modid = FRSM.MODID, name = "radio2")
 public class Radio2 extends Block {
 	
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
@@ -27,7 +27,7 @@ public class Radio2 extends Block {
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(1.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.TECHNIC);
+    	this.setCreativeTab(FRSMTabs.TECHNIC);
     	this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
 	

@@ -1,23 +1,23 @@
 package net.fexcraft.mod.frsm.blocks.pillar;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "pillar1", tileentity = Pillar.Entity.class, item = PaintableInfo.class)
-public class Pillar extends FBC_4R {
+@fBlock(modid = FRSM.MODID, name = "pillar1", tileentity = Pillar.Entity.class, item = PaintableInfo.class)
+public class Pillar extends BasicContainer4R {
 	
 	public Pillar() {
     	super(Material.GLASS);this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(2.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.BLOCKS);
+    	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
 	
 	@Override

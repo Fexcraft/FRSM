@@ -1,6 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.asphalt;
 
-import net.fexcraft.mod.frsm.util.CD;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -18,7 +18,7 @@ public class Asphalt extends Block {
         this.setHarvestLevel("pickaxe", 0);
         this.setHardness(50.0F);
         this.setResistance(300.0F);
-        this.setCreativeTab(CD.STREETS);
+        this.setCreativeTab(FRSMTabs.STREETS);
     }
     
     @Override

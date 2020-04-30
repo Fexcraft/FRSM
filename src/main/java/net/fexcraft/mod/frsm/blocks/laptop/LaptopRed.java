@@ -7,24 +7,24 @@ import javax.annotation.Nullable;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.ItemBlock16;
 import net.fexcraft.lib.mc.utils.Formatter;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBN_4R;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.Basic4R;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "laptop_red", item = LaptopRed.IB.class)
-public class LaptopRed extends FBN_4R {
+@fBlock(modid = FRSM.MODID, name = "laptop_red", item = LaptopRed.IB.class)
+public class LaptopRed extends Basic4R {
 	
 	public LaptopRed(){
 		super(Material.GLASS);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(2.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.TECHNIC);
+		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
 	
 	public static class IB extends ItemBlock16 {

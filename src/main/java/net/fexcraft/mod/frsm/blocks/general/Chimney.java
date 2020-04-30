@@ -2,10 +2,10 @@ package net.fexcraft.mod.frsm.blocks.general;
 
 import java.util.Random;
 
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
 import net.fexcraft.lib.mc.api.registry.fBlock;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.blocks.pipes.StovePipeEntity;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -23,14 +23,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "chimney", variants = 5)
+@fBlock(modid = FRSM.MODID, name = "chimney", variants = 5)
 public class Chimney extends Block implements StovePipeEntity.Connectable {
 	
 	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 3);
 
 	public Chimney(){
 		super(Material.ROCK);
-		this.setCreativeTab(CD.BLOCKS);
+		this.setCreativeTab(FRSMTabs.BLOCKS);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(3.0F);
 		this.setResistance(10.0F);

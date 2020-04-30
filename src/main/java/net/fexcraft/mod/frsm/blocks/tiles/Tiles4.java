@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.blocks.tiles;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -10,14 +10,14 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-@fBlock(modid = FI.MODID, name = "tiles4")
+@fBlock(modid = FRSM.MODID, name = "tiles4")
 public class Tiles4 extends Block {
 
 	public Tiles4() {
 		super(Material.CARPET);this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(1.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.BLOCKS);
+		this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
 	
 	@Override

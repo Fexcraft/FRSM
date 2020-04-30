@@ -5,11 +5,11 @@ import static net.fexcraft.mod.frsm.util.Properties.DYECOLOR;
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.frsm.util.CD;
 import net.fexcraft.mod.frsm.util.DyePaintable;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.LampMaterial;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -27,16 +27,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "lamp", variants = 16, burn_time = 100, item = /*Lamp.IB*/PaintableInfo.class)
+@fBlock(modid = FRSM.MODID, name = "lamp", variants = 16, burn_time = 100, item = /*Lamp.IB*/PaintableInfo.class)
 public class Lamp extends Block  implements DyePaintable {
     
     public Lamp() {
-    	super(FM.normal);
+    	super(LampMaterial.INSTANCE);
     	this.setLightLevel(1.0F);
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(2.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.BLOCKS);
+    	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
     
     public static class IB extends PaintableInfo {

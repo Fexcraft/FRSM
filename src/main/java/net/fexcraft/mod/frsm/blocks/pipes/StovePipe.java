@@ -1,8 +1,8 @@
 package net.fexcraft.mod.frsm.blocks.pipes;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "stove_pipe", tileentity = StovePipeEntity.class)
+@fBlock(modid = FRSM.MODID, name = "stove_pipe", tileentity = StovePipeEntity.class)
 public class StovePipe extends BlockContainer {
 
 	public StovePipe(){
@@ -19,7 +19,7 @@ public class StovePipe extends BlockContainer {
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(3.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.PIPES);
+    	this.setCreativeTab(FRSMTabs.PIPES);
 	}
 
 	@Override

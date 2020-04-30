@@ -7,7 +7,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.tv.TVL_1;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
 public class TVL_1Model extends GenericModelBase {
 	
@@ -265,7 +265,7 @@ public class TVL_1Model extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<TVL_1.TE> {
+	public static class Renderer extends TileRenderer4R<TVL_1.TE> {
 		
 		public Renderer(){ super("frsm:textures/blocks/TVL_1.png", new TVL_1Model()); }
 		

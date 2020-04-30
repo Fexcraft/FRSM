@@ -3,7 +3,7 @@ package net.fexcraft.mod.frsm.util;
 import net.fexcraft.lib.mc.registry.CreativeTab;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class CD {
+public class FRSMTabs {
 	
 	public static CreativeTabs BLOCKS = new CreativeTab("frsm_blocks", "frsm:woodenlightbox");
 	

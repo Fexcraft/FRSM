@@ -11,8 +11,8 @@ import net.fexcraft.lib.mc.api.registry.fItem;
 import net.fexcraft.lib.mc.network.Network;
 import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.lib.mc.utils.Static;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -30,12 +30,12 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SuppressWarnings("deprecation")
-@fItem(modid = FI.MODID, name = "key", variants = 3)
+@fItem(modid = FRSM.MODID, name = "key", variants = 3)
 public class Key extends KeyItem {
 	
 	public Key(){
 		this.setMaxStackSize(1);
-		this.setCreativeTab(CD.TOOLS);
+		this.setCreativeTab(FRSMTabs.TOOLS);
 		this.setHasSubtypes(true);
 	}
 	

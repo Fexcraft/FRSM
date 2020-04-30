@@ -4,7 +4,7 @@ package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.mod.frsm.blocks.machines.VM.VMEntity;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -290,7 +290,7 @@ public class VMModel extends ModelBase {
 	public static VMModel INSTANCE = new VMModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<VMEntity> {
+	public static class Renderer extends TileRenderer4R<VMEntity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/vendingmachine.png", null); }
 

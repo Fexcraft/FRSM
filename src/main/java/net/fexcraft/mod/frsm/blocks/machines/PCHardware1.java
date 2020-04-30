@@ -4,10 +4,10 @@ import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.network.packet.PacketTileEntityUpdate;
 import net.fexcraft.lib.mc.utils.ApiUtil;
+import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -22,15 +22,15 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "pchardware1", tileentity = PCHardware1.Entity.class, item = PaintableInfo.class)
-public class PCHardware1 extends FBC_4R {
+@fBlock(modid = FRSM.MODID, name = "pchardware1", tileentity = PCHardware1.Entity.class, item = PaintableInfo.class)
+public class PCHardware1 extends BasicContainer4R {
 	
 	public PCHardware1() {
     	super(Material.GLASS);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(3.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.TECHNIC);
+		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
 	
 	@Override

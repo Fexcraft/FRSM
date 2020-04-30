@@ -2,7 +2,7 @@ package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.mod.frsm.blocks.other.Car1D;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
@@ -120,7 +120,7 @@ public class Car1DModel extends ModelBase {
 	public static Car1DModel INSTANCE = new Car1DModel();
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<Car1D.Entity> {
+	public static class Renderer extends TileRenderer4R<Car1D.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/Car1D.png", null); }
 

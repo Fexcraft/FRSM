@@ -9,9 +9,9 @@ import javax.annotation.Nullable;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.utils.Formatter;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -30,15 +30,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "furnace1", item = Furnace1.Item.class, tileentity = Furnace1.Entity.class)
-public class Furnace1 extends FBC_4R {
+@fBlock(modid = FRSM.MODID, name = "furnace1", item = Furnace1.Item.class, tileentity = Furnace1.Entity.class)
+public class Furnace1 extends BasicContainer4R {
 	
 	public Furnace1() {
     	super(Material.IRON);
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(3.0F);
     	this.setResistance(32.0F);
-    	this.setCreativeTab(CD.BLOCKS);
+    	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
 	
 	@Override

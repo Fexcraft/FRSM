@@ -3,8 +3,8 @@ package net.fexcraft.mod.frsm.blocks.clock;
 import static net.fexcraft.mod.frsm.util.Properties.FACING;
 
 import net.fexcraft.lib.mc.utils.Print;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -21,14 +21,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public abstract class ClockBase extends FBC_4R {
+public abstract class ClockBase extends BasicContainer4R {
 
 	public ClockBase(){
 		super(Material.IRON);
 		this.setHarvestLevel("axe", 1);
 		this.setHardness(1.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.TECHNIC);
+		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
 	
 	@Override

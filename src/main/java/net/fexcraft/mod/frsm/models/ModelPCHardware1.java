@@ -7,7 +7,7 @@ import net.fexcraft.lib.mc.api.registry.fTESR;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.blocks.machines.PCHardware1;
-import net.fexcraft.mod.frsm.util.block.FTESR_4R;
+import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
 public class ModelPCHardware1 extends GenericModelBase {
 	
@@ -163,7 +163,7 @@ public class ModelPCHardware1 extends GenericModelBase {
 	}
 	
 	@fTESR
-	public static class Renderer extends FTESR_4R<PCHardware1.Entity> {
+	public static class Renderer extends TileRenderer4R<PCHardware1.Entity> {
 		
 		public Renderer(){ super("frsm:textures/blocks/pchardware1.png", new ModelPCHardware1()); }
 

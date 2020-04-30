@@ -11,7 +11,7 @@ import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
-import net.fexcraft.mod.frsm.util.CD;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.DyePaintable;
 import net.minecraft.block.BlockCarpet;
 import net.minecraft.block.BlockColored;
@@ -50,7 +50,7 @@ public class PaintSet extends Item {
 		String id = "paintset" + name;
 		this.dye = EnumDyeColor.byMetadata(name);
 		this.color = RGB.fromDyeColor(dye);
-		this.setCreativeTab(CD.TOOLS);
+		this.setCreativeTab(FRSMTabs.TOOLS);
 		this.setMaxStackSize(1);
 		FCLRegistry.getAutoRegistry("frsm").addItem(id, this, 1, null);
 	}

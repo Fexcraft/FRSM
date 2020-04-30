@@ -2,8 +2,8 @@ package net.fexcraft.mod.frsm.blocks.general;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.ItemBlock16;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -16,7 +16,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FI.MODID, name = "framedglowstone", variants = 6, item = FramedGlowstone.IB.class, burn_time = 900)
+@fBlock(modid = FRSM.MODID, name = "framedglowstone", variants = 6, item = FramedGlowstone.IB.class, burn_time = 900)
 public class FramedGlowstone extends Block {
 	
 	public static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 5);
@@ -27,7 +27,7 @@ public class FramedGlowstone extends Block {
         this.setHarvestLevel("pickaxe", 1);
         this.setHardness(1.0F);
         this.setResistance(10.0F);
-        this.setCreativeTab(CD.BLOCKS);
+        this.setCreativeTab(FRSMTabs.BLOCKS);
     }
     
 	public static class IB extends ItemBlock16 {

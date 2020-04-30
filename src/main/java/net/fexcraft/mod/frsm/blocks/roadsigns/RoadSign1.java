@@ -1,9 +1,9 @@
 package net.fexcraft.mod.frsm.blocks.roadsigns;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
-import net.fexcraft.mod.frsm.util.CD;
-import net.fexcraft.mod.frsm.util.FI;
-import net.fexcraft.mod.frsm.util.block.FBC_4R;
+import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
+import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
@@ -12,15 +12,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FI.MODID, name = "roadsign1", tileentity = RoadSign1.TE.class)
-public class RoadSign1 extends FBC_4R {
+@fBlock(modid = FRSM.MODID, name = "roadsign1", tileentity = RoadSign1.TE.class)
+public class RoadSign1 extends BasicContainer4R {
     
 	public RoadSign1() {
 		super(Material.GRASS);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(3.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(CD.STREETS);
+		this.setCreativeTab(FRSMTabs.STREETS);
 	}
 	
 	@Override
