@@ -13,6 +13,7 @@ import net.minecraft.item.ItemClock;
 import net.minecraft.item.ItemCompass;
 import net.minecraft.item.ItemTool;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -91,5 +92,10 @@ public abstract class ClockBase extends FBC_4R {
     	}
     	return false;
 	}
+	
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState state){
+        return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
+    }
 	
 }
