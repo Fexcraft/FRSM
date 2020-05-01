@@ -1,17 +1,24 @@
 package net.fexcraft.mod.frsm.models;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.machines.PCHardware2;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
-public class ModelPCHardware2 extends GenericModelBase {
+@fModel(registryname = "frsm:models/block/pchardware2")
+public class PCHardware2Model extends GenericModelBase {
 	
 	int textureX = 64, textureY = 64;
 
-	public ModelPCHardware2(){
+	public PCHardware2Model(){
 		base = new ModelRendererTurbo[8];
 		base[0] = new ModelRendererTurbo(this, 1, 1, textureX, textureY); // Box 0
 		base[1] = new ModelRendererTurbo(this, 9, 1, textureX, textureY); // Box 1
@@ -73,23 +80,20 @@ public class ModelPCHardware2 extends GenericModelBase {
 
 		r0[4].addShapeBox(6F, 0F, -4F, 1, 1, 2, 0F, 0F, 0F, -0.25F, -0.25F, 0F, -0.25F, -0.25F, -0.1F, -0.25F, -0.1F, -0.1F, -0.25F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F); // Box 11
 		r0[4].setRotationPoint(0F, -1F, 0F);
-		
-		translate(0F, 24F, 0F);
 	}
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<PCHardware2.Entity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/pchardware2.png", new ModelPCHardware2()); }
 
-		@Override
-		public void renderModel(PCHardware2.Entity tileentity, float partialticks, int destroystage){
-			model.render(model.base);
-			tileentity.getColor().glColorApply();
-			model.render(model.r0);
-			RGB.glColorReset();
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
 		}
-		
+		applyColor(r0, color);
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		addAll(mrts, r0);
+		return mrts;
 	}
 	
 }

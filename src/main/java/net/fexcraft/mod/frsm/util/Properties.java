@@ -59,4 +59,28 @@ public class Properties {
 		
 	};
 	
+	public static final IUnlistedProperty<Integer> PCHARDWAREPOS = new IUnlistedProperty<Integer>(){
+
+		@Override
+		public String getName(){
+			return "hardware_pos";
+		}
+
+		@Override
+		public boolean isValid(Integer value){
+			return value >= 0 && value < 3;
+		}
+
+		@Override
+		public Class<Integer> getType(){
+			return Integer.class;
+		}
+
+		@Override
+		public String valueToString(Integer value){
+			return Integer.toHexString(value);
+		}
+		
+	};
+	
 }

@@ -1,19 +1,24 @@
 package net.fexcraft.mod.frsm.models;
 
-import org.lwjgl.opengl.GL11;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.machines.PCHardware1;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
-public class ModelPCHardware1 extends GenericModelBase {
+@fModel(registryname = "frsm:models/block/pchardware1")
+public class PCHardware1Model extends GenericModelBase {
 	
 	int textureX = 64, textureY = 64;
 
-	public ModelPCHardware1(){
+	public PCHardware1Model(){
 		base = new ModelRendererTurbo[32];
 		base[0] = new ModelRendererTurbo(this, 25, 1, textureX, textureY); // Box 1
 		base[1] = new ModelRendererTurbo(this, 41, 1, textureX, textureY); // Box 2
@@ -158,33 +163,49 @@ public class ModelPCHardware1 extends GenericModelBase {
 
 		r0[2].addShapeBox(0F, 0F, -4F, 2, 5, 1, 0F, 0F, 0F, -0.5F, -0.25F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 4
 		r0[2].setRotationPoint(0F, -12F, 0F);
-		
-		translate(0F, 24F, 0F);
 	}
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<PCHardware1.Entity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/pchardware1.png", new ModelPCHardware1()); }
 
-		@Override
-		public void renderModel(PCHardware1.Entity tileentity, float partialticks, int destroystage){
-			int i = tileentity.getPosition();
-			if(i == 1){
-				GL11.glTranslatef(0.375f, 0, 0);
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		int offset = 0;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
+			offset = ext.getValue(Properties.PCHARDWAREPOS);
+		}
+		switch(offset){
+			case 1:{
+				translate(-6, 0, 0);
+				break;
 			}
-			else if(i == 2){
-				GL11.glTranslatef(-0.375f, 0, 0);
+			case 2:{
+				translate(6, 0, 0);
+				break;
 			}
-			model.render(model.base);
-			tileentity.getColor().glColorApply();
-			model.render(model.r0);
-			RGB.glColorReset();
-			if(i == 1){
-				GL11.glTranslatef(-0.375f, 0, 0);
+		}
+		applyColor(r0, color);
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		addAll(mrts, r0);
+		return mrts;
+	}
+
+	@Override
+	public void reset(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		int offset = 0;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			offset = ext.getValue(Properties.PCHARDWAREPOS);
+		}
+		switch(offset){
+			case 1:{
+				translate(6, 0, 0);
+				break;
 			}
-			else if(i == 2){
-				GL11.glTranslatef(0.375f, 0, 0);
+			case 2:{
+				translate(-6, 0, 0);
+				break;
 			}
 		}
 		

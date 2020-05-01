@@ -46,7 +46,7 @@ public abstract class BasicContainer4R extends BlockContainer {
 
 	@Override
     public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
-        return FULL_BLOCK_AABB;
+        return FULL_BLOCK_AABB.offset(pos);
     }
 	
 	@Override
