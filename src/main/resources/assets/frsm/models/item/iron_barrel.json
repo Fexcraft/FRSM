@@ -1,45 +1,6 @@
 {
-	"parent": "frsm:block/iron_barrel",
-	"display": {
-	    "thirdperson_righthand": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "thirdperson_lefthand": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "head": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 1.2, 1.2, 1.2 ]
-	    },
-	    "ground": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "fixed": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, -2, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "firstperson_righthand": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "firstperson_lefthand": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, 0, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    },
-	    "gui": {
-	        "rotation": [ 0, 0, 0 ],
-	        "translation": [ 0, -4, 0 ],
-	        "scale": [ 0.5, 0.5, 0.5 ]
-	    }
-	}
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "frsm:items/iron_barrel"
+    }
 }
