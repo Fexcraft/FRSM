@@ -12,9 +12,9 @@ import net.fexcraft.mod.frsm.util.FVTMFormatModel;
  *  @author Ferdinand (FEX___96)
  */
 @fModel(registryname = "frsm:models/block/iron_barrel")
-public class IronBarrel extends FVTMFormatModel {
+public class IronBarrelModel extends FVTMFormatModel {
 
-	public IronBarrel(){
+	public IronBarrelModel(){
 		super(); textureX = 64; textureY = 64;
 		TurboList group0 = new TurboList("group0");
 		group0.add(new ModelRendererTurbo(group0, 32, 0, textureX, textureY).addHollowCylinder(0, 0, 0, 8, 0.001f, 2, 12, 0, 1, 1, 4, null)

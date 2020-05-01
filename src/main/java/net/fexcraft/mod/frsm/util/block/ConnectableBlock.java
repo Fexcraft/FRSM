@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -63,6 +62,7 @@ public class ConnectableBlock extends Block {
     	this.setDefaultState(this.blockState.getBaseState().withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
 	}
 	
+	@Override
 	@SuppressWarnings("deprecation")
 	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean b){
         if(!b){
@@ -83,6 +83,7 @@ public class ConnectableBlock extends Block {
         }
     }
 	
+	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
         state = this.getActualState(state, source, pos);
         return BOUNDING_BOXES[getBoundingBoxIdx(state)];
@@ -105,14 +106,17 @@ public class ConnectableBlock extends Block {
         return i;
     }
 	
+	@Override
 	public boolean isOpaqueCube(IBlockState state){
         return false;
     }
 
+	@Override
     public boolean isFullCube(IBlockState state){
         return false;
     }
 
+	@Override
     public boolean isPassable(IBlockAccess worldIn, BlockPos pos){
         return false;
     }
@@ -123,11 +127,13 @@ public class ConnectableBlock extends Block {
         return block == Blocks.BARRIER ? false : ((!(block instanceof ConnectableBlock) || state.getMaterial() != this.material) && !(block instanceof BlockWall) ? (state.getMaterial().isOpaque() && state.isFullCube() ? state.getMaterial() != Material.GOURD : false) : true);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side){
         return true;
     }
     
+    @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ){
         if(!worldIn.isRemote){
             return ItemLead.attachToFence(playerIn, worldIn, pos);
@@ -138,10 +144,12 @@ public class ConnectableBlock extends Block {
         }
     }
     
+    @Override
     public int getMetaFromState(IBlockState state){
         return 0;
     }
     
+    @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos){
         return state.withProperty(NORTH, canFenceConnectTo(worldIn, pos, EnumFacing.NORTH))
                 .withProperty(EAST, canFenceConnectTo(worldIn, pos, EnumFacing.EAST))
@@ -149,6 +157,7 @@ public class ConnectableBlock extends Block {
                 .withProperty(WEST, canFenceConnectTo(worldIn, pos, EnumFacing.WEST));
     }
     
+    @Override
     public IBlockState withRotation(IBlockState state, Rotation r){
         switch (r){
             case CLOCKWISE_180:
@@ -175,8 +184,9 @@ public class ConnectableBlock extends Block {
         }
     }
 
+    @Override
     protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, new IProperty[] {NORTH, EAST, WEST, SOUTH});
+        return new BlockStateContainer(this, NORTH, EAST, WEST, SOUTH);
     }
     
     @Override
