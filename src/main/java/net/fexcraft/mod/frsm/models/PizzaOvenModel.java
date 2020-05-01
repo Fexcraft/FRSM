@@ -1,22 +1,29 @@
 package net.fexcraft.mod.frsm.models;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.machines.PizzaOven;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
 /**
  * 
  * @author Ferdinand (FEX___96)
  */
-public class ModelPizzaOven extends GenericModelBase {
+@fModel(registryname = "frsm:models/block/electric_pizza_oven")
+public class PizzaOvenModel extends GenericModelBase {
 	
 	int textureX = 256;
 	int textureY = 128;
 
-	public ModelPizzaOven(){
+	public PizzaOvenModel(){
 		base = new ModelRendererTurbo[48];
 		base[0] = new ModelRendererTurbo(this, 1, 1, textureX, textureY); // Box 0
 		base[1] = new ModelRendererTurbo(this, 9, 1, textureX, textureY); // Box 1
@@ -275,27 +282,24 @@ public class ModelPizzaOven extends GenericModelBase {
 
 		r3[3].addShapeBox(0F, 0F, 0F, 15, 7, 1, 0F, 0F, -0.5F, -0.5F, 0F, -0.5F, -0.5F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, -0.5F, 0F, 0F, -0.5F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 11
 		r3[3].setRotationPoint(-7.5F, -9F, 7F);
-		
-		translate(0F, 24F, 0F);
 	}
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<PizzaOven.Entity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/pizza_oven.png", new ModelPizzaOven()); }
 
-		@Override
-		public void renderModel(PizzaOven.Entity tileentity, float partialticks, int destroystage){
-			model.render(model.base);
-			model.render(model.closed);
-			model.render(model.r0);
-			model.render(model.r1);
-			model.render(model.r2);
-			tileentity.getColor().glColorApply();
-			model.render(model.r3);
-			RGB.glColorReset();
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
 		}
-		
+		applyColor(r3, color);
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		addAll(mrts, closed);
+		addAll(mrts, r0);
+		addAll(mrts, r1);
+		addAll(mrts, r2);
+		addAll(mrts, r3);
+		return mrts;
 	}
 	
 }

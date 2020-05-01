@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "frsm:blocks/electric_pizza_oven"
+        "layer0": "frsm:items/electric_pizza_oven"
     }
 }
