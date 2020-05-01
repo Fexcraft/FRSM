@@ -1,5 +1,22 @@
 {
-    "variants": {
-        "normal": { "model": "frsm:iron_barrel" }
+  "forge_marker": 1,
+  "defaults": {
+    "model": "frsm:iron_barrel",
+    "transform": "forge:default-block",
+    "custom": {
+    	"t-x": 0.5,
+    	"t-z": 0.5
     }
+  },
+  "variants": {
+  	"normal": [{}],
+    "lowered": {
+      "true": {
+        "custom": { "t-y": -0.5 }
+      },
+      "false": {
+        "custom": { "t-y": 0 }
+      }
+    }
+  }
 }

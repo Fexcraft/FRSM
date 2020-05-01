@@ -5,6 +5,7 @@ import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -13,12 +14,15 @@ import net.minecraft.world.IBlockAccess;
 @fBlock(modid = FRSM.MODID, name = "iron_barrel")
 public class IronBarrel extends Block {
 	
+	public static final PropertyBool LOWERED = PropertyBool.create("lowered");
+	
 	public IronBarrel() {
     	super(Material.WOOD);
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(3.0F);
     	this.setResistance(32.0F);
     	this.setCreativeTab(FRSMTabs.BLOCKS);
+    	this.setDefaultState(this.blockState.getBaseState().withProperty(LOWERED, false));
 	}
 	
     @Override
