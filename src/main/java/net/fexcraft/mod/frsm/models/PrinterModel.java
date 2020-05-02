@@ -1,118 +1,124 @@
+//FMT-Marker FVTM-1.4
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
-import net.fexcraft.mod.frsm.blocks.machines.Printer;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
+import net.fexcraft.lib.mc.api.registry.fModel;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
+import net.fexcraft.mod.frsm.util.FVTMFormatModel;
 
-public class PrinterModel extends ModelBase {
-
-	ModelRenderer Shape1;
-	ModelRenderer Shape2;
-	ModelRenderer Shape3;
-	ModelRenderer Shape4;
-	ModelRenderer Shape5;
-	ModelRenderer Shape6;
-	ModelRenderer Shape7;
-	ModelRenderer Shape8;
-	ModelRenderer Shape9;
+/** This file was exported via the FVTM Exporter V1.4 of<br>
+ *  FMT (Fex's Modelling Toolbox) v.2.4.1 &copy; 2020 - Fexcraft.net<br>
+ *  All rights reserved. For this Model's License contact the Author/Creator.
+ *  
+ *  @author Ferdinand (FEX___96)
+ */
+@fModel(registryname = "frsm:models/block/printer")
+public class PrinterModel extends FVTMFormatModel {
 
 	public PrinterModel(){
-		textureWidth = 128; textureHeight = 32;
-		Shape1 = new ModelRenderer(this, 0, 21);
-		Shape1.addBox(0F, 0F, 0F, 12, 1, 10);
-		Shape1.setRotationPoint(-5F, 23F, -5F);
-		Shape1.setTextureSize(128, 32);
-		Shape1.mirror = true;
-		setRotation(Shape1, 0F, 0F, 0F);
-		Shape2 = new ModelRenderer(this, 70, 19);
-		Shape2.addBox(0F, 0F, 0F, 2, 3, 10);
-		Shape2.setRotationPoint(-5F, 20F, -5F);
-		Shape2.setTextureSize(128, 32);
-		Shape2.mirror = true;
-		setRotation(Shape2, 0F, 0F, 0F);
-		Shape3 = new ModelRenderer(this, 45, 19);
-		Shape3.addBox(0F, 0F, 0F, 2, 3, 10);
-		Shape3.setRotationPoint(5F, 20F, -5F);
-		Shape3.setTextureSize(128, 32);
-		Shape3.mirror = true;
-		setRotation(Shape3, 0F, 0F, 0F);
-		Shape4 = new ModelRenderer(this, 32, 17);
-		Shape4.addBox(0F, 0F, 0F, 2, 1, 2);
-		Shape4.setRotationPoint(-5F, 20F, -1F);
-		Shape4.setTextureSize(128, 32);
-		Shape4.mirror = true;
-		setRotation(Shape4, 0.5576792F, 0F, 0F);
-		Shape5 = new ModelRenderer(this, 0, 10);
-		Shape5.addBox(0F, 0F, 0F, 8, 1, 1);
-		Shape5.setRotationPoint(-3F, 22F, 4F);
-		Shape5.setTextureSize(128, 32);
-		Shape5.mirror = true;
-		setRotation(Shape5, 0F, 0F, 0F);
-		Shape6 = new ModelRenderer(this, 45, 13);
-		Shape6.addBox(0F, 0F, 0F, 6, 1, 4);
-		Shape6.setRotationPoint(-2F, 24F, -5F);
-		Shape6.setTextureSize(128, 32);
-		Shape6.mirror = true;
-		setRotation(Shape6, 2.862753F, 0F, 0F);
-		Shape7 = new ModelRenderer(this, 0, 12);
-		Shape7.addBox(0F, 0F, 0F, 8, 1, 7);
-		Shape7.setRotationPoint(-3F, 21F, -4F);
-		Shape7.setTextureSize(128, 32);
-		Shape7.mirror = true;
-		setRotation(Shape7, 0F, 0F, 0F);
-		Shape8 = new ModelRenderer(this, 0, 0);
-		Shape8.addBox(0F, 0F, 0F, 8, 1, 8);
-		Shape8.setRotationPoint(-3F, 20F, -5F);
-		Shape8.setTextureSize(128, 32);
-		Shape8.mirror = true;
-		setRotation(Shape8, 0F, 0F, 0F);
-		Shape9 = new ModelRenderer(this, 53, 0);
-		Shape9.addBox(0F, 0F, 0F, 8, 1, 8);
-		Shape9.setRotationPoint(-3F, 23F, 3F);
-		Shape9.setTextureSize(128, 32);
-		Shape9.mirror = true;
-		setRotation(Shape9, 1.041001F, 0F, 0F);
-	}
-
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5){
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		setRotationAngles(f, f1, f2, f3, f4, f5);
-		Shape1.render(f5);
-		Shape2.render(f5);
-		Shape3.render(f5);
-		Shape4.render(f5);
-		Shape5.render(f5);
-		Shape6.render(f5);
-		Shape7.render(f5);
-		Shape8.render(f5);
-		Shape9.render(f5);
-	}
-
-	private void setRotation(ModelRenderer model, float x, float y, float z){
-		model.rotateAngleX = x;
-		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5){
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
-	}
-
-	public static PrinterModel INSTANCE = new PrinterModel();
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<Printer.Entity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/printer.png", null); }
-
-		@Override
-		public void renderModel(Printer.Entity tileentity, float partialticks, int destroystage){
-			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		}
-		
+		super(); textureX = 64; textureY = 64;
+		//
+		TurboList group0 = new TurboList("group0");
+		group0.add(new ModelRendererTurbo(group0, 5, 5, textureX, textureY)
+			.addBox(0, 0, 0, 8, 1, 12, 0, 1f, new boolean[]{ false, false, true, false, false, false })
+			.setRotationPoint(-5, -1, -6).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 36, 25, textureX, textureY)
+			.addBox(0, -5, 0, 1, 5, 8, 0, 1f, new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-5, -4, -4).setRotationAngle(0, 0, -15)
+		);
+		group0.add(new ModelRendererTurbo(group0, 43, 5, textureX, textureY)
+			.addShapeBox(0, 0, 0, 2, 1, 2, 0, -0.125f, 0, -0.125f, -0.125f, 0, -0.125f, -0.125f, 0, -0.125f, -0.125f, 0, -0.125f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-3.25f, -6.0625f, 3.75f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 33, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 14, 35, 0, 0, 0, 0, 0, -0.125f, -0.125f, 0, -0.125f, -33.625f, 0, 0, -33.5f, 0, -13, 0, 0, -13.125f, -0.125f, 0, -13.125f, -33.625f, 0, -13, -33.5f,
+				new boolean[]{ false, true, true, true, true, true })
+			.setRotationPoint(1.375f, -5.25f, -5.625f).setRotationAngle(0, 0, -45)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 7, 1, 12, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+			.setRotationPoint(-4, -6, -6).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 38, 0, textureX, textureY)
+			.addBox(0, 0, 0, 8, 4, 2, 0, 1f, new boolean[]{ false, false, true, true, false, false })
+			.setRotationPoint(-5, -5, -6).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 17, 0, textureX, textureY)
+			.addBox(0, 0, 0, 8, 4, 2, 0, 1f, new boolean[]{ false, false, true, true, false, false })
+			.setRotationPoint(-5, -5, 4).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 8, 4, 8, 0, 0, 0, 0, 0, -3, 0, 0, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, true, true })
+			.setRotationPoint(-5, -5, -4).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 58, 7, textureX, textureY)
+			.addBox(0, 0, 0, 1, 1, 2, 0, 1f, new boolean[]{ true, false, false, true, false, false })
+			.setRotationPoint(-5, -6, 4).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 3, 4, textureX, textureY)
+			.addBox(0, 0, 0, 1, 1, 2, 0, 1f, new boolean[]{ true, false, false, true, false, false })
+			.setRotationPoint(-5, -6, -6).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 26, 5, textureX, textureY)
+			.addShapeBox(0, 0, 0, 4, 1, 8, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0)
+			.setRotationPoint(3, -2, -4).setRotationAngle(0, 0, -5)
+		);
+		group0.add(new ModelRendererTurbo(group0, 52, 17, textureX, textureY)
+			.addShapeBox(0.125f, -6.5625f, 0, 1, 6, 7, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0,
+				new boolean[]{ true, false, false, true, false, false })
+			.setRotationPoint(-5.0625f, -4, -3.5f).setRotationAngle(0, 0, -15)
+		);
+		group0.add(new ModelRendererTurbo(group0, 49, 17, textureX, textureY)
+			.addShapeBox(0.125f, -6.5625f, 0, 1, 6, 7, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0,
+				new boolean[]{ true, true, false, true, false, false })
+			.setRotationPoint(-5, -4, -3.5f).setRotationAngle(0, 0, -15)
+		);
+		group0.add(new ModelRendererTurbo(group0, 46, 17, textureX, textureY)
+			.addShapeBox(0.125f, -6.5625f, 0, 1, 6, 7, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0,
+				new boolean[]{ true, true, false, true, false, false })
+			.setRotationPoint(-4.9375f, -4, -3.5f).setRotationAngle(0, 0, -15)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 13, textureX, textureY)
+			.addShapeBox(0.125f, -6.5625f, 0, 1, 6, 7, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0, -0.9375f, 0, 0, 0, 0, 0, 0, 0, 0, -0.9375f, 0, 0,
+				new boolean[]{ false, true, false, true, false, false })
+			.setRotationPoint(-4.875f, -4, -3.5f).setRotationAngle(0, 0, -15)
+		);
+		group0.add(new ModelRendererTurbo(group0, 26, 8, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-1.375f, -6.0625f, 4.75f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 55, 6, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-0.75f, -6.0625f, 4.75f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 26, 5, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-0.125f, -6.0625f, 4.75f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 58, 4, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(0.5f, -6.0625f, 4.75f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 3, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-1.375f, -6.0625f, 4.125f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 0, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, -0.25f, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-0.75f, -6.0625f, 4.125f).setRotationAngle(0, 0, 0)
+		);
+		group0.add(new ModelRendererTurbo(group0, 44, 7, textureX, textureY).addBox(0, 0, 0, 1, 1, 8)
+			.setRotationPoint(2, -5, -4).setRotationAngle(0, 0, 0)
+		);
+		this.groups.add(group0);
 	}
 
 }
