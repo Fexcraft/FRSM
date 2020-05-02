@@ -49,6 +49,11 @@ public class Radio2 extends Block {
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
 		return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.6875F, 1.0F);
 	}
+
+	@Override
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
+        return getBoundingBox(state, world, pos).offset(pos);
+    }
 	
 	@Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer){

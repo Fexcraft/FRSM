@@ -29,7 +29,7 @@ public class Printer extends Basic4R {
 	}
 
 	@Override
-    public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
         return AABBs.PRINTER.offset(pos);
     }
 	
