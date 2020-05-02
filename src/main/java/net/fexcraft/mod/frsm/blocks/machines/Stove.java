@@ -6,7 +6,7 @@ import static net.fexcraft.mod.frsm.util.Properties.OPEN;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.Basic4R;
+import net.fexcraft.mod.frsm.util.block.Basic4RFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -20,7 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 @fBlock(modid = FRSM.MODID, name = "stove")
-public class Stove extends Basic4R {
+public class Stove extends Basic4RFalling {
 	
 	public Stove(){
     	super(Material.GLASS);
