@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "frsm:blocks/radio1i"
+        "layer0": "frsm:items/radio1"
     }
 }
