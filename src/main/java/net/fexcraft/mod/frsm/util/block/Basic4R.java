@@ -4,7 +4,6 @@ import static net.fexcraft.mod.frsm.util.Properties.FACING;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -44,7 +43,7 @@ public abstract class Basic4R extends Block {
 
 	@Override
     public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
-        return FULL_BLOCK_AABB;
+        return FULL_BLOCK_AABB.offset(pos);
     }
 	
 	@Override
@@ -54,13 +53,13 @@ public abstract class Basic4R extends Block {
 
 	@Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack){
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
+        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()));
     }
     
 	@Override
     public IBlockState getStateFromMeta(int meta){
         EnumFacing enumfacing = EnumFacing.byIndex(meta);
-        if (enumfacing.getAxis() == EnumFacing.Axis.Y){
+        if(enumfacing.getAxis() == EnumFacing.Axis.Y){
             enumfacing = EnumFacing.NORTH;
         }
         return this.getDefaultState().withProperty(FACING, enumfacing);
@@ -68,12 +67,12 @@ public abstract class Basic4R extends Block {
 	
 	@Override
     public int getMetaFromState(IBlockState state){
-        return ((EnumFacing)state.getValue(FACING)).getIndex();
+        return state.getValue(FACING).getIndex();
     }
 	
 	@Override
     protected BlockStateContainer createBlockState(){
-        return new BlockStateContainer(this, new IProperty[] {FACING});
+        return new BlockStateContainer(this, FACING);
     }
 	
 }

@@ -1,359 +1,272 @@
+//FMT-Marker FVTM-1.4
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
-import net.fexcraft.mod.frsm.blocks.machines.Stove;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
+import java.util.Collection;
+import java.util.Map;
 
-public class StoveModel extends ModelBase {
+import net.fexcraft.lib.mc.api.registry.fModel;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
+import net.fexcraft.mod.frsm.util.FVTMFormatModel;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
 
-	ModelRenderer Shape1;
-	ModelRenderer Shape2;
-	ModelRenderer Shape3;
-	ModelRenderer Shape4;
-	ModelRenderer Shape5;
-	ModelRenderer Shape6;
-	ModelRenderer Shape62;
-	ModelRenderer Shape63;
-	ModelRenderer Shape64;
-	ModelRenderer Shape65;
-	ModelRenderer Shape66;
-	ModelRenderer Shape67;
-	ModelRenderer Shape68;
-	ModelRenderer Shape69;
-	ModelRenderer Shape610;
-	ModelRenderer Shape611;
-	ModelRenderer Shape612;
-	ModelRenderer Shape7;
-	ModelRenderer Shape8;
-	ModelRenderer Shape9;
-	ModelRenderer Shape10;
-	ModelRenderer Shape11;
-	ModelRenderer Shape12;
-	ModelRenderer Shape13;
-	ModelRenderer Shape14;
-	ModelRenderer Shape15;
-	ModelRenderer Shape16;
-	ModelRenderer Shape17;
-	ModelRenderer Shape162;
-	ModelRenderer Shape172;
-	ModelRenderer Shape18;
-	ModelRenderer Shape19;
-	ModelRenderer Shape192;
-	ModelRenderer Shape182;
-	ModelRenderer Shape20;
-	ModelRenderer Shape21;
-	ModelRenderer Shape22;
-	ModelRenderer Shape23;
-	ModelRenderer Shape24;
+/** This file was exported via the FVTM Exporter V1.4 of<br>
+ *  FMT (Fex's Modelling Toolbox) v.2.4.1 &copy; 2020 - Fexcraft.net<br>
+ *  All rights reserved. For this Model's License contact the Author/Creator.
+ *  
+ *  @author Ferdinand (FEX___96)
+ */
+@fModel(registryname = "frsm:models/block/stove")
+public class StoveModel extends FVTMFormatModel {
 
 	public StoveModel(){
-		textureWidth = 256;
-		textureHeight = 64;
-		Shape1 = new ModelRenderer(this, 0, 49);
-		Shape1.addBox(0F, 0F, 0F, 16, 1, 14);
-		Shape1.setRotationPoint(-8F, 23F, -6F);
-		Shape1.setTextureSize(256, 64);
-		Shape1.mirror = true;
-		setRotation(Shape1, 0F, 0F, 0F);
-		Shape2 = new ModelRenderer(this, 0, 22);
-		Shape2.addBox(0F, 0F, 0F, 1, 12, 14);
-		Shape2.setRotationPoint(-8F, 11F, -6F);
-		Shape2.setTextureSize(256, 64);
-		Shape2.mirror = true;
-		setRotation(Shape2, 0F, 0F, 0F);
-		Shape3 = new ModelRenderer(this, 0, 22);
-		Shape3.addBox(0F, 0F, 0F, 1, 12, 14);
-		Shape3.setRotationPoint(7F, 11F, -6F);
-		Shape3.setTextureSize(256, 64);
-		Shape3.mirror = true;
-		setRotation(Shape3, 0F, 0F, 0F);
-		Shape4 = new ModelRenderer(this, 31, 35);
-		Shape4.addBox(0F, -13F, 0F, 14, 12, 1);
-		Shape4.setRotationPoint(-7F, 24F, 7F);
-		Shape4.setTextureSize(256, 64);
-		Shape4.mirror = true;
-		setRotation(Shape4, 0F, 0F, 0F);
-		Shape5 = new ModelRenderer(this, 61, 50);
-		Shape5.addBox(0F, 0F, 0F, 14, 1, 13);
-		Shape5.setRotationPoint(-7F, 11F, -6F);
-		Shape5.setTextureSize(256, 64);
-		Shape5.mirror = true;
-		setRotation(Shape5, 0F, 0F, 0F);
-		Shape6 = new ModelRenderer(this, 0, 18);
-		Shape6.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape6.setRotationPoint(0F, 19F, 6F);
-		Shape6.setTextureSize(256, 64);
-		Shape6.mirror = true;
-		setRotation(Shape6, 0F, 0F, 0.7853982F);
-		Shape62 = new ModelRenderer(this, 0, 18);
-		Shape62.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape62.setRotationPoint(0F, 19F, 6F);
-		Shape62.setTextureSize(256, 64);
-		Shape62.mirror = true;
-		setRotation(Shape62, 0F, 0F, 0.2617994F);
-		Shape63 = new ModelRenderer(this, 0, 18);
-		Shape63.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape63.setRotationPoint(0F, 19F, 6F);
-		Shape63.setTextureSize(256, 64);
-		Shape63.mirror = true;
-		setRotation(Shape63, 0F, 0F, -0.2617994F);
-		Shape64 = new ModelRenderer(this, 0, 18);
-		Shape64.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape64.setRotationPoint(0F, 19F, 6F);
-		Shape64.setTextureSize(256, 64);
-		Shape64.mirror = true;
-		setRotation(Shape64, 0F, 0F, -0.7853982F);
-		Shape65 = new ModelRenderer(this, 0, 18);
-		Shape65.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape65.setRotationPoint(0F, 19F, 6F);
-		Shape65.setTextureSize(256, 64);
-		Shape65.mirror = true;
-		setRotation(Shape65, 0F, 0F, -1.308997F);
-		Shape66 = new ModelRenderer(this, 0, 18);
-		Shape66.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape66.setRotationPoint(0F, 19F, 6F);
-		Shape66.setTextureSize(256, 64);
-		Shape66.mirror = true;
-		setRotation(Shape66, 0F, 0F, -1.832596F);
-		Shape67 = new ModelRenderer(this, 0, 18);
-		Shape67.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape67.setRotationPoint(0F, 19F, 6F);
-		Shape67.setTextureSize(256, 64);
-		Shape67.mirror = true;
-		setRotation(Shape67, 0F, 0F, -2.356194F);
-		Shape68 = new ModelRenderer(this, 0, 18);
-		Shape68.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape68.setRotationPoint(0F, 19F, 6F);
-		Shape68.setTextureSize(256, 64);
-		Shape68.mirror = true;
-		setRotation(Shape68, 0F, 0F, -2.879793F);
-		Shape69 = new ModelRenderer(this, 0, 18);
-		Shape69.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape69.setRotationPoint(0F, 19F, 6F);
-		Shape69.setTextureSize(256, 64);
-		Shape69.mirror = true;
-		setRotation(Shape69, 0F, 0F, 1.308997F);
-		Shape610 = new ModelRenderer(this, 0, 18);
-		Shape610.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape610.setRotationPoint(0F, 19F, 6F);
-		Shape610.setTextureSize(256, 64);
-		Shape610.mirror = true;
-		setRotation(Shape610, 0F, 0F, 1.832596F);
-		Shape611 = new ModelRenderer(this, 0, 18);
-		Shape611.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape611.setRotationPoint(0F, 19F, 6F);
-		Shape611.setTextureSize(256, 64);
-		Shape611.mirror = true;
-		setRotation(Shape611, 0F, 0F, 2.356194F);
-		Shape612 = new ModelRenderer(this, 0, 18);
-		Shape612.addBox(0F, 0F, 0F, 1, 3, 0);
-		Shape612.setRotationPoint(0F, 19F, 6F);
-		Shape612.setTextureSize(256, 64);
-		Shape612.mirror = true;
-		setRotation(Shape612, 0F, 0F, 2.879793F);
-		Shape7 = new ModelRenderer(this, 3, 18);
-		Shape7.addBox(0F, 0F, 0F, 2, 2, 1);
-		Shape7.setRotationPoint(-1F, 18F, 6F);
-		Shape7.setTextureSize(256, 64);
-		Shape7.mirror = true;
-		setRotation(Shape7, 0F, 0F, 0F);
-		Shape8 = new ModelRenderer(this, 0, 22);
-		Shape8.addBox(0F, 0F, 0F, 3, 11, 1);
-		Shape8.setRotationPoint(-7F, 12F, 6F);
-		Shape8.setTextureSize(256, 64);
-		Shape8.mirror = true;
-		setRotation(Shape8, 0F, 0F, 0F);
-		Shape9 = new ModelRenderer(this, 22, 22);
-		Shape9.addBox(0F, 0F, 0F, 3, 11, 1);
-		Shape9.setRotationPoint(4F, 12F, 6F);
-		Shape9.setTextureSize(256, 64);
-		Shape9.mirror = true;
-		setRotation(Shape9, 0F, 0F, 0F);
-		Shape10 = new ModelRenderer(this, 10, 17);
-		Shape10.addBox(0F, 0F, 0F, 8, 3, 1);
-		Shape10.setRotationPoint(-4F, 12F, 6F);
-		Shape10.setTextureSize(256, 64);
-		Shape10.mirror = true;
-		setRotation(Shape10, 0F, 0F, 0F);
-		Shape11 = new ModelRenderer(this, 31, 22);
-		Shape11.addBox(0F, 0F, 0F, 1, 1, 11);
-		Shape11.setRotationPoint(-7F, 19F, -5F);
-		Shape11.setTextureSize(256, 64);
-		Shape11.mirror = true;
-		setRotation(Shape11, 0F, 0F, 0F);
-		Shape12 = new ModelRenderer(this, 31, 22);
-		Shape12.addBox(0F, 0F, 0F, 1, 1, 11);
-		Shape12.setRotationPoint(6F, 19F, -5F);
-		Shape12.setTextureSize(256, 64);
-		Shape12.mirror = true;
-		setRotation(Shape12, 0F, 0F, 0F);
-		Shape13 = new ModelRenderer(this, 62, 38);
-		Shape13.addBox(0F, 0F, 0F, 14, 0, 11);
-		Shape13.setRotationPoint(-7F, 19F, -5F);
-		Shape13.setTextureSize(256, 64);
-		Shape13.mirror = true;
-		setRotation(Shape13, 0F, 0F, 0F);
-		Shape14 = new ModelRenderer(this, 62, 23);
-		Shape14.addBox(0F, 0F, 0F, 16, 13, 1);
-		Shape14.setRotationPoint(-8F, 24F, -6F);
-		Shape14.setTextureSize(256, 64);
-		Shape14.mirror = true;
-		setRotation(Shape14, -3.054326F, 0F, 0F);
-		Shape15 = new ModelRenderer(this, 0, 15);
-		Shape15.addBox(0F, 0F, 0F, 4, 1, 1);
-		Shape15.setRotationPoint(-2F, 12F, -9F);
-		Shape15.setTextureSize(256, 64);
-		Shape15.mirror = true;
-		setRotation(Shape15, 0F, 0F, 0F);
-		Shape16 = new ModelRenderer(this, 57, 0);
-		Shape16.addBox(0F, 0F, 0F, 3, 1, 5);
-		Shape16.setRotationPoint(-6F, 9.5F, 1F);
-		Shape16.setTextureSize(256, 64);
-		Shape16.mirror = true;
-		setRotation(Shape16, 0F, 0F, 0F);
-		Shape17 = new ModelRenderer(this, 57, 7);
-		Shape17.addBox(0F, 0F, 0F, 5, 1, 3);
-		Shape17.setRotationPoint(-7F, 9.5F, 2F);
-		Shape17.setTextureSize(256, 64);
-		Shape17.mirror = true;
-		setRotation(Shape17, 0F, 0F, 0F);
-		Shape162 = new ModelRenderer(this, 57, 0);
-		Shape162.addBox(0F, 0F, 0F, 3, 1, 5);
-		Shape162.setRotationPoint(2F, 9.5F, 1F);
-		Shape162.setTextureSize(256, 64);
-		Shape162.mirror = true;
-		setRotation(Shape162, 0F, 0F, 0F);
-		Shape172 = new ModelRenderer(this, 57, 7);
-		Shape172.addBox(0F, 0F, 0F, 5, 1, 3);
-		Shape172.setRotationPoint(1F, 9.5F, 2F);
-		Shape172.setTextureSize(256, 64);
-		Shape172.mirror = true;
-		setRotation(Shape172, 0F, 0F, 0F);
-		Shape18 = new ModelRenderer(this, 33, 16);
-		Shape18.addBox(0F, 0F, 0F, 2, 1, 4);
-		Shape18.setRotationPoint(-5F, 9.5F, -4F);
-		Shape18.setTextureSize(256, 64);
-		Shape18.mirror = true;
-		setRotation(Shape18, 0F, 0F, 0F);
-		Shape19 = new ModelRenderer(this, 46, 18);
-		Shape19.addBox(0F, 0F, 0F, 4, 1, 2);
-		Shape19.setRotationPoint(-6F, 9.5F, -3F);
-		Shape19.setTextureSize(256, 64);
-		Shape19.mirror = true;
-		setRotation(Shape19, 0F, 0F, 0F);
-		Shape192 = new ModelRenderer(this, 46, 18);
-		Shape192.addBox(0F, 0F, 0F, 4, 1, 2);
-		Shape192.setRotationPoint(1F, 9.5F, -3F);
-		Shape192.setTextureSize(256, 64);
-		Shape192.mirror = true;
-		setRotation(Shape192, 0F, 0F, 0F);
-		Shape182 = new ModelRenderer(this, 33, 16);
-		Shape182.addBox(0F, 0F, 0F, 2, 1, 4);
-		Shape182.setRotationPoint(2F, 9.5F, -4F);
-		Shape182.setTextureSize(256, 64);
-		Shape182.mirror = true;
-		setRotation(Shape182, 0F, 0F, 0F);
-		Shape20 = new ModelRenderer(this, 0, 0);
-		Shape20.addBox(0F, 0F, 0F, 15, 1, 13);
-		Shape20.setRotationPoint(-7.5F, 10F, -5.5F);
-		Shape20.setTextureSize(256, 64);
-		Shape20.mirror = true;
-		setRotation(Shape20, 0F, 0F, 0F);
-		Shape21 = new ModelRenderer(this, 47, 15);
-		Shape21.addBox(0F, 0F, 0F, 1, 1, 1);
-		Shape21.setRotationPoint(-5F, 10F, -6F);
-		Shape21.setTextureSize(256, 64);
-		Shape21.mirror = true;
-		setRotation(Shape21, 0F, 0F, 0F);
-		Shape22 = new ModelRenderer(this, 47, 15);
-		Shape22.addBox(0F, 0F, 0F, 1, 1, 1);
-		Shape22.setRotationPoint(4F, 10F, -6F);
-		Shape22.setTextureSize(256, 64);
-		Shape22.mirror = true;
-		setRotation(Shape22, 0F, 0F, 0F);
-		Shape23 = new ModelRenderer(this, 47, 15);
-		Shape23.addBox(0F, 0F, 0F, 1, 1, 1);
-		Shape23.setRotationPoint(-3F, 10F, -6F);
-		Shape23.setTextureSize(256, 64);
-		Shape23.mirror = true;
-		setRotation(Shape23, 0F, 0F, 0F);
-		Shape24 = new ModelRenderer(this, 47, 15);
-		Shape24.addBox(0F, 0F, 0F, 1, 1, 1);
-		Shape24.setRotationPoint(2F, 10F, -6F);
-		Shape24.setTextureSize(256, 64);
-		Shape24.mirror = true;
-		setRotation(Shape24, 0F, 0F, 0F);
+		super(); textureX = 128; textureY = 128;
+		//
+		TurboList door = new TurboList("door");
+		door.add(new ModelRendererTurbo(door, 26, 34, textureX, textureY).addBox(0, -10, 0, 1, 11, 1)
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 121, 24, textureX, textureY).addBox(0, -10, 15, 1, 11, 1)
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 85, 51, textureX, textureY)
+			.addBox(0, 0, 1, 1, 1, 14, 0, 1f, new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 0, 49, textureX, textureY)
+			.addBox(0, -10, 1, 1, 2, 14, 0, 1f, new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 38, 49, textureX, textureY).addBox(0.5f, -8, 1, 0, 8, 14)
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 21, 47, textureX, textureY)
+			.addShapeBox(0.75f, -9.5f, 1, 1, 1, 14, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, 0, 0, 0)
+			.setRotationPoint(6.5f, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 13, 6, textureX, textureY)
+			.addShapeBox(0.25f, -9.5f, 3, 1, 1, 1, 0, 0, 0, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0,
+				new boolean[]{ true, true, false, false, false, false })
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		door.add(new ModelRendererTurbo(door, 13, 3, textureX, textureY)
+			.addShapeBox(0.25f, -9.5f, 12, 1, 1, 1, 0, 0, 0, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0, 0, 0, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0, 0,
+				new boolean[]{ true, true, false, false, false, false })
+			.setRotationPoint(6, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		this.groups.add(door);
+		//
+		TurboList base = new TurboList("base");
+		base.add(new ModelRendererTurbo(base, 47, 26, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 2, 0, 1f, new boolean[]{ false, false, true, false, false, false })
+			.setRotationPoint(3, -1, -7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 47, 14, textureX, textureY).addBox(0, 0, 0, 14, 1, 16)
+			.setRotationPoint(-8, -2, -8).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 118, 7, textureX, textureY).addHollowCylinder(0, 0, 0, 2, 1.25f, 1, 16, 0, 1.125f, 1.375f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(-4, -14.25f, -3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 116, 24, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, -6).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 100, 25, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 2, 0, 1f, new boolean[]{ false, false, true, false, false, false })
+			.setRotationPoint(-7, -1, -7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 38, 25, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 2, 0, 1f, new boolean[]{ false, false, true, false, false, false })
+			.setRotationPoint(3, -1, 5).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 21, 25, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 2, 0, 1f, new boolean[]{ false, false, true, false, false, false })
+			.setRotationPoint(-7, -1, 5).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 78, 3, textureX, textureY)
+			.addBox(0, 0, 0, 14, 10, 1, 0, 1f, new boolean[]{ false, false, true, true, false, false })
+			.setRotationPoint(-8, -12, -8).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 47, 3, textureX, textureY)
+			.addBox(0, 0, 0, 14, 10, 1, 0, 1f, new boolean[]{ false, false, true, true, false, false })
+			.setRotationPoint(-8, -12, 7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 70, 45, textureX, textureY)
+			.addBox(0, 0, 0, 1, 10, 14, 0, 1f, new boolean[]{ false, false, true, true, true, true })
+			.setRotationPoint(-8, -12, -7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 0, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 15, 2, 16, 0, 0, 0, 0, -1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+			.setRotationPoint(-8, -14, -8).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 78, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 14, 1, 1, 0, 0, -0.75f, 0, -0.5f, -0.75f, 0, -0.5f, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-8, -15, -8).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 47, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 14, 1, 1, 0, 0, -0.75f, 0, -0.5f, -0.75f, 0, -0.5f, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, false })
+			.setRotationPoint(-8, -15, 7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 54, 45, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 14, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, true, true })
+			.setRotationPoint(-8, -15, -7).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 54, 24, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 8, 0, 0.625f, 1.375f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(-4, -14.25f, -3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 109, 7, textureX, textureY).addHollowCylinder(0, 0, 0, 2, 1.25f, 1, 16, 0, 1, 1.25f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(-4, -14.25f, 3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 33, 24, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 8, 0, 0.5f, 1.25f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(-4, -14.25f, 3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 118, 0, textureX, textureY).addHollowCylinder(0, 0, 0, 2, 1.25f, 1, 16, 0, 0.75f, 1, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(2.5f, -14.25f, 3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 97, 23, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 8, 0, 0.5f, 1, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(2.5f, -14.25f, 3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 109, 0, textureX, textureY).addHollowCylinder(0, 0, 0, 2, 1.25f, 1, 16, 0, 1, 1.25f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(2.5f, -14.25f, -3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 92, 23, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 8, 0, 0.5f, 1.25f, 4,
+			null, new boolean[]{ false, true, false, false })
+			.setRotationPoint(2.5f, -14.25f, -3.5f).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 119, 14, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, -4.5f).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 114, 14, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, 5).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 10, 9, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, 6.5f).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 5, 9, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, -2).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 0, 9, textureX, textureY).addHollowCylinder(0, 0, 0, 1, 0.001f, 1, 6, 0, 0.625f, 0.875f, 4,
+			new net.fexcraft.lib.common.math.Vec3f(-0.25, 0.0, 0.0), new boolean[]{ false, true, false, false })
+			.setRotationPoint(6.75f, -13, 2).setRotationAngle(0, 0, 65)
+		);
+		base.add(new ModelRendererTurbo(base, 13, 0, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.25f, 0, 0, -0.25f, 0, 0, -0.25f, 0, 0, 0.25f, 0, 0,
+				new boolean[]{ true, true, false, false, true, true })
+			.setRotationPoint(6.4f, -13.3625f, -1).setRotationAngle(0, 0, 64)
+		);
+		this.groups.add(base);
+		//
+		TurboList inner = new TurboList("inner");
+		inner.add(new ModelRendererTurbo(inner, 104, 22, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, true, false, false, false, true })
+			.setRotationPoint(-5, -4, 6).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 42, 22, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, true, false, false, true, false })
+			.setRotationPoint(-5, -4, -7).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 21, 22, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, true, false, false, false, true })
+			.setRotationPoint(-5, -7, 6).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 92, 20, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, true, false, false, true, false })
+			.setRotationPoint(-5, -7, -7).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 42, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, true, false, false, false, true })
+			.setRotationPoint(-5, -10, 6).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 21, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, true, false, false, true, false })
+			.setRotationPoint(-5, -10, -7).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 34, 32, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 10, 1, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, true, false, false, false, false })
+			.setRotationPoint(-5, -3.75f, -6.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 0, 19, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 10, 1, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, true, false, false, false, false })
+			.setRotationPoint(-5, -9.75f, -6.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 92, 17, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, true, false, false, false, false })
+			.setRotationPoint(-5, -6.75f, -6.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 92, 14, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 10, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, true, false, false, false, false })
+			.setRotationPoint(-5, -6.75f, 5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 101, 38, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, true, false, false, true, true })
+			.setRotationPoint(-5, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 12, 36, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(4, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 0, 34, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(2.25f, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 78, 32, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(0.25f, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 55, 32, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(-3.25f, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 98, 25, textureX, textureY)
+			.addShapeBox(0, -0.5f, 0, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, -0.75f, 0,
+				new boolean[]{ false, false, false, false, true, true })
+			.setRotationPoint(-1.5f, -6.75f, -5.5f).setRotationAngle(0, 0, 0)
+		);
+		inner.add(new ModelRendererTurbo(inner, 0, 0, textureX, textureY).newCylinderBuilder()
+			.setPosition(0, 0, 0).setRadius(3, 2).setLength(1).setSegments(16, 0).setScale(0.25f, 1).setDirection(3)
+			.setRadialTexture(0, 0).setSidesVisible(false, false, false, false).setTopOffset(new net.fexcraft.lib.common.math.Vec3f(-0.5, 0.0, 0.0)).setTopRotation(new net.fexcraft.lib.common.math.Vec3f(1.0, 0.0, 46.0)).build()
+			.setRotationPoint(-7, -7, 0).setRotationAngle(0, 0, 0)
+		);
+		this.groups.add(inner);
 	}
 
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5){
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		setRotationAngles(f, f1, f2, f3, f4, f5);
-		Shape1.render(f5);
-		Shape2.render(f5);
-		Shape3.render(f5);
-		Shape4.render(f5);
-		Shape5.render(f5);
-		Shape6.render(f5);
-		Shape62.render(f5);
-		Shape63.render(f5);
-		Shape64.render(f5);
-		Shape65.render(f5);
-		Shape66.render(f5);
-		Shape67.render(f5);
-		Shape68.render(f5);
-		Shape69.render(f5);
-		Shape610.render(f5);
-		Shape611.render(f5);
-		Shape612.render(f5);
-		Shape7.render(f5);
-		Shape8.render(f5);
-		Shape9.render(f5);
-		Shape10.render(f5);
-		Shape11.render(f5);
-		Shape12.render(f5);
-		Shape13.render(f5);
-		Shape14.render(f5);
-		Shape15.render(f5);
-		Shape16.render(f5);
-		Shape17.render(f5);
-		Shape162.render(f5);
-		Shape172.render(f5);
-		Shape18.render(f5);
-		Shape19.render(f5);
-		Shape192.render(f5);
-		Shape182.render(f5);
-		Shape20.render(f5);
-		Shape21.render(f5);
-		Shape22.render(f5);
-		Shape23.render(f5);
-		Shape24.render(f5);
-	}
-
-	private void setRotation(ModelRenderer model, float x, float y, float z){
-		model.rotateAngleX = x;
-		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5){
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
-	}
-
-	public static StoveModel INSTANCE = new StoveModel();
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<Stove.Entity> {
-	       
-		public Renderer(){ super("frsm:textures/blocks/Stove.png", null); }
-		
-		@Override
-		public void renderModel(Stove.Entity tileentity, float partialticks, int destroystage){
-			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		}
-		
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		boolean bool = state.getValue(Properties.OPEN);
+		groups.get(0).forEach(mrt -> {
+			mrt.rotationAngleZ = bool ? 80 : 0;
+		});
+		return super.getPolygons(state, side, args, rand);
 	}
 
 }
