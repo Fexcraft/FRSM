@@ -178,8 +178,8 @@ tile.frsm:tvl_1.name=Grote TV (alt)
 tile.frsm:tvm.name=Middelgrote TV
 tile.frsm:tvs.name=Kleine TV (1)
 tile.frsm:tvs2.name=Kleine TV (2)
-tile.frsm:vendingmashine.name=Automaat
-tile.frsm:washingmashine.name=Wasmachine
+tile.frsm:vendingmachine.name=Automaat
+tile.frsm:washingmachine.name=Wasmachine
 tile.frsm:window1.name=Raam (1)
 tile.frsm:woodenlightbox.name=Houten lichtdoos
 

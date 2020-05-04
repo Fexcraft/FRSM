@@ -8,6 +8,8 @@ import net.minecraft.block.material.Material;
 
 @fBlock(modid = FRSM.MODID, name = "washingmachine")
 public class WM extends Basic4RFalling {
+
+	public static WM TEMPINSTANCE;
 	
 	public WM() {
 		super(Material.IRON);
@@ -15,6 +17,7 @@ public class WM extends Basic4RFalling {
 		this.setHardness(5.0F);
 		this.setResistance(32.0F);
 		this.setCreativeTab(FRSMTabs.TECHNIC);
+    	TEMPINSTANCE = this;
 	}
 	
 }

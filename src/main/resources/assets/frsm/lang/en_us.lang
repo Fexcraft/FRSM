@@ -183,8 +183,8 @@ tile.frsm:tvl_1.name=TV Large (alt)
 tile.frsm:tvm.name=TV Medium
 tile.frsm:tvs.name=TV Small (1)
 tile.frsm:tvs2.name=TV Small (2)
-tile.frsm:vendingmashine.name=Vending Mashine
-tile.frsm:washingmashine.name=Washing Mashine
+tile.frsm:vendingmachine.name=Vending Machine
+tile.frsm:washingmachine.name=Washing Machine
 tile.frsm:window1.name=Window (1)
 tile.frsm:woodenlightbox.name=Wooden Light Box
 

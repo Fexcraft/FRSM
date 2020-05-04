@@ -15,6 +15,8 @@ import net.minecraft.world.World;
 
 @fBlock(modid = FRSM.MODID, name = "vendingmachine")
 public class VM extends Basic4RFalling {
+	
+	public static VM TEMPINSTANCE;
 
 	public VM(){
     	super(Material.IRON);
@@ -22,6 +24,7 @@ public class VM extends Basic4RFalling {
     	this.setHardness(5.0F);
     	this.setResistance(32.0F);
     	this.setCreativeTab(FRSMTabs.TECHNIC);
+    	TEMPINSTANCE = this;
 	}
     
     @Override
