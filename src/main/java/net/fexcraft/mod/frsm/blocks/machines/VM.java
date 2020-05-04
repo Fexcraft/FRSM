@@ -41,5 +41,15 @@ public class VM extends Basic4RFalling {
     public BlockRenderLayer getRenderLayer(){
         return BlockRenderLayer.CUTOUT;
     }
+
+    @Override
+	public boolean isFullBlock(IBlockState state) {
+		return true;
+	}
+	
+	@Override
+	public boolean isFullCube(IBlockState state){
+        return true;
+    }
 	
 }

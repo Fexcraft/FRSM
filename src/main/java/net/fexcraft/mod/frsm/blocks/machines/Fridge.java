@@ -139,5 +139,15 @@ public class Fridge extends BasicContainer4R {
 		}
 		
 	}
+
+    @Override
+	public boolean isFullBlock(IBlockState state) {
+		return true;
+	}
+	
+	@Override
+	public boolean isFullCube(IBlockState state){
+        return true;
+    }
 	
 }
