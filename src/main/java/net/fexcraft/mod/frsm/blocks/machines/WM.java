@@ -3,15 +3,11 @@ package net.fexcraft.mod.frsm.blocks.machines;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.BasicContainer4RFalling;
+import net.fexcraft.mod.frsm.util.block.Basic4RFalling;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.world.World;
 
-@fBlock(modid = FRSM.MODID, name = "washingmashine", tileentity = WM.Entity.class)
-public class WM extends BasicContainer4RFalling {
+@fBlock(modid = FRSM.MODID, name = "washingmachine")
+public class WM extends Basic4RFalling {
 	
 	public WM() {
 		super(Material.IRON);
@@ -20,17 +16,5 @@ public class WM extends BasicContainer4RFalling {
 		this.setResistance(32.0F);
 		this.setCreativeTab(FRSMTabs.TECHNIC);
 	}
-
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new WM.Entity();
-	}
-	
-	public static class Entity extends TileEntity {}
-	
-	@Override
-	public EnumBlockRenderType getRenderType(IBlockState state){
-        return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;
-    }
 	
 }

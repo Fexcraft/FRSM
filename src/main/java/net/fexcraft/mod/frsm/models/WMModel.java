@@ -1,150 +1,152 @@
+//FMT-Marker FVTM-1.4
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
-import net.fexcraft.mod.frsm.blocks.machines.WM;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
+import net.fexcraft.lib.mc.api.registry.fModel;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
+import net.fexcraft.mod.frsm.util.FVTMFormatModel;
 
-public class WMModel extends ModelBase {
-
-	ModelRenderer Shape1;
-	ModelRenderer Shape2;
-	ModelRenderer Shape3;
-	ModelRenderer Shape4;
-	ModelRenderer Shape5;
-	ModelRenderer Shape6;
-	ModelRenderer Shape7;
-	ModelRenderer Shape8;
-	ModelRenderer Shape9;
-	ModelRenderer Shape10;
-	ModelRenderer Shape11;
-	ModelRenderer Shape12;
-	ModelRenderer Shape13;
+/** This file was exported via the FVTM Exporter V1.4 of<br>
+ *  FMT (Fex's Modelling Toolbox) v.2.4.1 &copy; 2020 - Fexcraft.net<br>
+ *  All rights reserved. For this Model's License contact the Author/Creator.
+ *  
+ *  @author Ferdinand Calo' (FEX___96)
+ */
+@fModel(registryname = "frsm:models/block/washingmachine")
+public class WMModel extends FVTMFormatModel {
 
 	public WMModel(){
-		textureWidth = 128; textureHeight = 32;
-		Shape1 = new ModelRenderer(this, 0, 0);
-		Shape1.addBox(0F, 0F, 0F, 16, 15, 12);
-		Shape1.setRotationPoint(-8F, 9F, -4F);
-		Shape1.setTextureSize(128, 32);
-		Shape1.mirror = true;
-		setRotation(Shape1, 0F, 0F, 0F);
-		Shape2 = new ModelRenderer(this, 57, 0);
-		Shape2.addBox(0F, 0F, 0F, 16, 12, 2);
-		Shape2.setRotationPoint(-8F, 12F, -6F);
-		Shape2.setTextureSize(128, 32);
-		Shape2.mirror = true;
-		setRotation(Shape2, 0F, 0F, 0F);
-		Shape3 = new ModelRenderer(this, 57, 22);
-		Shape3.addBox(0F, 0F, 0F, 5, 2, 2);
-		Shape3.setRotationPoint(-6F, 10F, -6F);
-		Shape3.setTextureSize(128, 32);
-		Shape3.mirror = true;
-		setRotation(Shape3, 0F, 0F, 0F);
-		Shape4 = new ModelRenderer(this, 57, 15);
-		Shape4.addBox(0F, 0F, 0F, 9, 3, 3);
-		Shape4.setRotationPoint(-2F, 10F, -4F);
-		Shape4.setTextureSize(128, 32);
-		Shape4.mirror = true;
-		setRotation(Shape4, -0.6320364F, 0.0174533F, 0F);
-		Shape5 = new ModelRenderer(this, 0, 28);
-		Shape5.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape5.setRotationPoint(-2F, 13F, -8F);
-		Shape5.setTextureSize(128, 32);
-		Shape5.mirror = true;
-		setRotation(Shape5, 0F, 0F, 0F);
-		Shape6 = new ModelRenderer(this, 0, 28);
-		Shape6.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape6.setRotationPoint(-2F, 21F, -8F);
-		Shape6.setTextureSize(128, 32);
-		Shape6.mirror = true;
-		setRotation(Shape6, 0F, 0F, 0F);
-		Shape7 = new ModelRenderer(this, 82, 15);
-		Shape7.addBox(0F, 0F, 0F, 2, 4, 2);
-		Shape7.setRotationPoint(3F, 16F, -8F);
-		Shape7.setTextureSize(128, 32);
-		Shape7.mirror = true;
-		setRotation(Shape7, 0F, 0F, 0F);
-		Shape8 = new ModelRenderer(this, 82, 15);
-		Shape8.addBox(0F, 0F, 0F, 2, 4, 2);
-		Shape8.setRotationPoint(-5F, 16F, -8F);
-		Shape8.setTextureSize(128, 32);
-		Shape8.mirror = true;
-		setRotation(Shape8, 0F, 0F, 0F);
-		Shape9 = new ModelRenderer(this, 0, 28);
-		Shape9.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape9.setRotationPoint(2F, 13F, -8F);
-		Shape9.setTextureSize(128, 32);
-		Shape9.mirror = true;
-		setRotation(Shape9, 0F, -0.0174533F, 0.7853982F);
-		Shape10 = new ModelRenderer(this, 0, 28);
-		Shape10.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape10.setRotationPoint(5F, 20F, -8F);
-		Shape10.setTextureSize(128, 32);
-		Shape10.mirror = true;
-		setRotation(Shape10, 0F, 0F, 2.356194F);
-		Shape11 = new ModelRenderer(this, 0, 28);
-		Shape11.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape11.setRotationPoint(-5F, 16F, -8F);
-		Shape11.setTextureSize(128, 32);
-		Shape11.mirror = true;
-		setRotation(Shape11, 0F, 0F, -0.7853982F);
-		Shape12 = new ModelRenderer(this, 0, 28);
-		Shape12.addBox(0F, 0F, 0F, 4, 2, 2);
-		Shape12.setRotationPoint(-2F, 23F, -8F);
-		Shape12.setTextureSize(128, 32);
-		Shape12.mirror = true;
-		setRotation(Shape12, 0F, 0F, -2.356194F);
-		Shape13 = new ModelRenderer(this, 72, 22);
-		Shape13.addBox(0F, 0F, 0F, 1, 2, 1);
-		Shape13.setRotationPoint(5F, 17F, -7F);
-		Shape13.setTextureSize(128, 32);
-		Shape13.mirror = true;
-		setRotation(Shape13, 0F, 0F, 0F);
-	}
-
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5){
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		setRotationAngles(f, f1, f2, f3, f4, f5);
-		Shape1.render(f5);
-		Shape2.render(f5);
-		Shape3.render(f5);
-		Shape4.render(f5);
-		Shape5.render(f5);
-		Shape6.render(f5);
-		Shape7.render(f5);
-		Shape8.render(f5);
-		Shape9.render(f5);
-		Shape10.render(f5);
-		Shape11.render(f5);
-		Shape12.render(f5);
-		Shape13.render(f5);
-	}
-
-	private void setRotation(ModelRenderer model, float x, float y, float z){
-		model.rotateAngleX = x;
-		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
-	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5){
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
-	}
-
-	public static WMModel INSTANCE = new WMModel();
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<WM.Entity> {
-	       
-		public Renderer(){ super("frsm:textures/blocks/washingmachine.png", null); }
-
-		@Override
-		public void renderModel(WM.Entity tileentity, float partialticks, int destroystage){
-			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		}
-		
+		super(); textureX = 64; textureY = 64;
+		//
+		TurboList base = new TurboList("base");
+		base.add(new ModelRendererTurbo(base, 0, 37, textureX, textureY)
+			.addBox(0, 0, 0, 16, 15, 11, 0, 1f, new boolean[]{ false, false, true, false, true, false })
+			.setRotationPoint(-8, -15, -4).setRotationAngle(0, 0, 0).setName("Shape1")
+		);
+		base.add(new ModelRendererTurbo(base, 23, 19, textureX, textureY)
+			.addBox(0, 0, 0, 16, 14, 3, 0, 1f, new boolean[]{ false, false, true, false, false, true })
+			.setRotationPoint(-8, -14, -7).setRotationAngle(0, 0, 0).setName("Shape2")
+		);
+		base.add(new ModelRendererTurbo(base, 46, 22, textureX, textureY)
+			.addBox(0, 0, 0, 4, 2, 1, 0, 1f, new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(-7.5f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3")
+		);
+		base.add(new ModelRendererTurbo(base, 0, 0, textureX, textureY).addHollowCylinder(0, 0, 0, 6, 4, 2, 12, 0, 1, 0.875f, 1, null)
+			.setRotationPoint(0, -6, -8).setRotationAngle(0, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 0, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 16, 2, 3, 0, 0, 0, -2, 0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, false, true })
+			.setRotationPoint(-8, -16, -7).setRotationAngle(0, 0, 0).setName("Shape4cp")
+		);
+		base.add(new ModelRendererTurbo(base, 58, 0, textureX, textureY).addHollowCylinder(0, -0.25f, 0, 1, 0.001f, 1, 8, 0, 0.5f, 0.75f, 4,
+			null, new boolean[]{ false, false, false, true })
+			.setRotationPoint(7, -15, -6).setRotationAngle(45, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 0, 17, textureX, textureY)
+			.addBox(0, 0, 0, 1, 3, 1, 0, 1f, new boolean[]{ false, true, false, false, false, true })
+			.setRotationPoint(4.75f, -7.5f, -7.75f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 12, 25, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(3.5f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 8, 25, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(4.25f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 4, 25, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(5, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 0, 25, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(5.75f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 47, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(6.5f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 43, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, -0.5f, 0, -0.5f, -0.5f, 0, -0.5f, -0.5f, 0, 0, -0.5f, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(7.25f, -13.5f, -7.125f).setRotationAngle(0, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 53, 18, textureX, textureY)
+			.addShapeBox(0, 0, 0, 4, 2, 1, 0, 0, 0, -0.0625f, 0, 0, -0.0625f, 0, 0, 0, 0, 0, 0, 0, 0, -0.0625f, 0, 0, -0.0625f, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, false, false, true })
+			.setRotationPoint(2.25f, -15.75f, -5.375f).setRotationAngle(-45, 0, 0).setName("Shape3cp")
+		);
+		base.add(new ModelRendererTurbo(base, 53, 0, textureX, textureY).addHollowCylinder(0, -0.25f, 0, 1, 0.001f, 1, 8, 0, 0.5f, 0.75f, 4,
+			null, new boolean[]{ false, false, false, true })
+			.setRotationPoint(1.5f, -15, -6).setRotationAngle(45, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 48, 0, textureX, textureY).addHollowCylinder(0, -0.25f, 0, 1, 0.001f, 1, 8, 0, 0.5f, 0.75f, 4,
+			null, new boolean[]{ false, false, false, true })
+			.setRotationPoint(0.25f, -15, -6).setRotationAngle(45, 0, 0)
+		);
+		base.add(new ModelRendererTurbo(base, 13, 5, textureX, textureY)
+			.addBox(0, 0, 0, 16, 1, 12, 0, 1f, new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(-8, -16, -4).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 58, 7, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 1, 0, 1f, new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(5, -14, 6.5f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 58, 4, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 1, 0, 1f, new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(-7, -14, 6.5f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 42, 2, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 1, 0, 1f, new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(5, -5, 6.5f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 36, 2, textureX, textureY)
+			.addBox(0, 0, 0, 2, 1, 1, 0, 1f, new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(-7, -5, 6.5f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 20, 19, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, true, false })
+			.setRotationPoint(5.5f, -14.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 56, 22, textureX, textureY)
+			.addBox(0, 0, 0, 1, 11, 1, 0, 1f, new boolean[]{ false, false, true, true, true, false })
+			.setRotationPoint(5.5f, -13.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 60, 20, textureX, textureY)
+			.addBox(0, 0, 0, 1, 11, 1, 0, 1f, new boolean[]{ false, false, true, true, true, false })
+			.setRotationPoint(-6.5f, -13.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 25, 0, textureX, textureY)
+			.addBox(0, 0, 0, 11, 1, 1, 0, 1f, new boolean[]{ true, true, false, false, true, false })
+			.setRotationPoint(-5.5f, -2.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 61, 15, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, -0.5f, 0, 0, -0.5f, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, true, true, true })
+			.setRotationPoint(-6.5f, -14.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 58, 13, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0,
+				new boolean[]{ false, false, false, false, true, false })
+			.setRotationPoint(-6.5f, -14.5f, 7).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 61, 10, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, -0.75f, 0, 0, 0, 0, 0,
+				new boolean[]{ false, true, true, false, true, false })
+			.setRotationPoint(5.5f, -2.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		base.add(new ModelRendererTurbo(base, 58, 10, textureX, textureY)
+			.addShapeBox(0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0, 0, 0, 0, 0, 0, 0, -0.75f, 0, 0,
+				new boolean[]{ true, false, true, false, true, false })
+			.setRotationPoint(-6.5f, -2.5f, 6.75f).setRotationAngle(0, 0, 0).setName("Shape1cp")
+		);
+		this.groups.add(base);
 	}
 
 }
