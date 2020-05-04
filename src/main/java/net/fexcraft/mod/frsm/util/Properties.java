@@ -3,6 +3,7 @@ package net.fexcraft.mod.frsm.util;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.property.IUnlistedProperty;
@@ -12,6 +13,7 @@ public class Properties {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static final PropertyEnum<EnumDyeColor> DYECOLOR = PropertyEnum.create("color", EnumDyeColor.class);
 	public static final PropertyBool OPEN = PropertyBool.create("open");
+    public static final PropertyInteger ROTATION = PropertyInteger.create("rotation", 0, 15);
 	
 	public static final IUnlistedProperty<Boolean> CLOSED = new IUnlistedProperty<Boolean>(){
 
