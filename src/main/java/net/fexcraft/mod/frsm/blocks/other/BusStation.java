@@ -3,17 +3,20 @@ package net.fexcraft.mod.frsm.blocks.other;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
+import net.fexcraft.mod.frsm.util.block.Basic16R;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FRSM.MODID, name = "busstation", tileentity = BusStation.Entity.class)
-public class BusStation extends BasicContainer4R {
+@fBlock(modid = FRSM.MODID, name = "busstation")
+public class BusStation extends Basic16R {
+
+	private static final AxisAlignedBB NOR = new AxisAlignedBB(0.45F, 0.0F, 0.45F, 0.55F, 2.2F, 0.55F);
+	private static final AxisAlignedBB SEL = new AxisAlignedBB(0.45F, 0.0F, 0.45F, 0.55F, 1F, 0.55F);
 	
 	public BusStation() {
 		super(Material.IRON);
@@ -25,19 +28,17 @@ public class BusStation extends BasicContainer4R {
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
-        return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.05F, 1.0F);
+        return NOR;
     }
 	
 	@Override
-    public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
-        return FULL_BLOCK_AABB;
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
+        return SEL.offset(pos);
     }
-	
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Entity();
-	}
-	
-	public static class Entity extends TileEntity { }
+    
+    @Override
+    public BlockRenderLayer getRenderLayer(){
+        return BlockRenderLayer.CUTOUT;
+    }
 
 }
