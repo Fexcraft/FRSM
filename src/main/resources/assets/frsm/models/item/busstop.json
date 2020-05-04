@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "frsm:blocks/busstopi"
+        "layer0": "frsm:items/busstop"
     },
     "display": {
         "thirdperson": {

@@ -3,17 +3,16 @@ package net.fexcraft.mod.frsm.blocks.other;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
+import net.fexcraft.mod.frsm.util.block.Basic16R;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-@fBlock(modid = FRSM.MODID, name = "busstop", tileentity = BusStopSign.Entity.class)
-public class BusStopSign extends BasicContainer4R {
+@fBlock(modid = FRSM.MODID, name = "busstop")
+public class BusStopSign extends Basic16R {
 	
 	private static final AxisAlignedBB AABB = new AxisAlignedBB(0.4F, 0.0F, 0.4F, 0.6F, 2.2F, 0.6F);
 	
@@ -32,19 +31,7 @@ public class BusStopSign extends BasicContainer4R {
 	
 	@Override
     public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
-        return FULL_BLOCK_AABB;
+        return AABB.offset(pos);
     }
-       
-	@Override
-	public boolean isFullBlock(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Entity();
-	}
-	
-	public static class Entity extends TileEntity {}
 
 }
