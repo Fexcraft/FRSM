@@ -87,10 +87,10 @@ public class UpdateHandler {
 
 		//@formatter:off
 		public static ResourceLocation[] renamed = new ResourceLocation[]{
-			new ResourceLocation("frsm:vendingmashine"), new ResourceLocation("frsm:washingmashine"), new ResourceLocation("frsm:vendingmaschine")
+			new ResourceLocation("frsm:vendingmashine"), new ResourceLocation("frsm:washingmashine")
 		};
 		public static Block[] blocks = new Block[]{
-			VM.TEMPINSTANCE, WM.TEMPINSTANCE, VM.TEMPINSTANCE
+			VM.TEMPINSTANCE, WM.TEMPINSTANCE
 		};
 		//@formatter:on
 
