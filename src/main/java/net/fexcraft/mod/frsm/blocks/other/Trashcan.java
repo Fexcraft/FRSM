@@ -50,12 +50,12 @@ public class Trashcan extends BlockFalling {
     
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
-		return AABBs.BARREL;
+		return state.getValue(OPEN) ? AABBs.TRASHCAN_OPEN : AABBs.BARREL;
 	}
     
 	@Override
 	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
-		return AABBs.BARREL.offset(pos);
+		return (state.getValue(OPEN) ? AABBs.TRASHCAN_OPEN : AABBs.BARREL).offset(pos);
 	}
 
     @Override
