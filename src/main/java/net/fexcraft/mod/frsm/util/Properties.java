@@ -13,6 +13,7 @@ public class Properties {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	public static final PropertyEnum<EnumDyeColor> DYECOLOR = PropertyEnum.create("color", EnumDyeColor.class);
 	public static final PropertyBool OPEN = PropertyBool.create("open");
+	public static final PropertyBool ORIENT = PropertyBool.create("orientation");
     public static final PropertyInteger ROTATION = PropertyInteger.create("rotation", 0, 15);
 	
 	public static final IUnlistedProperty<Boolean> CLOSED = new IUnlistedProperty<Boolean>(){
