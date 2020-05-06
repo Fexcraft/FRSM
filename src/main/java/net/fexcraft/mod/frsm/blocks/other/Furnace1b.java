@@ -17,6 +17,7 @@ import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
@@ -137,6 +138,11 @@ public class Furnace1b extends BasicContainer4R {
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state){
         return new ItemStack(FCLRegistry.getBlock("frsm:furnace1"));
+    }
+    
+    @Override
+    public BlockRenderLayer getRenderLayer(){
+        return BlockRenderLayer.CUTOUT;
     }
     
 }

@@ -1,22 +1,16 @@
-//This File was created with the Minecraft-SMP Modelling Toolbox 2.2.1.1
-// Copyright (C) 2015 Minecraft-SMP.de
-
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.other.Furnace1bEntity;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
 
-public class ModelFurnace1b extends GenericModelBase {
+@fModel(registryname = "frsm:models/block/furnace1")
+public class Furnace1Model extends GenericModelBase {
 	
-	int textureX = 128;
-	int textureY = 128;
-
-	public ModelFurnace1b(){
-		
-		base = new ModelRendererTurbo[62];
+	private int textureX = 128, textureY = 128;
+	
+	public Furnace1Model(){
+		base = new ModelRendererTurbo[54];
 		base[0] = new ModelRendererTurbo(this, 1, 1, textureX, textureY); // Box 0
 		base[1] = new ModelRendererTurbo(this, 9, 1, textureX, textureY); // Box 1
 		base[2] = new ModelRendererTurbo(this, 17, 1, textureX, textureY); // Box 2
@@ -71,14 +65,6 @@ public class ModelFurnace1b extends GenericModelBase {
 		base[51] = new ModelRendererTurbo(this, 89, 89, textureX, textureY); // Box 54
 		base[52] = new ModelRendererTurbo(this, 105, 41, textureX, textureY); // Box 55
 		base[53] = new ModelRendererTurbo(this, 113, 57, textureX, textureY); // Box 56
-		base[54] = new ModelRendererTurbo(this, 17, 97, textureX, textureY); // Box 0
-		base[55] = new ModelRendererTurbo(this, 33, 97, textureX, textureY); // Box 1
-		base[56] = new ModelRendererTurbo(this, 49, 97, textureX, textureY); // Box 2
-		base[57] = new ModelRendererTurbo(this, 65, 97, textureX, textureY); // Box 3
-		base[58] = new ModelRendererTurbo(this, 81, 97, textureX, textureY); // Box 4
-		base[59] = new ModelRendererTurbo(this, 97, 97, textureX, textureY); // Box 5
-		base[60] = new ModelRendererTurbo(this, 113, 97, textureX, textureY); // Box 6
-		base[61] = new ModelRendererTurbo(this, 1, 105, textureX, textureY); // Box 7
 
 		base[0].addBox(0F, 0F, 0F, 1, 1, 1, 0F); // Box 0
 		base[0].setRotationPoint(6F, 23F, 6F);
@@ -241,67 +227,8 @@ public class ModelFurnace1b extends GenericModelBase {
 
 		base[53].addShapeBox(0F, 0F, 0F, 1, 2, 1, 0F, 0F, 0F, 0F, 0F, -1F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F, 0F); // Box 56
 		base[53].setRotationPoint(-14.5F, 2F, -2.5F);
-
-		base[54].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 0
-		base[54].setRotationPoint(1.5F, 16F, 0.5F);
-		base[54].rotationAngleY = 32F;
-		base[54].rotationAngleZ = 2F;
-
-		base[55].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 1
-		base[55].setRotationPoint(1.5F, 16F, -3.5F);
-		base[55].rotationAngleY = -6F;
-		base[55].rotationAngleZ = 2F;
-
-		base[56].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 2
-		base[56].setRotationPoint(-3.5F, 16F, -3.5F);
-		base[56].rotationAngleY = 46F;
-		base[56].rotationAngleZ = 2F;
-
-		base[57].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 3
-		base[57].setRotationPoint(-3.5F, 16F, 0.5F);
-		base[57].rotationAngleY = 23F;
-		base[57].rotationAngleZ = 2F;
-
-		base[58].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 4
-		base[58].setRotationPoint(0.5F, 16F, -4.5F);
-		base[58].rotationAngleX = 11F;
-		base[58].rotationAngleY = 23F;
-		base[58].rotationAngleZ = 15F;
-
-		base[59].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 5
-		base[59].setRotationPoint(0.5F, 16F, -1.5F);
-		base[59].rotationAngleX = 12F;
-		base[59].rotationAngleY = 40F;
-		base[59].rotationAngleZ = 8F;
-
-		base[60].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 6
-		base[60].setRotationPoint(0.5F, 14F, 2.5F);
-		base[60].rotationAngleX = -20F;
-		base[60].rotationAngleY = 75F;
-		base[60].rotationAngleZ = -30F;
-
-		base[61].addBox(0F, 0F, 0F, 3, 1, 3, 0F); // Box 7
-		base[61].setRotationPoint(-0.5F, 14.5F, -2.5F);
-		base[61].rotationAngleX = -20F;
-		base[61].rotationAngleY = 75F;
-		base[61].rotationAngleZ = 5F;
 		
-		translate(0F, 0F, 0F);
-	}
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<Furnace1bEntity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/furnace1.png", new ModelFurnace1b()); }
-		
-		@Override
-		public int adjustAngle(){ return 90; }
-
-		@Override
-		public void renderModel(Furnace1bEntity tileentity, float partialticks, int destroystage){
-			model.render();
-		}
-		
+		translate(0F, -24F, 0F);
 	}
 	
 }

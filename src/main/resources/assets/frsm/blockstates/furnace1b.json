@@ -1,9 +1,27 @@
 {
-    "variants": {
-        "normal": { "model": "frsm:placeholder" },
-        "facing=north": { "model": "frsm:placeholder" },
-        "facing=south": { "model": "frsm:placeholder" },
-        "facing=west":  { "model": "frsm:placeholder" },
-        "facing=east":  { "model": "frsm:placeholder" }
+  "forge_marker": 1,
+  "defaults": {
+    "model": "frsm:furnace1b",
+    "transform": "forge:default-block",
+    "custom": {
+    	"t-x": 0.5,
+    	"t-z": 0.5
     }
+  },
+  "variants": {
+    "facing": {
+      "north": {
+        "custom": { "y": -90 }
+      },
+      "south": {
+        "custom": { "y": 90 }
+      },
+      "west": {
+        "custom": { "y": 180 }
+      },
+      "east": {
+        "custom": { "y": 0 }
+      }
+    }
+  }
 }

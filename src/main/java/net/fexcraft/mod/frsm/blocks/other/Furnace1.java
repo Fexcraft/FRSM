@@ -11,7 +11,7 @@ import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
+import net.fexcraft.mod.frsm.util.block.Basic4R;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -20,7 +20,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -30,8 +30,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@fBlock(modid = FRSM.MODID, name = "furnace1", item = Furnace1.Item.class, tileentity = Furnace1.Entity.class)
-public class Furnace1 extends BasicContainer4R {
+@fBlock(modid = FRSM.MODID, name = "furnace1", item = Furnace1.Item.class)
+public class Furnace1 extends Basic4R {
 	
 	public Furnace1() {
     	super(Material.IRON);
@@ -39,11 +39,6 @@ public class Furnace1 extends BasicContainer4R {
     	this.setHardness(3.0F);
     	this.setResistance(32.0F);
     	this.setCreativeTab(FRSMTabs.BLOCKS);
-	}
-	
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Furnace1.Entity();
 	}
 	
 	@Override
@@ -62,8 +57,6 @@ public class Furnace1 extends BasicContainer4R {
 		return false;
     }
     
-    public static class Entity extends TileEntity {}
-    
     public static class Item extends ItemBlock {
 
 		public Item(Block block){ super(block); }
@@ -73,6 +66,11 @@ public class Furnace1 extends BasicContainer4R {
 	    	tooltip.add(Formatter.format("&9Rightlick with &7Flint and Steel&9 to put the fire on."));
 	    }
     	
+    }
+    
+    @Override
+    public BlockRenderLayer getRenderLayer(){
+        return BlockRenderLayer.CUTOUT;
     }
 
 }
