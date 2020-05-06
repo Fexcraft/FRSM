@@ -1,16 +1,19 @@
 package net.fexcraft.mod.frsm.models;
 
-import org.lwjgl.opengl.GL11;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
-import net.fexcraft.lib.tmt.ModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.other.Officechair;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.util.ResourceLocation;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
+@fModel(registryname = "frsm:models/block/officechair")
 public class OfficechairModel extends GenericModelBase {
 	
 	int textureX = 128;
@@ -332,26 +335,24 @@ public class OfficechairModel extends GenericModelBase {
 		r0[5].setRotationPoint(0F, -8F, 0F);
 		r0[5].rotationAngleX = -3F;
 		
-		translate(0F, 24F, 0F);
+		translate(0F, 0F, 0F);
 	}
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<Officechair.Entity> {
-		
-		public Renderer(ResourceLocation location, ModelBase model) {
-			super(new ResourceLocation("frsm:textures/blocks/officechair.png"), new OfficechairModel());
+
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
 		}
-		
-		@Override
-		public void renderModel(Officechair.Entity tileentity, float partialticks, int destroystage){
-			model.render(model.base);
-			GL11.glRotated(tileentity.rotation * 10, 0, 1, 0);
-			model.render(model.r1);
-			tileentity.getColor().glColorApply();
-			model.render(model.r0);
-			RGB.glColorReset();
-		}
-		
+		applyColor(r0, color);
+		for(ModelRendererTurbo mrt : r0) mrt.rotationAngleY = state.getValue(Properties.ROTATION) * 22.5f;
+		for(ModelRendererTurbo mrt : r1) mrt.rotationAngleY = state.getValue(Properties.ROTATION) * 22.5f;
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		addAll(mrts, r0);
+		addAll(mrts, r1);
+		return mrts;
 	}
 	
 }
