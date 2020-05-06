@@ -1,16 +1,22 @@
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
+import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
-import net.fexcraft.mod.frsm.blocks.other.Shelf1;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.client.Minecraft;
-import net.minecraft.util.ResourceLocation;
+import net.fexcraft.mod.frsm.util.Properties;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumFacing;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
+@fModel(registryname = "frsm:models/block/shelf1")
 public class Shelf1Model extends GenericModelBase {
 	
-	private int textureX = 128, textureY = 64;
+	private int textureX = 128, textureY = 128;
 
 	public Shelf1Model(){
 		base = new ModelRendererTurbo[5];
@@ -81,39 +87,29 @@ public class Shelf1Model extends GenericModelBase {
 		closed[3].addBox(6F, 6.5F, -0.5F, 1, 3, 1, 0F); // Box 8
 		closed[3].setRotationPoint(-8F, -16F, 0F);
 		
-		translate(0F, 24F, 0F);
+		translate(0F, 0F, 0F);
 	}
-	
-	@fTESR //TODO
-	public static class Renderer extends TileRenderer4R<Shelf1.Entity> {
-		
-		public Renderer(){
-			super(temp/*getFromColor(EnumDyeColor.BLACK)*/, new Shelf1Model());
-		}
-		
-		//private static TreeMap<EnumDyeColor, ResourceLocation> LOCS = new TreeMap<>();
-		private static ResourceLocation temp = new ResourceLocation("frsm:textures/blocks/shelf1_white.png");
-		
-		/*private static ResourceLocation getFromColor(EnumDyeColor color){
-			if((temp = LOCS.get(color)) == null){
-				LOCS.put(color, temp = new ResourceLocation("frsm:textures/blocks/shelf1_" + color.getMetadata() + ".png"));
-			} return temp;
-		}*/
 
-		@Override
-		public void renderModel(Shelf1.Entity tileentity, float partialticks, int destroystage){
-			boolean open = tileentity.getState();
-			//EnumDyeColor color = tileentity.getColor();
-			Minecraft.getMinecraft().renderEngine.bindTexture(temp);//getFromColor(color));
-			model.render(model.base);
-			if(open == true){
-				model.render(model.open);
-			}
-			if(open == false){
-				model.render(model.closed);
-			}
+	@Override
+	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
+		RGB color = null;
+		boolean isopen = false;
+		if(state instanceof IExtendedBlockState){
+			IExtendedBlockState ext = (IExtendedBlockState)state;
+			color = new RGB(ext.getValue(Properties.COLOR));
+			isopen = !ext.getValue(Properties.CLOSED);
 		}
-		
+		ArrayList<ModelRendererTurbo> mrts = new ArrayList<>();
+		addAll(mrts, base);
+		if(isopen){
+			applyColor(open, color);
+			addAll(mrts, open);
+		}
+		else{
+			applyColor(closed, color);
+			addAll(mrts, closed);
+		}
+		return mrts;
 	}
 	
 }

@@ -1,5 +1,7 @@
 package net.fexcraft.mod.frsm.blocks.other;
 
+import static net.fexcraft.mod.frsm.util.Properties.CLOSED;
+import static net.fexcraft.mod.frsm.util.Properties.COLOR;
 import static net.fexcraft.mod.frsm.util.Properties.FACING;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
@@ -11,6 +13,7 @@ import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
 import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,6 +26,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.property.IExtendedBlockState;
 
 @fBlock(modid = FRSM.MODID, name = "shelf1", tileentity = Shelf1.Entity.class, item = PaintableInfo.class)
 public class Shelf1 extends BasicContainer4R {
@@ -57,7 +61,7 @@ public class Shelf1 extends BasicContainer4R {
     
     @Override
     public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos){
-        return getBoundingBox(state, null, pos);
+        return getBoundingBox(state, null, pos).offset(pos);
     }
 	
 	@Override
@@ -76,6 +80,20 @@ public class Shelf1 extends BasicContainer4R {
         }
 		return true;
     }
+	
+	@Override
+    protected BlockStateContainer createBlockState(){
+		return new BlockStateContainer.Builder(this).add(FACING).add(CLOSED, COLOR).build();
+    }
+	
+	@Override
+	public IExtendedBlockState getExtendedState(IBlockState state, IBlockAccess world, BlockPos pos){
+		Entity ent = (Entity)world.getTileEntity(pos);
+		if(ent == null){
+			return ((IExtendedBlockState)state).withProperty(COLOR, 16777265).withProperty(CLOSED, true);
+		}
+		else return ((IExtendedBlockState)state).withProperty(COLOR, ent.getColor().packed).withProperty(CLOSED, !ent.open);
+	}
 	
 	public static class Entity extends PaintableTileEntity {
 
@@ -109,6 +127,9 @@ public class Shelf1 extends BasicContainer4R {
 		public void processClientPacket(PacketTileEntityUpdate packet){
 			if(packet.nbt.hasKey("open")){
 				this.open = packet.nbt.getBoolean("open");
+			}
+			if(world != null){
+				world.markBlockRangeForRenderUpdate(pos, pos);
 			}
 		}
 		
