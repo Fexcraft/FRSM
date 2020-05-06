@@ -69,7 +69,15 @@ public class Officechair extends Basic16R implements ITileEntityProvider {
 		return AABBs.CHAIR;
 	}
 	
-	public static class Entity extends PaintableTileEntity {}
+	public static class Entity extends PaintableTileEntity {
+		
+		@Override
+		public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldstate, IBlockState newstate){
+			return newstate.getBlock() instanceof Officechair == false;
+		}
+		
+		
+	}
 	
 	@Override
     protected BlockStateContainer createBlockState(){
