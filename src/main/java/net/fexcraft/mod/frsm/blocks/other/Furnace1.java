@@ -10,6 +10,7 @@ import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.AABBs;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.block.Basic4R;
 import net.minecraft.block.Block;
@@ -43,8 +44,13 @@ public class Furnace1 extends Basic4R {
 	
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
-		return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 1.5F, 1.0F);
+		return AABBs.BARREL;
 	}
+	
+	@Override
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
+        return AABBs.BARREL.offset(pos);
+    }
 	
     @Override
     public boolean onBlockActivated(World w, BlockPos pos, IBlockState state, EntityPlayer p, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ){
