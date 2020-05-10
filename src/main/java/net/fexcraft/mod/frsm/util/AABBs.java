@@ -12,5 +12,6 @@ public class AABBs {
 	public static final AxisAlignedBB PRINTER = new AxisAlignedBB(0 + Static.sixteenth, 0, 0 + Static.sixteenth, 1 - Static.sixteenth, 11 * Static.sixteenth, 1 - Static.sixteenth);
 	public static final AxisAlignedBB CHAIR = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.5625F, 1.0F);
 	public static final AxisAlignedBB TRASHCAN_OPEN = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 1.375F, 1.0F);
+	public static final AxisAlignedBB PILLAR = new AxisAlignedBB(0.25F, 0F, 0.25F, 0.75F, 1F, 0.75F);
 
 }

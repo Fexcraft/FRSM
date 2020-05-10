@@ -3,15 +3,17 @@ package net.fexcraft.mod.frsm.blocks.pillar;
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.items.PaintableInfo;
+import net.fexcraft.mod.frsm.util.AABBs;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.block.BasicContainer4R;
-import net.fexcraft.mod.frsm.util.block.PaintableTileEntity;
+import net.fexcraft.mod.frsm.util.block.Basic4R;
 import net.minecraft.block.material.Material;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 
-@fBlock(modid = FRSM.MODID, name = "pillar1", tileentity = Pillar.Entity.class, item = PaintableInfo.class)
-public class Pillar extends BasicContainer4R {
+@fBlock(modid = FRSM.MODID, name = "pillar1", item = PaintableInfo.class)
+public class Pillar extends Basic4R {
 	
 	public Pillar() {
     	super(Material.GLASS);this.setHarvestLevel("pickaxe", 1);
@@ -19,12 +21,10 @@ public class Pillar extends BasicContainer4R {
     	this.setResistance(32.0F);
     	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
-	
+    
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new Entity();
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
+		return AABBs.PILLAR;
 	}
-	
-	public static class Entity extends PaintableTileEntity { public Entity(){ super(); } }
 	
 }
