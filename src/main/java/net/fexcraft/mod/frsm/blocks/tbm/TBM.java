@@ -5,7 +5,6 @@ import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -89,7 +88,7 @@ public class TBM extends BlockFalling {
     
     @Override
     protected BlockStateContainer createBlockState(){
-    	return new BlockStateContainer(this, new IProperty[] {FACING});
+    	return new BlockStateContainer(this, FACING);
     }
     
 }
