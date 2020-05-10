@@ -42,8 +42,8 @@ public abstract class Basic4R extends Block {
     }
 
 	@Override
-    public AxisAlignedBB getSelectedBoundingBox(IBlockState blockState, World worldIn, BlockPos pos){
-        return FULL_BLOCK_AABB.offset(pos);
+    public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World world, BlockPos pos){
+        return getBoundingBox(state, world, pos).offset(pos);
     }
 	
 	@Override

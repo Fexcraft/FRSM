@@ -2,6 +2,7 @@ package net.fexcraft.mod.frsm.blocks.palet;
 
 import net.fexcraft.lib.mc.api.registry.fBlock;
 import net.fexcraft.mod.frsm.FRSM;
+import net.fexcraft.mod.frsm.util.AABBs;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.block.BasicContainer4RFalling;
 import net.minecraft.block.material.Material;
@@ -24,7 +25,7 @@ public class Palet1x1_2 extends BasicContainer4RFalling {
     
     @Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
-		return new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 2.0F, 1.0F);
+		return AABBs.HIGH_2;
 	}
 	
 	@Override
