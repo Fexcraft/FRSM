@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "frsm:blocks/windowi"
+        "layer0": "frsm:items/window1"
     },
     "display": {
         "thirdperson": {

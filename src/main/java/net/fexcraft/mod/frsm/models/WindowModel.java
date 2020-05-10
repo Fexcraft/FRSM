@@ -1,102 +1,52 @@
+//FMT-Marker DFM-1.0
+//Creator: FEX___96
+
 package net.fexcraft.mod.frsm.models;
 
-import net.fexcraft.lib.mc.api.registry.fTESR;
-import net.fexcraft.mod.frsm.blocks.other.Window;
-import net.fexcraft.mod.frsm.util.block.TileRenderer4R;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
+import net.fexcraft.lib.mc.api.registry.fModel;
+import net.fexcraft.lib.tmt.GenericModelBase;
+import net.fexcraft.lib.tmt.ModelRendererTurbo;
 
-public class WindowModel extends ModelBase {
-	
-	ModelRenderer Shape1;
-	ModelRenderer Shape2;
-	ModelRenderer Shape3;
-	ModelRenderer Shape4;
-	ModelRenderer Shape5;
-	ModelRenderer Shape6;
-	ModelRenderer Shape7;
+/** This file was exported via the (Default) FlansMod Exporter of<br>
+ *  FMT (Fex's Modelling Toolbox) v.2.4.1 &copy; 2020 - Fexcraft.net<br>
+ *  All rights reserved. For this Model's License contact the Author/Creator.
+ */
+@fModel(registryname = "frsm:models/block/window")
+public class WindowModel extends GenericModelBase {
+
+	private int textureX = 64;
+	private int textureY = 64;
 
 	public WindowModel(){
-		textureWidth = 64; textureHeight = 32;
-		Shape1 = new ModelRenderer(this, 0, 0);
-		Shape1.addBox(0F, 0F, 0F, 16, 2, 4);
-		Shape1.setRotationPoint(-8F, 22F, -2F);
-		Shape1.setTextureSize(64, 32);
-		Shape1.mirror = true;
-		setRotation(Shape1, 0F, 0F, 0F);
-		Shape2 = new ModelRenderer(this, 0, 7);
-		Shape2.addBox(0F, 0F, 0F, 3, 12, 2);
-		Shape2.setRotationPoint(-8F, 10F, -1F);
-		Shape2.setTextureSize(64, 32);
-		Shape2.mirror = true;
-		setRotation(Shape2, 0F, 0F, 0F);
-		Shape3 = new ModelRenderer(this, 0, 7);
-		Shape3.addBox(0F, 0F, 0F, 3, 12, 2);
-		Shape3.setRotationPoint(5F, 10F, -1F);
-		Shape3.setTextureSize(64, 32);
-		Shape3.mirror = true;
-		setRotation(Shape3, 0F, 0F, 0F);
-		Shape4 = new ModelRenderer(this, 0, 22);
-		Shape4.addBox(0F, 0F, 0F, 16, 2, 5);
-		Shape4.setRotationPoint(-8F, 8F, -2.5F);
-		Shape4.setTextureSize(64, 32);
-		Shape4.mirror = true;
-		setRotation(Shape4, 0F, 0F, 0F);
-		Shape5 = new ModelRenderer(this, 11, 7);
-		Shape5.addBox(0F, 0F, 0F, 10, 12, 0);
-		Shape5.setRotationPoint(-5F, 10F, 0F);
-		Shape5.setTextureSize(64, 32);
-		Shape5.mirror = true;
-		setRotation(Shape5, 0F, 0F, 0F);
-		Shape6 = new ModelRenderer(this, 32, 7);
-		Shape6.addBox(0F, 0F, 0F, 1, 1, 1);
-		Shape6.setRotationPoint(-7F, 15F, -2F);
-		Shape6.setTextureSize(64, 32);
-		Shape6.mirror = true;
-		setRotation(Shape6, 0F, 0F, 0F);
-		Shape7 = new ModelRenderer(this, 32, 10);
-		Shape7.addBox(0F, 0F, 0F, 1, 3, 1);
-		Shape7.setRotationPoint(-7F, 15F, -3F);
-		Shape7.setTextureSize(64, 32);
-		Shape7.mirror = true;
-		setRotation(Shape7, 0F, 0F, 0F);
-	}
+		base = new ModelRendererTurbo[7];
+		//
+		base[0] = new ModelRendererTurbo(this, 0, 0, textureX, textureY); // Shape1
+		base[0].addBox(0, 0, 0, 16, 2, 4, 0f);
+		base[0].setRotationPoint(-8.0f, -2.0f, -2.0f);
 
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5){
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		setRotationAngles(f, f1, f2, f3, f4, f5);
-		Shape1.render(f5);
-		Shape2.render(f5);
-		Shape3.render(f5);
-		Shape4.render(f5);
-		Shape5.render(f5);
-		Shape6.render(f5);
-		Shape7.render(f5);
-	}
+		base[1] = new ModelRendererTurbo(this, 0, 7, textureX, textureY); // Shape2
+		base[1].addBox(0, 0, 0, 3, 12, 2, 0f);
+		base[1].setRotationPoint(-8.0f, -14.0f, -1.0f);
 
-	private void setRotation(ModelRenderer model, float x, float y, float z){
-		model.rotateAngleX = x;
-		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
-	}
+		base[2] = new ModelRendererTurbo(this, 0, 7, textureX, textureY); // Shape3
+		base[2].addBox(0, 0, 0, 3, 12, 2, 0f);
+		base[2].setRotationPoint(5.0f, -14.0f, -1.0f);
 
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5){
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, null);
-	}
+		base[3] = new ModelRendererTurbo(this, 0, 22, textureX, textureY); // Shape4
+		base[3].addBox(0, 0, 0, 16, 2, 5, 0f);
+		base[3].setRotationPoint(-8.0f, -16.0f, -2.5f);
 
-	public static WindowModel INSTANCE = new WindowModel();
-	
-	@fTESR
-	public static class Renderer extends TileRenderer4R<Window.Entity> {
-		
-		public Renderer(){ super("frsm:textures/blocks/window.png", null); }
+		base[4] = new ModelRendererTurbo(this, 11, 7, textureX, textureY); // Shape5
+		base[4].addBox(0, 0, 0, 10, 12, 0, 0f);
+		base[4].setRotationPoint(-5.0f, -14.0f, 0.0f);
 
-		@Override
-		public void renderModel(Window.Entity tileentity, float partialticks, int destroystage){
-			INSTANCE.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		}
-		
+		base[5] = new ModelRendererTurbo(this, 32, 7, textureX, textureY); // Shape6
+		base[5].addBox(0, 0, 0, 1, 1, 1, 0f);
+		base[5].setRotationPoint(-7.0f, -9.0f, -2.0f);
+
+		base[6] = new ModelRendererTurbo(this, 32, 10, textureX, textureY); // Shape7
+		base[6].addBox(0, 0, 0, 1, 3, 1, 0f);
+		base[6].setRotationPoint(-7.0f, -9.0f, -3.0f);
 	}
 
 }
