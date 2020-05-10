@@ -15,8 +15,8 @@ import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.IronSaw;
 import net.fexcraft.mod.frsm.items.PaintSet;
-import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.Data;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.UpdateHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -213,7 +213,7 @@ public class FRSM {
     public void init(FMLInitializationEvent event){
 		GameRegistry.registerTileEntity(ClockBaseTileEntity.class, new ResourceLocation("frsm:clock_tileentity"));
 		MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:tomatoseeds")), 1);
-		
+		//
 		Data.getDataFromServer();
 		MinecraftForge.EVENT_BUS.register(new UpdateHandler.EventHandler());
 		UpdateHandler.load();
