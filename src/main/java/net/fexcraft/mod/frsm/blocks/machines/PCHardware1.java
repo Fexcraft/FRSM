@@ -20,6 +20,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -129,5 +130,10 @@ public class PCHardware1 extends BasicContainer4R {
 		}
 
 	}
+	
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState state){
+        return EnumBlockRenderType.MODEL;
+    }
 
 }

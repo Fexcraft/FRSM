@@ -15,6 +15,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -64,5 +65,10 @@ public class PizzaOven extends BasicContainer4R {
     }
 	
 	public static class Entity extends PaintableTileEntity {}
+	
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState state){
+        return EnumBlockRenderType.MODEL;
+    }
 	
 }

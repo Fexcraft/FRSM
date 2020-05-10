@@ -6,6 +6,7 @@ import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.block.Basic4RFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.EnumBlockRenderType;
 
 @fBlock(modid = FRSM.MODID, name = "washingmachine")
 public class WM extends Basic4RFalling {
@@ -29,6 +30,11 @@ public class WM extends Basic4RFalling {
 	@Override
 	public boolean isFullCube(IBlockState state){
         return true;
+    }
+	
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState state){
+        return EnumBlockRenderType.MODEL;
     }
 	
 }
