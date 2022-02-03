@@ -124,13 +124,8 @@ public class Command extends CommandBase {
         	case "reload":
         	case "resync":
         		if(args.length < 2){
-            		if(Network.isConnected()){
-                		Data.getDataFromServer();
-                		print("Resync Complete.");
-            		}
-            		else{
-            			print("Couldn't connect to Data Server.");
-            		}
+            		Data.getDataFromServer();
+            		print("Resync Complete.");
             	}
             	else if(args[1].equals("help")){
             		Print.chat(sender, "Used to re-sync with the server data.");
