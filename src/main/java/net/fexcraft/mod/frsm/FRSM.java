@@ -43,10 +43,9 @@ public class FRSM {
     public static final String NAME = "Fex's Random Stuff Mod";
     public static final String MODID = "frsm";
 	public static final String PREFIX = "&0[&6FRSM&0]&7";
-	public static final String VERSION = "4.4.1";
+	public static final String VERSION = "5.0.0";
 	public static final String VNOTE = "Generic Update";
 	public static FCLRegistry.AutoRegisterer AUTOREG;
-	//Config
 	public static boolean COOKIES_IN_GRASS;
 	
 	@Mod.EventHandler
@@ -55,9 +54,7 @@ public class FRSM {
 	    config.load();
 	    COOKIES_IN_GRASS = config.getBoolean("cookies_in_grass", "Generator", true, "Grass Dropping randomly cookies when breaking it");
 	    config.save();
-	    
 	    AUTOREG = new FCLRegistry.AutoRegisterer(MODID);
-	    //RegistryUtil.registerEntitiesOf(MODID);
 		if(COOKIES_IN_GRASS == true){
 			MinecraftForge.addGrassSeed(new ItemStack(Items.WHEAT), 1);
 			MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:chocolatecookie")), 2);
