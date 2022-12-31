@@ -9,5 +9,6 @@
     "HarverestTool": ["axe", 1 ],
     "Hardness": 1,
     "Resistance": 10,
-    "CreativeTab": "blocks"
+    "CreativeTab": "blocks",
+    "ItemBurnTime": 400
 }
