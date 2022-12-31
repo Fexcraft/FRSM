@@ -6,18 +6,12 @@ import javax.annotation.Nullable;
 
 import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.registry.FCLRegistry.AutoRegisterer;
-import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt;
-import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt2;
-import net.fexcraft.mod.frsm.blocks.asphalt.Asphalt2Slab;
-import net.fexcraft.mod.frsm.blocks.asphalt.AsphaltFull;
-import net.fexcraft.mod.frsm.blocks.asphalt.AsphaltSlab;
 import net.fexcraft.mod.frsm.blocks.clock.ClockBaseTileEntity;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.items.IronSaw;
 import net.fexcraft.mod.frsm.items.PaintSet;
-import net.fexcraft.mod.frsm.util.Data;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
-import net.fexcraft.mod.frsm.util.UpdateHandler;
+import net.fexcraft.mod.fvtm.data.addon.AddonClass;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,7 +33,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = FRSM.MODID, name = FRSM.NAME, version = FRSM.VERSION, acceptedMinecraftVersions = "*", updateJSON = "http://fexcraft.net/minecraft/fcl/request?mode=getForgeUpdateJson&modid=frsm", dependencies = "required-after:fcl")
+@AddonClass(registryname = "fvtm:frsm")
+@Mod(modid = FRSM.MODID, name = FRSM.NAME, version = FRSM.VERSION, acceptedMinecraftVersions = "*", updateJSON = "http://fexcraft.net/minecraft/fcl/request?mode=getForgeUpdateJson&modid=frsm", dependencies = "required-after:fcl;required-after:fvtm")
 public class FRSM {
 	
 	@Mod.Instance(FRSM.MODID)
@@ -52,29 +47,17 @@ public class FRSM {
 	public static final String VNOTE = "Generic Update";
 	public static FCLRegistry.AutoRegisterer AUTOREG;
 	//Config
-	public static boolean COOKIES_IN_GRASS, UPDATE_CHECK, ASPHALT;
+	public static boolean COOKIES_IN_GRASS;
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 	    config.load();
-	    //conf1       = config.getBoolean("robo_crafting", "###[> RoboStuff <]###", true, "Robo Crafting Recipes");
 	    COOKIES_IN_GRASS = config.getBoolean("cookies_in_grass", "Generator", true, "Grass Dropping randomly cookies when breaking it");
-	    //conf3       = config.getBoolean("generate_stone_light_box", "###{> Generator <]###", true, "This function is unavaible actually.");
-	    UPDATE_CHECK = config.getBoolean("enable_update_checker", "General", true, "Self-explaining.");
-	    //conf5       = config.getBoolean("robo_entities", "###[> RoboStuff <]###", true, "Should FRSM robots be enabled?");
-	    ASPHALT = config.getBoolean("enable_asphalt", "General", true, "If Asphalt Blocks should be enabled.");
 	    config.save();
 	    
 	    AUTOREG = new FCLRegistry.AutoRegisterer(MODID);
 	    //RegistryUtil.registerEntitiesOf(MODID);
-	    if(ASPHALT){
-	    	AUTOREG.addBlock("asphalt", new Asphalt(), null, 0, null);
-	    	AUTOREG.addBlock("asphalt2", new Asphalt2(), null, 0, null);
-	    	AUTOREG.addBlock("asphalt2Slab", new Asphalt2Slab(), null, 0, null);
-	    	AUTOREG.addBlock("asphaltFull", new AsphaltFull(), null, 0, null);
-	    	AUTOREG.addBlock("asphaltSlab", new AsphaltSlab(), null, 0, null);
-	    }
 		if(COOKIES_IN_GRASS == true){
 			MinecraftForge.addGrassSeed(new ItemStack(Items.WHEAT), 1);
 			MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:chocolatecookie")), 2);
@@ -213,10 +196,6 @@ public class FRSM {
     public void init(FMLInitializationEvent event){
 		GameRegistry.registerTileEntity(ClockBaseTileEntity.class, new ResourceLocation("frsm:clock_tileentity"));
 		MinecraftForge.addGrassSeed(new ItemStack(FCLRegistry.getItem("frsm:tomatoseeds")), 1);
-		//
-		Data.getDataFromServer();
-		MinecraftForge.EVENT_BUS.register(new UpdateHandler.EventHandler());
-		UpdateHandler.load();
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 	}
 	
