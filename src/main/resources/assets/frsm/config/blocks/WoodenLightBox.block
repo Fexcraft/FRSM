@@ -9,5 +9,6 @@
     "HarverestToolClass": "axe",
     "HarverestToolLevel": 1,
     "Hardness": 1,
-    "Resistance": 10
+    "Resistance": 10,
+    "CreativeTab": "blocks"
 }
