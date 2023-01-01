@@ -1,8 +1,8 @@
 # Creative Tabs
-itemGroup.frsm:blocks=FRSM Blocks
-itemGroup.frsm:consumables=FRSM Consumables
-itemGroup.frsm:materials=FRSM Materials
-itemGroup.frsm:misc=FRSM Misc
+itemGroup.fvtm:frsm.blocks=FRSM Blocks
+itemGroup.fvtm:frsm.consumables=FRSM Consumables
+itemGroup.fvtm:frsm.materials=FRSM Materials
+itemGroup.fvtm:frsm.misc=FRSM Misc
 
 
 # Items
@@ -73,11 +73,6 @@ item.frsm:tvscreensmall.name=TV Screen Small
 item.frsm:upgradekit.name=UpGrade Kit
 
 # Blocks
-tile.frsm:asphalt.name=Asphalt
-tile.frsm:asphalt2.name=Asphalt
-tile.frsm:asphalt2slab.name=Asphalt Slab
-tile.frsm:asphaltfull.name=Full Asphalt Block
-tile.frsm:asphaltslab.name=Asphalt Slab
 tile.frsm:bench1.name=Bench
 tile.frsm:bench1_1.name=Bench
 tile.frsm:bench1_2.name=Bench
@@ -146,12 +141,6 @@ tile.frsm:placeholder.name=Placeholder Block
 tile.frsm:printer.name=Printer
 tile.frsm:radio1.name=Radio (1)
 tile.frsm:radio2.name=Radio (2)
-tile.frsm:roadsign1.name=RoadSign (1)
-tile.frsm:roadsign2.name=RoadSign (2)
-tile.frsm:roadsign3.name=RoadSign (3)
-tile.frsm:roadsign4.name=RoadSign (4)
-tile.frsm:roadsign5.name=RoadSign (5)
-tile.frsm:roadsign6.name=RoadSign (6)
 tile.frsm:shelf1.name=Shelf (1)
 tile.frsm:status.name=Status Block
 tile.frsm:stonelightbox.name=Stone Light Box
@@ -181,9 +170,3 @@ tile.frsm:vendingmachine.name=Vending Machine
 tile.frsm:washingmachine.name=Washing Machine
 tile.frsm:window1.name=Window (1)
 tile.frsm:woodenlightbox.name=Wooden Light Box
-
-# Entities
-
-# Commands
-
-# Other
