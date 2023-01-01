@@ -2,7 +2,6 @@
     "RegistryName": "woodenlightbox",
     "Addon": "frsm",
     "Name": "Wooden Light box",
-    "Model": "baked|gep:models/block/pizza_oven.fmf",
     "BlockType": "GENERIC_SIMPLE",
     "Material": "WOOD",
     "LightLevel": 0.6,
