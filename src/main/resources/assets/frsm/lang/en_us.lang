@@ -1,15 +1,9 @@
 # Creative Tabs
-itemGroup.frsm_blocks=FRSM - Blocks
-itemGroup.frsm_eatables=FRSM - Food
-itemGroup.frsm_materials=FRSM - Materials
-itemGroup.frsm_tools=FRSM - Tools
-itemGroup.frsm_technic=FRSM - Technical Things
-itemGroup.frsm_models=FRSM - Models & Toys
-itemGroup.frsm_robots=FRSM - Robots
-itemGroup.frsm_experimental=Experimental FRSM Things
-itemGroup.frsm_pipes=FRSM - Pipes
-itemGroup.frsm_streets=FRSM - Street Stuff
-itemGroup.frsm_treepots=FRSM - Treepots
+itemGroup.frsm:blocks=FRSM Blocks
+itemGroup.frsm:consumables=FRSM Consumables
+itemGroup.frsm:materials=FRSM Materials
+itemGroup.frsm:misc=FRSM Misc
+
 
 # Items
 item.frsm:bacon.name=Bacon
