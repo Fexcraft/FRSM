@@ -1,0 +1,11 @@
+{
+    "RegistryName": "laptop",
+    "Addon": "frsm",
+    "Name": "Laptop",
+    "BlockType": "GENERIC_4ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 2,
+    "Resistance": 32,
+    "CreativeTab": "blocks"
+}
