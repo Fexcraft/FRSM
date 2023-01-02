@@ -29,7 +29,7 @@ public class Bench1 extends Basic4R {
 		this.setHarvestLevel("pickaxe", 1);
 		this.setHardness(3.0F);
 		this.setResistance(32.0F);
-		this.setCreativeTab(FRSMTabs.STREETS);
+		this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
 	
 	@Override
