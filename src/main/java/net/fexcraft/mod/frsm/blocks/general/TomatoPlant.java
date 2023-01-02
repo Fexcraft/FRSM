@@ -47,7 +47,7 @@ public class TomatoPlant extends BlockBush implements IGrowable {
         this.setHardness(0.0F);
         this.setSoundType(SoundType.PLANT);
         this.disableStats();
-        this.setCreativeTab(FRSMTabs.EXPERIMENTAL);
+        this.setCreativeTab(FRSMTabs.BLOCKS);
     }
     
     @Override
