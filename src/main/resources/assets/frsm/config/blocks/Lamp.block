@@ -1,0 +1,20 @@
+{
+    "RegistryName": "lamp",
+    "Addon": "frsm",
+    "Name": "Lamp",
+    "BlockType": "GENERIC_16VAR",
+    "Material": "WOOD",
+    "LightLevel": 1,
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 2,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "ItemBurnTime": 100,
+    "AABBs":{
+		"normal": [ 0.4, 0.9, 0.4, 0.6, 1, 0.6 ],
+		"selection#normal": [ 0.2, 0.7, 0.2, 0.8, 1, 0.8 ]
+	},
+	"FullBlock": false,
+	"FullCube": false,
+	"Opaque": false
+}

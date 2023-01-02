@@ -1,21 +1,21 @@
 {
     "variants": {
-        "color=white": { "model": "frsm:lamp_white" },
-        "color=orange": { "model": "frsm:lamp_orange" },
-        "color=magenta": { "model": "frsm:lamp_magenta" },
-        "color=light_blue": { "model": "frsm:lamp_light_blue" },
-        "color=yellow": { "model": "frsm:lamp_yellow" },
-        "color=lime": { "model": "frsm:lamp_lime" },
-        "color=pink": { "model": "frsm:lamp_pink" },
-        "color=silver": { "model": "frsm:lamp_silver" },
-        "color=gray": { "model": "frsm:lamp_gray" },
-        "color=cyan": { "model": "frsm:lamp_cyan" },
-        "color=purple": { "model": "frsm:lamp_purple" },
-        "color=blue": { "model": "frsm:lamp_blue" },
-        "color=brown": { "model": "frsm:lamp_brown" },
-        "color=green": { "model": "frsm:lamp_green" },
-        "color=red": { "model": "frsm:lamp_red" },
-        "color=black": { "model": "frsm:lamp_black" }
+        "variant=0": { "model": "frsm:lamp_white" },
+        "variant=1": { "model": "frsm:lamp_orange" },
+        "variant=2": { "model": "frsm:lamp_magenta" },
+        "variant=3": { "model": "frsm:lamp_light_blue" },
+        "variant=4": { "model": "frsm:lamp_yellow" },
+        "variant=5": { "model": "frsm:lamp_lime" },
+        "variant=6": { "model": "frsm:lamp_pink" },
+        "variant=7": { "model": "frsm:lamp_silver" },
+        "variant=8": { "model": "frsm:lamp_gray" },
+        "variant=9": { "model": "frsm:lamp_cyan" },
+        "variant=10": { "model": "frsm:lamp_purple" },
+        "variant=11": { "model": "frsm:lamp_blue" },
+        "variant=12": { "model": "frsm:lamp_brown" },
+        "variant=13": { "model": "frsm:lamp_green" },
+        "variant=14": { "model": "frsm:lamp_red" },
+        "variant=15": { "model": "frsm:lamp_black" }
     }
 }
  
