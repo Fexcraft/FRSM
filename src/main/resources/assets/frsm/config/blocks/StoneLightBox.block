@@ -1,0 +1,12 @@
+{
+    "RegistryName": "stonelightbox",
+    "Addon": "frsm",
+    "Name": "Stone Light box",
+    "BlockType": "GENERIC_SIMPLE",
+    "Material": "ROCK",
+    "LightLevel": 0.8,
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1.5,
+    "Resistance": 10,
+    "CreativeTab": "blocks"
+}
