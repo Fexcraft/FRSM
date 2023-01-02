@@ -1,0 +1,12 @@
+{
+    "RegistryName": "crate",
+    "Addon": "frsm",
+    "Name": "Crate",
+    "BlockType": "GENERIC_SIMPLE",
+    "Material": "WOOD",
+    "HarverestTool": ["axe", 1 ],
+    "Hardness": 1,
+    "Resistance": 10,
+    "CreativeTab": "blocks",
+    "ItemBurnTime": 1600
+}
