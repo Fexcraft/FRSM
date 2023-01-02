@@ -20,7 +20,7 @@ public class Car1D extends BasicContainer4R {
     	this.setHarvestLevel("pickaxe", 1);
     	this.setHardness(1.0F);
     	this.setResistance(10.0F);
-    	this.setCreativeTab(FRSMTabs.MODELS);
+    	this.setCreativeTab(FRSMTabs.BLOCKS);
 	}
     
     @Override

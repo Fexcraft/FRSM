@@ -15,16 +15,8 @@ public class FRSMTabs {
 	
 	public static CreativeTabs TECHNIC = new CreativeTab("frsm_technic", "frsm:tvs");
 	
-	public static CreativeTabs MODELS = new CreativeTab("frsm_models", "frsm:model_rail");
-	
-	//public static CreativeTabs ROBOTS = new CreativeTab("frsm_robots");
-	
 	public static CreativeTabs EXPERIMENTAL = new CreativeTab("frsm_experimental", "frsm:tbm");
 	
-	public static CreativeTabs PIPES = new CreativeTab("frsm_pipes", "frsm:stove_pipe");
-	
 	public static CreativeTabs STREETS = new CreativeTab("frsm_streets", "frsm:asphaltfull");
-	
-	public static CreativeTabs TREEPOTS = new CreativeTab("frsm_treepots", "frsm:tree_pot", 3);
 	
 }
