@@ -1,0 +1,17 @@
+{
+    "RegistryName": "tiles",
+    "Addon": "frsm",
+    "Name": "Tiles",
+    "BlockType": "GENERIC_2VAR",
+    "Material": "CLAY",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "AABBs":{
+		"normal": [ 0, 0, 0, 1, 0.0625, 1 ]
+	},
+	"FullBlock": false,
+	"FullCube": false,
+	"Opaque": false
+}
