@@ -1,0 +1,13 @@
+{
+    "RegistryName": "framedglowstone",
+    "Addon": "frsm",
+    "Name": "Framed Glowstone",
+    "BlockType": "GENERIC_6VAR",
+    "Material": "WOOD",
+    "LightLevel": 1,
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1,
+    "Resistance": 10,
+    "CreativeTab": "blocks",
+    "ItemBurnTime": 900
+}
