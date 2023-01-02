@@ -15,8 +15,4 @@ public class FRSMTabs {
 	
 	public static CreativeTabs TECHNIC = new CreativeTab("frsm_technic", "frsm:tvs");
 	
-	public static CreativeTabs EXPERIMENTAL = new CreativeTab("frsm_experimental", "frsm:tbm");
-	
-	public static CreativeTabs STREETS = new CreativeTab("frsm_streets", "frsm:asphaltfull");
-	
 }
