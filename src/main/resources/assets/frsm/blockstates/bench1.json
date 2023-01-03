@@ -1,9 +1,21 @@
 {
     "variants": {
         "normal": { "model": "frsm:placeholder" },
-        "facing=north": { "model": "frsm:bench1" },
-        "facing=south": { "model": "frsm:bench1", "y": 180 },
-        "facing=west":  { "model": "frsm:bench1", "y": 270 },
-        "facing=east":  { "model": "frsm:bench1", "y": 90 }
+        "facing=north,variant=0": { "model": "frsm:bench1" },
+        "facing=south,variant=0": { "model": "frsm:bench1", "y": 180 },
+        "facing=west,variant=0":  { "model": "frsm:bench1", "y": 270 },
+        "facing=east,variant=0":  { "model": "frsm:bench1", "y": 90 },
+        "facing=north,variant=1": { "model": "frsm:bench1_1" },
+        "facing=south,variant=1": { "model": "frsm:bench1_1", "y": 180 },
+        "facing=west,variant=1":  { "model": "frsm:bench1_1", "y": 270 },
+        "facing=east,variant=1":  { "model": "frsm:bench1_1", "y": 90 },
+        "facing=north,variant=2": { "model": "frsm:bench1_2" },
+        "facing=south,variant=2": { "model": "frsm:bench1_2", "y": 180 },
+        "facing=west,variant=2":  { "model": "frsm:bench1_2", "y": 270 },
+        "facing=east,variant=2":  { "model": "frsm:bench1_2", "y": 90 },
+        "facing=north,variant=3": { "model": "frsm:bench1_3" },
+        "facing=south,variant=3": { "model": "frsm:bench1_3", "y": 180 },
+        "facing=west,variant=3":  { "model": "frsm:bench1_3", "y": 270 },
+        "facing=east,variant=3":  { "model": "frsm:bench1_3", "y": 90 }
     }
 }
