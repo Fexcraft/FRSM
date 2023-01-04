@@ -1,0 +1,14 @@
+{
+    "RegistryName": "radio2",
+    "Addon": "frsm",
+    "Name": "Radio (2)",
+    "BlockType": "GENERIC_4ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "AABBs":{
+		"normal": [ 0, 0, 0, 1, 0.6875, 1 ]
+	}
+}
