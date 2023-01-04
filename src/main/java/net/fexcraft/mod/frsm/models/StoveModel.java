@@ -7,7 +7,6 @@ import java.util.Map;
 import net.fexcraft.lib.mc.api.registry.fModel;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.util.FVTMFormatModel;
-import net.fexcraft.mod.frsm.util.Properties;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
 
@@ -262,10 +261,10 @@ public class StoveModel extends FVTMFormatModel {
 
 	@Override
 	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
-		boolean bool = state.getValue(Properties.OPEN);
+		/*boolean bool = state.getValue(Properties.OPEN);
 		groups.get(0).forEach(mrt -> {
 			mrt.rotationAngleZ = bool ? 80 : 0;
-		});
+		});*/
 		return super.getPolygons(state, side, args, rand);
 	}
 

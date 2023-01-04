@@ -1,0 +1,12 @@
+{
+    "RegistryName": "stove",
+    "Addon": "frsm",
+    "Name": "Stove",
+    "BlockType": "GENERIC_4ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 3,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+	"RenderCutout": true
+}
