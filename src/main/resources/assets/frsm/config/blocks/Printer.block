@@ -1,0 +1,14 @@
+{
+    "RegistryName": "printer",
+    "Addon": "frsm",
+    "Name": "Printer",
+    "BlockType": "GENERIC_4ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 2,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "AABBs":{
+		"normal": [ 0.0625, 0, 0.0625, 0.9375, 0.6875, 0.9375 ]
+	}
+}
