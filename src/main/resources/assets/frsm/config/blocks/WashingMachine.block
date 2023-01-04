@@ -1,0 +1,12 @@
+{
+    "RegistryName": "washingmachine",
+    "Addon": "frsm",
+    "Name": "Washing Machine",
+    "BlockType": "GENERIC_4ROT",
+    "Material": "IRON",
+    "HarverestTool": [ "pickaxe", 1 ],
+    "Hardness": 5,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+	"RenderCutout": true
+}
