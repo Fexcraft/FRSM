@@ -6,7 +6,6 @@ import java.util.Map;
 
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fModel;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.util.Properties;
 import net.minecraft.block.state.IBlockState;
@@ -165,7 +164,7 @@ public class PCHardware1Model extends GenericModelBase {
 		r0[2].setRotationPoint(0F, -12F, 0F);
 	}
 
-	@Override
+	//@Override
 	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
 		RGB color = null;
 		int offset = 0;
@@ -191,7 +190,7 @@ public class PCHardware1Model extends GenericModelBase {
 		return mrts;
 	}
 
-	@Override
+	//@Override
 	public void reset(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
 		int offset = 0;
 		if(state instanceof IExtendedBlockState){

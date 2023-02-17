@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.Map;
 
 import net.fexcraft.lib.mc.api.registry.fModel;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.minecraft.util.ResourceLocation;
 

@@ -6,7 +6,6 @@ import java.util.Map;
 
 import net.fexcraft.lib.common.math.RGB;
 import net.fexcraft.lib.mc.api.registry.fModel;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.fexcraft.mod.frsm.util.Properties;
 import net.minecraft.block.state.IBlockState;
@@ -284,7 +283,7 @@ public class PizzaOvenModel extends GenericModelBase {
 		r3[3].setRotationPoint(-7.5F, -9F, 7F);
 	}
 
-	@Override
+	//@Override
 	public Collection<ModelRendererTurbo> getPolygons(IBlockState state, EnumFacing side, Map<String, String> args, long rand){
 		RGB color = null;
 		if(state instanceof IExtendedBlockState){

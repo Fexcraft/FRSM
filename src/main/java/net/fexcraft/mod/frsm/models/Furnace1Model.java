@@ -1,7 +1,6 @@
 package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fModel;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 
 @fModel(registryname = "frsm:models/block/furnace1")

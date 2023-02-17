@@ -5,7 +5,6 @@
 package net.fexcraft.mod.frsm.models;
 
 import net.fexcraft.lib.mc.api.registry.fModel;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 
 /** This file was exported via the (Default) FlansMod Exporter of<br>

@@ -1,9 +1,10 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
+import net.fexcraft.mod.frsm.models.GenericModelBase;
+import net.fexcraft.mod.fvtm.model.GenericModel;
 import org.lwjgl.opengl.GL11;
 
 import net.fexcraft.lib.common.math.RGB;
-import net.fexcraft.lib.tmt.GenericModelBase;
 import net.fexcraft.lib.tmt.ModelRendererTurbo;
 import net.minecraft.entity.Entity;
 
@@ -22,6 +23,10 @@ public class ClockBaseModel extends GenericModelBase {
 	public void render(){
 		render(base);
 		render(paintable);
+	}
+
+	private void render(ModelRendererTurbo[] base) {
+
 	}
 
 	public void render(ClockBaseTileEntity type, Entity entity){
@@ -87,13 +92,20 @@ public class ClockBaseModel extends GenericModelBase {
 		translate(second, x, y, z);
 	}
 
-	@Override
+	private void translate(ModelRendererTurbo[] second, float x, float y, float z) {
+
+	}
+
+	//@Override
 	public void rotate(float x, float y, float z){
 		rotate(base, x, y, z);
 		rotate(paintable, x, y, z);
 		rotate(hour, x, y, z);
 		rotate(minute, x, y, z);
 		rotate(second, x, y, z);
+	}
+
+	private void rotate(ModelRendererTurbo[] paintable, float x, float y, float z) {
 	}
 
 }

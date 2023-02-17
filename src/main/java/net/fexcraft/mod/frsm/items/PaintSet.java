@@ -9,6 +9,7 @@ import net.fexcraft.lib.mc.capabilities.FCLCapabilities;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
 import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.lib.mc.utils.Print;
+import net.fexcraft.lib.mc.utils.Static;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
 import net.fexcraft.mod.frsm.util.FRSMTabs;
@@ -49,7 +50,7 @@ public class PaintSet extends Item {
 	public PaintSet(int name){
 		String id = "paintset" + name;
 		this.dye = EnumDyeColor.byMetadata(name);
-		this.color = RGB.fromDyeColor(dye);
+		this.color = Static.fromDyeColor(dye);
 		this.setCreativeTab(FRSMTabs.TOOLS);
 		this.setMaxStackSize(1);
 		FCLRegistry.getAutoRegistry("frsm").addItem(id, this, 1, null);
