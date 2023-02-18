@@ -28,6 +28,7 @@
             "door_closed_handles fvtm:block_bool_visible open false",
             "door_open fvtm:block_bool_visible open true",
             "door_open_handles fvtm:block_bool_visible open true"
-        ]
+        ],
+        "ItemScale": 0.5
     }
 }
