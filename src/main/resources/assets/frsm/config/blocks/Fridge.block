@@ -15,6 +15,12 @@
 	},
     "Functions": [
         {
+            "type": "fvtm:inventory",
+            "inv_type": "item",
+            "stacks": 36,
+            "bool_key": "open"
+        },
+        {
             "type": "fvtm:bool_value",
             "key": "open"
         }
