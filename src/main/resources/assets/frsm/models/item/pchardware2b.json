@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "frsm:blocks/pchardware2i"
-    }
-}
+{ 
+    "parent": "item/generated", 
+    "textures": { 
+        "layer0": "frsm:block/pchardware2i"
+     }
+ }

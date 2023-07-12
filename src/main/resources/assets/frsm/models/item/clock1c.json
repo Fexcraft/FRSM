@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "frsm:items/clock1c"
-    }
-}
+{ 
+    "parent": "item/generated", 
+    "textures": { 
+        "layer0": "frsm:item/clock1c"
+     }
+ }

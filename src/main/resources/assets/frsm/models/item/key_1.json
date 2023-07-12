@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "frsm:items/key_1"
-    }
-}
+{ 
+    "parent": "item/generated", 
+    "textures": { 
+        "layer0": "frsm:item/key_1"
+     }
+ }

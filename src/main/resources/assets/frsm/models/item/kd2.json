@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "frsm:blocks/kd2i"
-    }
-}
+{ 
+    "parent": "item/generated", 
+    "textures": { 
+        "layer0": "frsm:block/kd2i"
+     }
+ }

@@ -1,6 +1,6 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "frsm:items/chocolatebarwhite"
-    }
-}
+{ 
+    "parent": "item/generated", 
+    "textures": { 
+        "layer0": "frsm:item/chocolatebarwhite"
+     }
+ }

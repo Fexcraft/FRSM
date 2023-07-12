@@ -1,6 +1,6 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "frsm:items/ironSaw"
-    }
-}
+{ 
+    "parent": "item/handheld", 
+    "textures": { 
+        "layer0": "frsm:item/ironSaw"
+     }
+ }

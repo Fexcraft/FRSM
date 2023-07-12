@@ -1,6 +1,6 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "frsm:blocks/cobble6"
-    }
-}
+{ 
+    "parent": "block/cube_all", 
+    "textures": { 
+        "all": "frsm:block/cobble6"
+     }
+ }

@@ -1,6 +1,6 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "frsm:items/paintset14"
-    }
-}
+{ 
+    "parent": "item/handheld", 
+    "textures": { 
+        "layer0": "frsm:item/paintset14"
+     }
+ }
