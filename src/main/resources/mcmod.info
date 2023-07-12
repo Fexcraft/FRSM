@@ -9,8 +9,8 @@
   "updateUrl": "http://fexcraft.net/download?modid=frsm",
   "authorList": ["FEX___96"],
   "credits": "",
-  "logoFile": "",
+  "logoFile": "frsm_icon.png",
   "screenshots": [],
-  "dependencies": ["fcl"]
+  "dependencies": ["fcl", "fvtm"]
 }
 ]
