@@ -1,0 +1,13 @@
+{
+	"ID": "tomatojar",
+	"Addon": "frsm",
+	"Name": "Jar with Tomatoes",
+	"Description": "&oFilled with Tomatoes.",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": true,
+	"CreativeTab": "consumables",
+	"ContainerItem": "frsm:jar",
+	"MaxItemStackSize": 16,
+	"Drinkable": true
+}

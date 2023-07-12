@@ -1,0 +1,11 @@
+{
+	"ID": "cupwithcacao",
+	"Addon": "frsm",
+	"Name": "Cacao Cup",
+	"Description": "Refreshing cacao drink.",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"Drinkable": true,
+	"CreativeTab": "consumables"
+}

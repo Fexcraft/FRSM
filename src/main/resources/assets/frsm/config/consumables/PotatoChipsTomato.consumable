@@ -1,0 +1,11 @@
+{
+	"ID": "potatochipstomato",
+	"Addon": "frsm",
+	"Name": "Potato Chips with Tomato",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"ContainerItem": "minecraft:paper",
+	"CreativeTab": "consumables",
+	"MaxItemStackSize": 60
+}

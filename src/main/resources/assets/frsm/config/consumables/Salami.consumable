@@ -1,0 +1,9 @@
+{
+	"ID": "salami",
+	"Addon": "frsm",
+	"Name": "Salami",
+	"HealAmount": 2,
+	"Saturation": 0.4,
+	"WolfFood": true,
+	"CreativeTab": "consumables"
+}

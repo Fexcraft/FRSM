@@ -1,0 +1,10 @@
+{
+	"ID": "donut",
+	"Addon": "frsm",
+	"Name": "Donut",
+	"HealAmount": 6,
+	"Saturation": 0.6,
+	"WolfFood": false,
+	"CreativeTab": "consumables",
+	"MaxItemStackSize": 8
+}

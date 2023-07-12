@@ -1,0 +1,11 @@
+{
+	"ID": "hamburger",
+	"Addon": "frsm",
+	"Name": "Hamburger",
+	"Description": "Fast food, fastly programmed.",
+	"HealAmount": 9,
+	"Saturation": 0.9,
+	"WolfFood": true,
+	"CreativeTab": "consumables",
+	"MaxItemStackSize": 4
+}

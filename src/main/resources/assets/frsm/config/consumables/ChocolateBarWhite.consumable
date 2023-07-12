@@ -1,0 +1,10 @@
+{
+	"ID": "chocolatebarwhite",
+	"Addon": "frsm",
+	"Name": "White Chocolate Bar",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"ContainerItem": "minecraft:paper",
+	"CreativeTab": "consumables"
+}

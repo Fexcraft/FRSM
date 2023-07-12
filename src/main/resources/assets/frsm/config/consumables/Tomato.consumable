@@ -1,0 +1,9 @@
+{
+	"ID": "tomato",
+	"Addon": "frsm",
+	"Name": "Tomato",
+	"HealAmount": 2,
+	"Saturation": 0.4,
+	"WolfFood": true,
+	"CreativeTab": "consumables"
+}

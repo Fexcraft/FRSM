@@ -1,0 +1,11 @@
+{
+	"ID": "potatochipsbag",
+	"Addon": "frsm",
+	"Name": "Potato Chips",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"ContainerItem": "minecraft:paper",
+	"CreativeTab": "consumables",
+	"MaxItemStackSize": 60
+}

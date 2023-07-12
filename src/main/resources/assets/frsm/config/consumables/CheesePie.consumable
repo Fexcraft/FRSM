@@ -1,0 +1,9 @@
+{
+	"ID": "cheesepie",
+	"Addon": "frsm",
+	"Name": "Cheese Pie",
+	"HealAmount": 10,
+	"Saturation": 1,
+	"WolfFood": true,
+	"CreativeTab": "consumables"
+}

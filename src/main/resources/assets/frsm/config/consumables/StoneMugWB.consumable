@@ -1,0 +1,12 @@
+{
+	"ID": "stonemugwithbeer",
+	"Addon": "frsm",
+	"Name": "Stone Mug with Beer",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"CreativeTab": "consumables",
+	"ContainerItem": "frsm:stonemug",
+	"MaxItemStackSize": 4,
+	"Drinkable": true
+}

@@ -1,0 +1,9 @@
+{
+	"ID": "bacon",
+	"Addon": "frsm",
+	"Name": "Bacon",
+	"HealAmount": 6,
+	"Saturation": 0.6,
+	"WolfFood": true,
+	"CreativeTab": "consumables"
+}

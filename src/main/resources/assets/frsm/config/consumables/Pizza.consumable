@@ -1,0 +1,10 @@
+{
+	"ID": "pizza",
+	"Addon": "frsm",
+	"Name": "Pizza",
+	"HealAmount": 10,
+	"Saturation": 1,
+	"WolfFood": true,
+	"CreativeTab": "consumables",
+	"MaxItemStackSize": 1
+}

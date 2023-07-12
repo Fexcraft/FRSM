@@ -1,0 +1,9 @@
+{
+	"ID": "chocolatecookie",
+	"Addon": "frsm",
+	"Name": "Chocolate Cookie",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": false,
+	"CreativeTab": "consumables"
+}

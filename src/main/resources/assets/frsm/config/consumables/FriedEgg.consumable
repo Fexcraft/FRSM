@@ -1,0 +1,9 @@
+{
+	"ID": "fried_egg",
+	"Addon": "frsm",
+	"Name": "Fried Egg",
+	"HealAmount": 4,
+	"Saturation": 0.4,
+	"WolfFood": true,
+	"CreativeTab": "consumables"
+}

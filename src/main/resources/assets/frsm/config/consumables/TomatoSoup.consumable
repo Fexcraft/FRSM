@@ -1,0 +1,12 @@
+{
+	"ID": "tomatosoup",
+	"Addon": "frsm",
+	"Name": "Tomato Soup",
+	"HealAmount": 2,
+	"Saturation": 0.4,
+	"WolfFood": true,
+	"CreativeTab": "consumables",
+	"ContainerItem": "minecraft:bowl",
+	"MaxItemStackSize": 16,
+	"Drinkable": true
+}

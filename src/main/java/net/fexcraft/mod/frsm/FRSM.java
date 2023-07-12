@@ -14,13 +14,9 @@ import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.fvtm.data.addon.AddonClass;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
@@ -92,98 +88,6 @@ public class FRSM {
 		AUTOREG.addItem("tvscreenmedium", new Item().setMaxStackSize(2).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		AUTOREG.addItem("tvscreensmall", new Item().setMaxStackSize(4).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
 		AUTOREG.addItem("upgradekit", new Item().setMaxStackSize(16).setCreativeTab(FRSMTabs.MATERIALS), 0, null);
-		//
-		AUTOREG.addItem("bacon", new ItemFood(6, 0.6F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("baconraw", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("cheese", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("cheesepie", new ItemFood(10, 1F, true).setMaxStackSize(8).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("cheesewhite", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("chocolatebar", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
-			}
-		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("chocolatebarwhite", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
-			}
-		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("chocolatecookie", new ItemFood(4, 0.4F, false).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("chocolatemilk", new ItemFood(4, 0.4F, true){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.BUCKET, 1, 0));
-			}
-		}.setMaxStackSize(1).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("cookedegg", new ItemFood(4, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("cupwithcacao", new ItemFood(4, 0.4F, false){
-			@Override
-			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
-				tooltip.add("Refreshing cacao drink.");
-			}
-			@Override
-			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.addPotionEffect(new PotionEffect(Potion.getPotionById(6), 360));
-				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:cup"), 1, 0));
-			}
-		}.setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("donut", new ItemFood(6, 0.6F, false).setMaxStackSize(32).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("hamburger", new ItemFood(9, 0.9F, true){
-			@Override
-			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
-				tooltip.add("Fast food, fastly programmed.");
-			}
-		}.setMaxStackSize(4).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("pizza", new ItemFood(10, 1F, true){
-			@Override
-			public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
-				tooltip.add("Default.");
-			}
-		}.setMaxStackSize(1).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("potatochipsbag", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
-			}
-		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("potatochipscheese", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
-			}
-		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("potatochipstomato", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.PAPER, 1, 0));
-			}
-		}.setMaxStackSize(60).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("salami", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("stonemugwithbeer", new ItemFood(4, 0.4F, false){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:stonemug"), 1, 0));
-			}
-		}.setMaxStackSize(4).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("tomato", new ItemFood(2, 0.4F, true).setMaxStackSize(64).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("tomatojar", new ItemFood(2, 0.4F, true){
-			@Override
-			public void addInformation(ItemStack stack, @Nullable World playerIn, List<String> tooltip, ITooltipFlag advanced){
-				tooltip.add("Filled with Tomatoes.");
-			}
-			@Override
-			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(FCLRegistry.getItem("frsm:jar"), 1, 0));
-			}
-		}.setMaxStackSize(16).setCreativeTab(FRSMTabs.EATABLES), 0, null);
-		AUTOREG.addItem("tomatosoup", new ItemFood(2, 0.4F, true){
-			@Override
-			protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player){
-				player.inventory.addItemStackToInventory(new ItemStack(Items.BOWL, 1, 0));
-			}
-		}.setMaxStackSize(16).setCreativeTab(FRSMTabs.EATABLES), 0, null);
 		//
 		AUTOREG.addItem("ironsaw", new IronSaw(), 0, null);
 		PaintSet.register();
