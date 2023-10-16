@@ -1,7 +1,6 @@
 package net.fexcraft.mod.frsm.blocks.clock;
 
 import net.fexcraft.mod.frsm.models.GenericModelBase;
-import net.fexcraft.mod.fvtm.model.GenericModel;
 import org.lwjgl.opengl.GL11;
 
 import net.fexcraft.lib.common.math.RGB;
