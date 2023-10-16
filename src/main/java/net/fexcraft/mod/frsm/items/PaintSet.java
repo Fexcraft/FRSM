@@ -5,15 +5,15 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.fexcraft.lib.common.math.RGB;
+import net.fexcraft.lib.common.utils.Formatter;
 import net.fexcraft.lib.mc.capabilities.FCLCapabilities;
 import net.fexcraft.lib.mc.registry.FCLRegistry;
-import net.fexcraft.lib.mc.utils.Formatter;
 import net.fexcraft.lib.mc.utils.Print;
 import net.fexcraft.lib.mc.utils.Static;
 import net.fexcraft.mod.frsm.FRSM;
 import net.fexcraft.mod.frsm.guis.GuiHandler;
-import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.fexcraft.mod.frsm.util.DyePaintable;
+import net.fexcraft.mod.frsm.util.FRSMTabs;
 import net.minecraft.block.BlockCarpet;
 import net.minecraft.block.BlockColored;
 import net.minecraft.block.BlockStainedGlass;
