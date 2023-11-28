@@ -1,9 +1,22 @@
 {
-    "RegistryName": "fridge",
+    "ID": "fridge",
     "Addon": "frsm",
     "Name": "Fridge",
     "Model": "frsm:models/block/fridge.fmf",
-    "Texture": "frsm:textures/blocks/fridge.png",
+    "ModelData": {
+    	"Baked": true,
+        "Programs": [
+            "primary fvtm:rgb_primary",
+            "door_closed fvtm:rgb_primary",
+            "door_open fvtm:rgb_primary",
+            "door_closed fvtm:block_bool_visible open false",
+            "door_closed_handles fvtm:block_bool_visible open false",
+            "door_open fvtm:block_bool_visible open true",
+            "door_open_handles fvtm:block_bool_visible open true"
+        ],
+        "ItemScale": 0.5
+    },
+    "Texture": "frsm:textures/block/fridge.png",
     "BlockType": "GENERIC_4ROT",
     "Material": "IRON",
     "HarverestTool": ["pickaxe", 1 ],
@@ -24,17 +37,5 @@
             "type": "fvtm:bool_value",
             "key": "open"
         }
-    ],
-    "ModelData": {
-        "Programs": [
-            "primary fvtm:rgb_primary",
-            "door_closed fvtm:rgb_primary",
-            "door_open fvtm:rgb_primary",
-            "door_closed fvtm:block_bool_visible open false",
-            "door_closed_handles fvtm:block_bool_visible open false",
-            "door_open fvtm:block_bool_visible open true",
-            "door_open_handles fvtm:block_bool_visible open true"
-        ],
-        "ItemScale": 0.5
-    }
+    ]
 }
