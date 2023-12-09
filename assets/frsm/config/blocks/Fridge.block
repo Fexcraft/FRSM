@@ -4,10 +4,7 @@
     "Name": "Fridge",
     "Model": "frsm:models/block/fridge.fmf",
     "ModelData": {
-    	"Baked": true,
-    	"Transforms":[
-    		"rotate 0 1 0 -90"
-    	],
+    	"Baked": false,
         "Programs": [
             "primary fvtm:rgb_primary",
             "door_closed fvtm:rgb_primary",
