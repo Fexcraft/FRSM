@@ -9,7 +9,10 @@
 		"01e4af9b-2a30-471e-addf-f6338ffce04b"
 	],
 	"Version": "5.0.0",
-	"CreativeTabs": [
-		"blocks", "consumables", "materials", "misc"
-	]
+	"CreativeTabs": {
+		"blocks": "frsm:woodenlightbox",
+		"consumables": "frsm:cheesewhite",
+		"materials": "frsm:tomatojar",
+		"misc": "frsm:bacon"
+	}
 }
