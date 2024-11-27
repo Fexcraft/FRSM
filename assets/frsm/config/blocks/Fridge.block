@@ -26,16 +26,14 @@
     "AABBs":{
 		"normal": [ 0, 0, 0, 1, 2, 1 ]
 	},
-    "Functions": [
-        {
-            "type": "fvtm:inventory",
-            "inv_type": "item",
+    "Functions": {
+        "fvtm:inventory":{
+            "type": "item",
             "stacks": 36,
             "bool_key": "open"
         },
-        {
-            "type": "fvtm:bool_value",
-            "key": "open"
+        "fvtm:boolean":{
+            "open": false
         }
-    ]
+    }
 }
