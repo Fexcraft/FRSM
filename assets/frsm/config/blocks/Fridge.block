@@ -27,26 +27,7 @@
 		"normal": [ 0, 0, 0, 1, 2, 1 ],
 		"render": [ 0, 0, 0, 1, 2, 1 ]
 	},
-    "Functions": {
-        "fvtm:set_state0":[
-            {
-                "equals": "facing=north",
-                "region": "minecraft:oak_trapdoor open=false"
-                "state12": "minecraft:trapdoor open=false"
-            },
-            {
-                "equals": "facing=south",
-                "region": "minecraft:birch_trapdoor open=false"
-                "state12": "minecraft:trapdoor open=false"
-            }
-        ],
-        "fvtm:set_state":[
-            {
-                "region": "test:wireblock4 *"
-            }
-        ]
-    }
-    "Functions0": {
+	"Functions": {
         "fvtm:inventory":{
             "type": "item",
             "stacks": 36,
