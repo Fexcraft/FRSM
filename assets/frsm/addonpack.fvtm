@@ -1,18 +1,18 @@
-{
-	"ID": "frsm",
-	"Name": "Fex's Random Stuff Mod",
-	"URL": "http://fexcraft.net/download?modid=frsm",
-	"UpdateID": "frsm",
-	"License": "http://fexcraft.net/license?id=mods",
-	"Dependencies": [],
-	"Authors": [
-		"01e4af9b-2a30-471e-addf-f6338ffce04b"
-	],
-	"Version": "5.0.0",
-	"CreativeTabs": {
-		"blocks": "frsm:woodenlightbox",
-		"consumables": "frsm:cheesewhite",
-		"materials": "frsm:tomatojar",
-		"misc": "frsm:bacon"
-	}
+{ 
+    "ID": "frsm", 
+    "Name": "Fex's Random Stuff Mod", 
+    "URL": "http://fexcraft.net/download?modid=frsm", 
+    "UpdateID": "frsm", 
+    "License": "http://fexcraft.net/license?id=mods", 
+    "Dependencies": [], 
+    "Authors": [ 
+        "01e4af9b-2a30-471e-addf-f6338ffce04b"
+    ], 
+    "Version": "5.0.0", 
+    "CreativeTabs": { 
+        "blocks": "frsm:woodenlightbox", 
+        "consumables": "frsm:cheesewhite", 
+        "materials": "frsm:tomatojar", 
+        "misc": "frsm:bacon"
+    }
 }

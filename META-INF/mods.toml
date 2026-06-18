@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+issueTrackerURL="https://enter.your.url/here"
+[[mods]]
+modId="fvtm"
+version="5.0.0"
+displayName="Fex's Random Stuff Mod"
+displayURL="https://fexcraft.net/wiki/mod/fvtm"
+credits="Created using FMT" #optional
+authors="YourNameHere"
+displayTest="IGNORE_ALL_VERSION"
+
+description='''A pack for FVTM'''
+[[dependencies.fvtm]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.12.2],[1.20.1]"
+ordering="NONE"
+side="BOTH"

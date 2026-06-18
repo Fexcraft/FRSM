@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "normal": { "model": "frsm:stonelightbox" },
-        "": { "model": "frsm:block/stonelightbox" }
-    }
-}
