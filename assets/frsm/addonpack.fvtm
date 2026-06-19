@@ -10,9 +10,8 @@
     ], 
     "Version": "5.0.0", 
     "CreativeTabs": { 
-        "blocks": "frsm:woodenlightbox", 
+        "blocks": "frsm:radio1",
         "consumables": "frsm:cheesewhite", 
-        "materials": "frsm:tomatojar", 
-        "misc": "frsm:bacon"
+        "materials": "frsm:tomatojar"
     }
 }

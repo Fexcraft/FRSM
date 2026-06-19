@@ -2,6 +2,13 @@
     "RegistryName": "printer",
     "Addon": "frsm",
     "Name": "Printer",
+    "Model": "frsm:models/block/printer.fmf",
+    "Texture": "frsm:textures/block/printer.png",
+    "ModelData": {
+    	"Transforms":[
+          "rotate 0 1 0 -90"
+    	]
+    },
     "BlockType": "GENERIC_4ROT",
     "Material": "GLASS",
     "HarverestTool": ["pickaxe", 1 ],
