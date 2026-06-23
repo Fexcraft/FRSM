@@ -5,11 +5,12 @@
     "Model": "frsm:models/block/radio1.fmf",
     "Texture": "frsm:textures/block/radio1.png",
     "ModelData": {
+        "Baked": true,
     	"Transforms":[
           "rotate 0 1 0 -90"
     	]
     },
-    "BlockType": "GENERIC_4ROT",
+    "BlockType": "GENERIC_16ROT",
     "Material": "GLASS",
     "HarverestTool": ["pickaxe", 1 ],
     "Hardness": 1,
