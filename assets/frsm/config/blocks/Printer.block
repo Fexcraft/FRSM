@@ -5,6 +5,7 @@
     "Model": "frsm:models/block/printer.fmf",
     "Texture": "frsm:textures/block/printer.png",
     "ModelData": {
+        "Baked": true,
     	"Transforms":[
           "rotate 0 1 0 -90"
     	]
