@@ -1,27 +1,7 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "frsm:radio1",
-    "transform": "forge:default-block",
-    "custom": {
-    	"t-x": 0.5,
-    	"t-z": 0.5
+    "variants": {
+        "": {
+            "model": "frsm:block/radio1"
+        }
     }
-  },
-  "variants": {
-    "facing": {
-      "north": {
-        "custom": { "y": -90 }
-      },
-      "south": {
-        "custom": { "y": 90 }
-      },
-      "west": {
-        "custom": { "y": 180 }
-      },
-      "east": {
-        "custom": { "y": 0 }
-      }
-    }
-  }
 }
