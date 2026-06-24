@@ -4,7 +4,7 @@
         "name": "Fex's Random Stuff Mod",
         "description": "A mod adding random decorative and useful content.",
         "version": "5.0.0",
-        "mcversion": "1.12.2",
+        "mcversion": "1.12.2,1.20.1",
         "url": "http://fexcraft.net",
         "updateUrl": "http://fexcraft.net/download?modid=frsm",
         "authorList": [
