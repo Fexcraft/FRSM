@@ -1,0 +1,22 @@
+{
+    "RegistryName": "television_small_2",
+    "Addon": "frsm",
+    "Name": "Television Small (2)",
+    "Model": "frsm:models/block/television_small_2.fmf",
+    "Texture": "frsm:textures/block/television_small_2.png",
+    "ModelData": {
+        "Baked": true,
+    	"Transforms":[
+          "rotate 0 1 0 -180"
+    	]
+    },
+    "BlockType": "GENERIC_16ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "AABBs":{
+		"normal": [ 0.25, 0, 0.25, 0.75, 0.75, 0.75 ]
+	}
+}
