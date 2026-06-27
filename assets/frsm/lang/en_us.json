@@ -20,5 +20,6 @@
     "block.frsm.fridge": "Fridge", 
     "block.frsm.printer": "Printer", 
     "block.frsm.radio1": "Radio (1)", 
-    "block.frsm.electric_pizza_oven": "Electric Pizza Oven"
+    "block.frsm.electric_pizza_oven": "Electric Pizza Oven", 
+    "block.frsm.washing_machine": "Washing Machine"
 }
