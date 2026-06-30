@@ -1,0 +1,19 @@
+{
+    "RegistryName": "television_large_1",
+    "Addon": "frsm",
+    "Name": "Television Large (1)",
+    "Model": "frsm:models/block/television_large_1.fmf",
+    "Texture": "frsm:textures/block/television_large_1.png",
+    "ModelData": {
+        "Baked": true
+    },
+    "BlockType": "GENERIC_16ROT",
+    "Material": "GLASS",
+    "HarverestTool": ["pickaxe", 1 ],
+    "Hardness": 1,
+    "Resistance": 32,
+    "CreativeTab": "blocks",
+    "AABBs":{
+		"normal": [ 0.25, 0, 0.25, 0.75, 1, 0.75 ]
+	}
+}
