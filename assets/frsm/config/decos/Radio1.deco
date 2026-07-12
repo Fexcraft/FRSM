@@ -1,0 +1,8 @@
+{
+    "RegistryName": "radio1_deco",
+    "Addon": "frsm",
+    "Name": "Radio (1/Deco)",
+    "Model": "frsm:models/block/radio1.fmf",
+    "Texture": "frsm:textures/block/radio1.png",
+    "CreativeTab": "decorations"
+}

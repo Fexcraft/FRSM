@@ -19,9 +19,10 @@
     "item.frsm.tomatosoup": "Tomato Soup", 
     "block.frsm.fridge": "Fridge", 
     "block.frsm.printer": "Printer", 
-    "block.frsm.radio1": "Radio (1)", 
+    "block.frsm.radio1": "Radio (1/Block)",
     "block.frsm.electric_pizza_oven": "Electric Pizza Oven", 
     "block.frsm.washing_machine": "Washing Machine", 
     "block.frsm.television_small_2": "Television Small (2)", 
-    "block.frsm.television_large_1": "Television Large (1)"
+    "block.frsm.television_large_1": "Television Large (1)", 
+    "item.frsm.radio1_deco": "Radio (1/Deco)"
 }

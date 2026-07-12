@@ -10,7 +10,8 @@
     ], 
     "Version": "5.0.0", 
     "CreativeTabs": { 
-        "blocks": "frsm:radio1",
+        "blocks": "frsm:television_small_2",
+        "decorations": "frsm:radio1",
         "consumables": "frsm:cheesewhite", 
         "materials": "frsm:tomatojar"
     }
