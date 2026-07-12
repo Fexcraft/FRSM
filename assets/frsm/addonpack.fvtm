@@ -8,10 +8,10 @@
     "Authors": [ 
         "01e4af9b-2a30-471e-addf-f6338ffce04b"
     ], 
-    "Version": "5.0.0", 
+    "Version": "5.1.0", 
     "CreativeTabs": { 
-        "blocks": "frsm:television_small_2",
-        "decorations": "frsm:radio1",
+        "blocks": "frsm:television_small_2", 
+        "decorations": "frsm:radio1", 
         "consumables": "frsm:cheesewhite", 
         "materials": "frsm:tomatojar"
     }
